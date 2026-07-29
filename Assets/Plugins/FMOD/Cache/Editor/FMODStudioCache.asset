@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8277975441492369327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD_Jamtopia/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 639209226706036297
+  FileSizes:
+  - Name: Desktop
+    Value: 1258976
+  Exists: 1
 --- !u!114 &-6990380610954072457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,6 +36,26 @@ MonoBehaviour:
   Name: SFX
   StudioPath: bank:/SFX
   lastModified: 639209181323145318
+  FileSizes:
+  - Name: Desktop
+    Value: 61856
+  Exists: 1
+--- !u!114 &-5490346028736443639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD_Jamtopia/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 639209226706440079
   FileSizes:
   - Name: Desktop
     Value: 61856
@@ -40,6 +80,60 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1378
   Exists: 1
+--- !u!114 &-2447337289125831906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXOneShotTest
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXOneShotTest
+  Guid:
+    Data1: -2065105674
+    Data2: 1102194841
+    Data3: -1308993893
+    Data4: 2054535182
+  Banks:
+  - {fileID: -5490346028736443639}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1995625465395284140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MusicTest
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/MusicTest
+  Guid:
+    Data1: 1516588807
+    Data2: 1135529402
+    Data3: 948913792
+    Data4: -562048361
+  Banks:
+  - {fileID: -8277975441492369327}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 101860
 --- !u!114 &-694957120047507845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,25 +194,95 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
   EditorBanks:
-  - {fileID: -63743206437750216}
-  - {fileID: -2768124473598424401}
-  - {fileID: 2918970938983157852}
-  - {fileID: -6990380610954072457}
+  - {fileID: 1379360875614871261}
+  - {fileID: 2272104131291633172}
+  - {fileID: -8277975441492369327}
+  - {fileID: -5490346028736443639}
   EditorEvents:
-  - {fileID: 6733563337231230684}
-  - {fileID: -694957120047507845}
+  - {fileID: -1995625465395284140}
+  - {fileID: -2447337289125831906}
+  - {fileID: 2910227752483570884}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2768124473598424401}
+  - {fileID: 2272104131291633172}
   StringsBanks:
-  - {fileID: -63743206437750216}
+  - {fileID: 1379360875614871261}
   cacheVersion: 131860
-  cacheTime: 639209181323145318
+  cacheTime: 639209226706440079
   SerializableEventsDict:
   - key: event:/MusicTest
     index: 0
   - key: event:/SFXOneShotTest
     index: 1
+  - key: event:/Test
+    index: 2
+--- !u!114 &1379360875614871261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD_Jamtopia/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639209226695910620
+  FileSizes:
+  - Name: Desktop
+    Value: 1026
+  Exists: 1
+--- !u!114 &2272104131291633172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD_Jamtopia/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639209226695903093
+  FileSizes:
+  - Name: Desktop
+    Value: 1378
+  Exists: 1
+--- !u!114 &2910227752483570884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Test
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Test
+  Guid:
+    Data1: 472014034
+    Data2: 1264725951
+    Data3: 1830348423
+    Data4: -732805897
+  Banks:
+  - {fileID: -8277975441492369327}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2918970938983157852
 MonoBehaviour:
   m_ObjectHideFlags: 0
