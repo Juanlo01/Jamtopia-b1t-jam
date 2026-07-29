@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD_Jamtopia/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639209226706036297
+  lastModified: 639209229979809329
   FileSizes:
   - Name: Desktop
     Value: 1258976
@@ -55,7 +55,7 @@ MonoBehaviour:
   Path: FMOD_Jamtopia/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639209226706440079
+  lastModified: 639209229979817929
   FileSizes:
   - Name: Desktop
     Value: 61856
@@ -208,7 +208,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 1379360875614871261}
   cacheVersion: 131860
-  cacheTime: 639209226706440079
+  cacheTime: 639209229979817929
   SerializableEventsDict:
   - key: event:/MusicTest
     index: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   Path: FMOD_Jamtopia/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639209226695910620
+  lastModified: 639209229979731879
   FileSizes:
   - Name: Desktop
     Value: 1026
@@ -251,7 +251,7 @@ MonoBehaviour:
   Path: FMOD_Jamtopia/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639209226695903093
+  lastModified: 639209229979729496
   FileSizes:
   - Name: Desktop
     Value: 1378
