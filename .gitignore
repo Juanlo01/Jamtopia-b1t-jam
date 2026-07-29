@@ -110,4 +110,7 @@ InitTestScene*.unity*
 FMOD_Jamtopia/.unsaved/
 
 FMOD_Jamtopia/.cache/
-/Assets/Plugins/FMOD/Cache
+
+# FMOD Unity editor cache
+Assets/Plugins/FMOD/Cache/
+/Assets/Plugins/FMOD/Cache.meta
