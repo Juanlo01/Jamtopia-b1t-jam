@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour{
     }
 
     // Regions allow you to lump together related code and give it a name
-    #region PLAYER_CONTROLS 
+    #region PLAYER_CONTROLS     
     public void Move(InputAction.CallbackContext context){
         horizontal = context.ReadValue<Vector2>().x;
         vertical = context.ReadValue<Vector2>().y;
