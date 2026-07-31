@@ -1,0 +1,19 @@
+title: Start
+---
+
+You encounter a [italic]mysterious[/italic] man, standing at the edge of a calm tide.
+
+Mysterious Man: The sun sets, as it does every day; but I can't help but feel that this evening is different.
+
+Mysterious Man: Don't you feel the same way?
+
+He smiles gently at you. His demeanor gives you no reason to feel apprehensive, and yet you do.
+
+Mysterious Man: Is there something wrong?
+
+-> Lie to him
+    You: Hello there! It's good to see a friendly face.
+-> Speak your mind
+    You: youre freakig me out bro stop talking to me like that
+    Mysterious Man: [italic]3 sobbing emojis[/italic]
+===
