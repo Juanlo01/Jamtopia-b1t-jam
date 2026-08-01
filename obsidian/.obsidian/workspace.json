@@ -1,0 +1,200 @@
+{
+  "main": {
+    "id": "a3c7d2c560bbb6cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "328f1ab80662464c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "077f78f7df43f2b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Storyline/1. Backstory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Backstory"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d0b48ed02e392240",
+    "type": "split",
+    "children": [
+      {
+        "id": "e3b8816c1237183e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb3661bb1bc62c79",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "46f4eb4ae009e21d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "260b075c6f4d4e76",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6ba9166d7c32a6d1",
+    "type": "split",
+    "children": [
+      {
+        "id": "a88a6890bf661fe8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "541144e467abcf55",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Storyline/1. Backstory.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 1. Backstory"
+            }
+          },
+          {
+            "id": "1d0d33cc61033c8a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Storyline/1. Backstory.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 1. Backstory"
+            }
+          },
+          {
+            "id": "d36ce2d491adfefc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c1fd9ea16ba63db6",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "d468c3b90b60f395",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Storyline/1. Backstory.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 1. Backstory"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "077f78f7df43f2b6",
+  "lastOpenFiles": [
+    "Storyline/2..md",
+    "Storyline/1. Backstory.md",
+    "Mechanics.md",
+    "Untitled.md",
+    "Storyline",
+    "Characters/Marty Gray (Detective).md",
+    "Characters/Ethan Prahl (Night Janitor).md",
+    "Characters/Martina Gray (Detective).md",
+    "Characters/Denis Bradshaw (Forensic Lead).md",
+    "Characters/Blaine Gibbs (Genius Consultant - Protagonist).md",
+    "Characters/Tracie Bolton (Lieutenant).md"
+  ]
+}

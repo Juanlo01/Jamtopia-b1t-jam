@@ -15,5 +15,6 @@
 	3. Your captain tells you the details of what they know
 	4. You get either time event or like tap-out event where you have to move around a room or rooms to find clues
 		1. You enter minigames to retain the quality of the evidence depending on your performance
+			1. Lifting Prints
 
 There's a lot of re
