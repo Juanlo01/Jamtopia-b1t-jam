@@ -15,7 +15,7 @@ public class PlayerInteraction : MonoBehaviour{
             currentInteractable.Interact();
         }
     }
-
+    
     private void OnTriggerEnter2D(Collider2D collision){
         IInteractable interactable = collision.GetComponent<IInteractable>();
         if(interactable != null){
