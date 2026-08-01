@@ -4,8 +4,6 @@ using UnityEngine.InputSystem;
 public interface IInteractable3D{
     // Implementers must call onInteractionEnd once their interaction has fully finished
     void Interact(PlayerController3D interactingPlayer, System.Action onInteractionEnd);
-    void OnTouchingPlayer();
-    void OnNotTouchingPlayer();
 }
 public class PlayerInteraction3D : MonoBehaviour{
     [SerializeField] private PlayerController3D playerController;
@@ -33,17 +31,13 @@ public class PlayerInteraction3D : MonoBehaviour{
     private void OnTriggerEnter(Collider collision){
         IInteractable3D interactable = collision.GetComponent<IInteractable3D>();
         if(interactable != null){
-            Debug.Log($"[PlayerInteraction3D] Now touching interactable {interactable}");
             currentInteractable = interactable;
-            currentInteractable.OnTouchingPlayer();
         }
     }
 
     private void OnTriggerExit(Collider collision){
         IInteractable3D interactable = collision.GetComponent<IInteractable3D>();
         if(interactable != null && interactable == currentInteractable){
-            Debug.Log($"[PlayerInteraction3D] No longer touching interactable {interactable}");
-            currentInteractable.OnNotTouchingPlayer();
             currentInteractable = null;
         }
     }
