@@ -7,6 +7,12 @@
 	1. To allow the player to be able to use their first 1/3 of day however they like (sleep through it via pills or play naturally while being awake) I think most important dialogue should happen in 2/3, I think a typical flow could look like (1/3 go to office, work on paperwork, talk amongst coworkers 2/3 get developments on a case, process evidence, talk amongst coworkers, 3/3 have night you do its thing)
 		1. Some 3/3 (if awake) can be replaced with talking to the night janitor who knows a lot about your sleep walking issues but has stayed quiet about it
 # Sleep/Awake States
+1. Natural
+	1. Clues are way easier to find compared to being awake
+	2. Waking up early (timer) will destroy your progress with processing evidence
+	3. Waking up early (timer) while searching for clues will simply just cut your work short
+2. Knocked Out
+	1. 
 # Game Loop
 1. Solving a Case
 	1. Crime gets committed

@@ -1,0 +1,1 @@
+Hard to please or impress, they don't doubt that you have a decent eye but they doubt the department needs you at all. They've caught on to how infrequently you actually notice details from a case, you're never able to explain evidence you've gathered and processed but seem to still be able to submit solid reports -- they hate this inconsistency about you.
