@@ -1,7 +1,7 @@
 using UnityEngine;
 using Yarn.Unity;
 
-public class InteractableCharacter : MonoBehaviour, IInteractable3D{
+public class InteractableEvidence : MonoBehaviour, IInteractable3D{
     [SerializeField] private DialogueRunner dialogueRunner;
     [SerializeField] private string dialogueNode = "Start";
 
