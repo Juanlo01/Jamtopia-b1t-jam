@@ -30,15 +30,33 @@
 			2. Stumbling into walls or tripping over debris will wake you up
 			3. Doing work during a busy crime scene or lab will often have cop chattering appear as a QTE
 			4. Light Purple (two-tone)
-2. Sleep Enabler
-	1. After getting knocked out by Gray in Motel Murders you're able to sleep by pressing Z
-		1. You can sleep after three actions for $T$ seconds???
-		2. You can sleep after four actions for $T+16$ seconds???
-	2. Natural
-	3. Chamomile Tea
-		1. No night terrors
-	4. Melatonin
-		1. Sleep gives you $+32$ seconds
+	3. QTEs
+		1. Night Terrors
+			1. Spiky
+				1. **Appearance & Behavior**: Shadowy figure that lingers in the corners of your screen, appears to have porcupine-like spikes protruding upwards from their body, long slender hands reach towards your work to try and undo it or stop you from interacting with whatever you're working with (tools, machines, etc.)
+				2. **Counter Play**: Moving your mouse "slices" through the shadow getting four quick slashes will make it vanish.
+			2. Teeny
+				1. **Appearance & Behavior**: Little ball-like guy with 7 tentacle-like legs, sometimes balls up and rolls around your work station to cling onto evidence or tools. While rolling can also bump into your tools/evidence to move it around or into your mouse to shove it aside.
+				2. **Counter Play**: Clicking on the guy two times will make it shrink then vanish once becoming a tiny spec.
+			3. Smoky
+				1. **Appearance & Behavior**: Appears taking up the edges with a cigar sticking out and smoking pouring out and covering up the screen top-down, evidence or tools fully covered in smoke clouds can't be interacted with
+				2. **Counter Play**: You can click on smoke cloud to make them vanish and drag the cigar out of Smoky's mouth to make them vanish while chasing after it.
+		2. Cops Chattering
+			1. Thought Bubble
+				1. Simply hover over this one and it'll pop and go away
+			2. Speech Bubble
+				1. Drag this and fling it towards the edges/corners, when it flings far away enough it'll despawn, pushing too lightly will have it gradually float back into place. When it's out of screen (despawned or not) it will not be actively effecting you that way an object you can't interact with or see isn't continuously threatening your sleep timer until it reappears.
+			3. Exclamation Bubble
+				1. Clicking will cause all the area near your mouse to vanish, you need to click in four-five distinct/separate parts to make at least ~80% of the bubble vanish before it all despawns as a whole
+2. ~~Sleep Enablers~~
+	1. ~~After getting knocked out by Gray in Motel Murders you're able to sleep by pressing Z~~
+		1. ~~You can sleep after three actions for $T$ seconds???~~
+		2. ~~You can sleep after four actions for $T+16$ seconds???~~
+	2. ~~Natural~~
+	3. ~~Chamomile Tea~~
+		1. ~~No night terrors~~
+	4. ~~Melatonin~~
+		1. ~~Sleep gives you $+32$ seconds~~
 # Game Loop
 1. Solving a Case
 	1. Crime gets committed
@@ -71,7 +89,7 @@
 				1. Assets
 					1. Swab
 					2. Saline Bottle
-					3. Pipette
+					3. Volumetric Pipette
 					4. Microcentrifuge Tube
 					5. Bottle of Luminol with built in Dropper Lid
 				2. Crime Scene
@@ -116,6 +134,6 @@
 					1. Line up a camera
 					2. Take a photo
 				2. Lab
-					1. Hand the photos to Denis Bradshaw
+						1. Hand the photos to Denis Bradshaw
 
 There's a lot of re
