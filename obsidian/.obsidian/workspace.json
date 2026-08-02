@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Storyline/1. Backstory.md",
+                "file": "Storyline/Outline.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Backstory"
+              "title": "Outline"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Storyline/1. Backstory.md",
+                "file": "Storyline/Outline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 1. Backstory"
+              "title": "Backlinks for Outline"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Storyline/1. Backstory.md",
+                "file": "Storyline/Outline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 1. Backstory"
+              "title": "Outgoing links from Outline"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Storyline/1. Backstory.md",
+                "file": "Storyline/Outline.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1. Backstory"
+              "title": "Outline of Outline"
             }
           }
         ]
@@ -185,12 +185,14 @@
   },
   "active": "077f78f7df43f2b6",
   "lastOpenFiles": [
-    "Characters/Alejandra Lorin (Foster Mother of Grace Gibbs).md",
+    "Storyline/3. WIP.md",
     "Storyline/2. Motel Murders.md",
+    "Storyline/Outline.md",
     "Storyline/1. Backstory.md",
+    "Mechanics.md",
+    "Characters/Alejandra Lorin (Foster Mother of Grace Gibbs).md",
     "Characters/Tracie Bolton (Lieutenant).md",
     "Characters/Samwell Lorin (Foster Father of Grace Gibbs).md",
-    "Mechanics.md",
     "Untitled.md",
     "Untitled 1.md",
     "Characters/Marty Gray (Detective).md",
