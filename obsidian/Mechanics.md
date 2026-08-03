@@ -135,5 +135,6 @@
 					2. Take a photo
 				2. Lab
 						1. Hand the photos to Denis Bradshaw
-
-There's a lot of re
+	5. After gathering all the details of a case your sleep-walking variant is able to scribble down what they think happened in your notepad
+		1. This allows you to submit a full report and theory to Bolton
+	6. Bolton 
