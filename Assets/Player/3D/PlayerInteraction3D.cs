@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System.Globalization;
 
 public interface IInteractable3D{
     // Implementers must call onInteractionEnd once their interaction has fully finished
@@ -12,17 +13,29 @@ public interface IInteractable3D{
 }
 public class PlayerInteraction3D : MonoBehaviour{
     [SerializeField] private PlayerController3D playerController;
-
-    [SerializeField]
-    private LayerMask objectLayer;
+    [SerializeField] private MeshRenderer _meshRenderer;
+    [SerializeField] private LayerMask objectLayer;
+    [SerializeField] private Material dither;
     [SerializeField]
     public Camera mainCamera;
     public InputActionReference clickMouse;
     public bool isInteractable;
+    public bool isAsleep;
+    
 
     private IInteractable3D currentInteractable;
     private bool isInteracting;
+    private Color sleepMode;
+    private Color awakeMode;
+    
 
+
+    void Awake()
+    {
+        isAsleep = false;
+        UnityEngine.ColorUtility.TryParseHtmlString("#FFBF00", out awakeMode);
+        dither.SetColor("_LightColor", awakeMode);
+    }
 
     // Update is called once per frame
     void Update(){
@@ -32,6 +45,35 @@ public class PlayerInteraction3D : MonoBehaviour{
                 Debug.Log($"[PlayerInteraction3D] Starting interaction with {currentInteractable}");
                 isInteracting = true;
                 currentInteractable.Interact(playerController, OnInteractionEnd);
+            }
+        }
+        if (Keyboard.current.tabKey.wasPressedThisFrame)
+        {
+            if(mainCamera.enabled == true)
+            {
+                mainCamera.enabled = false;
+            }
+            else
+            {
+                mainCamera.enabled = true;
+            }
+        }
+
+        if (Keyboard.current.zKey.wasPressedThisFrame)
+        {
+            if (!isAsleep)
+            {
+                if (UnityEngine.ColorUtility.TryParseHtmlString("#90D5FF", out sleepMode))
+                {
+                dither.SetColor("_LightColor", sleepMode);
+                }
+                isAsleep = true;
+            }
+            else if (isAsleep){
+                if(UnityEngine.ColorUtility.TryParseHtmlString("#FFBF00", out awakeMode)){
+                    dither.SetColor("_LightColor", awakeMode);
+                }
+                isAsleep = false;
             }
         }
     }
@@ -116,7 +158,8 @@ public class PlayerInteraction3D : MonoBehaviour{
         {
             Debug.Log("Clicked on " + hit.collider.gameObject.name + "!");
             //currentInteractable.Interact(playerController, OnInteractionEnd);
-            Destroy(hit.collider.gameObject);
+            //Destroy(hit.collider.gameObject);
+            hit.collider.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
     }
 }
