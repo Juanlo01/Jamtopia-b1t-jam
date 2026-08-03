@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class SpriteAnimator : MonoBehaviour
 {
-    private SpriteRenderer _sr;
-    private PlayerController _ch;
-    
+    [SerializeField]
+    public SpriteRenderer spriteRenderer;
+
     [SerializeField]
     public CharacterSprite characterSprite;
     [SerializeField]
@@ -18,9 +18,13 @@ public class SpriteAnimator : MonoBehaviour
 
     public ActionState actionState = ActionState.Idle;
     public float dirAngle = 0f;
-    
-    private string _currentDirection; // just track direction name, not action
-    
+
+    private string _currentDirection; // track direction name
+
+    public string CurrentDirection => _currentDirection;
+    public AnimationScheme.SpriteAnimation CurrentAnimation => _currentSpriteAnimation;
+    public int CurrentFrameIndex { get; private set; }
+
     public enum ActionState
     {
         Idle,
@@ -28,22 +32,15 @@ public class SpriteAnimator : MonoBehaviour
         Jump
     }
     
-    void Awake()
-    {
-        // GET COMPONENTS
-        _sr = GetComponent<SpriteRenderer>();
-        _ch = GetComponent<PlayerController>();
-    }
-
     void OnValidate()
     {
-        Awake();
-        if (characterSprite.sprites.Length > 0)
+        if (spriteRenderer != null && characterSprite.sprites.Length > 0)
         {
-            _sr.sprite = characterSprite.sprites[0];
+            spriteRenderer.sprite = characterSprite.sprites[0];
         }
     }
     
+    // monitoring & updating current keyframe in an animation track
     void Update()
     {
         if (_currentSpriteAnimation == null || _currentSpriteAnimation.times.Length == 0)
@@ -60,6 +57,7 @@ public class SpriteAnimator : MonoBehaviour
             idx = ~idx - 1;
             if (idx < 0) idx = 0;
         }
+        CurrentFrameIndex = idx;
 
         global::AnimationScheme.SpriteKeyframe frameIndex = _currentSpriteAnimation.frames[idx];
 
@@ -72,36 +70,40 @@ public class SpriteAnimator : MonoBehaviour
             return;
         }
 
-        _sr.sprite = characterSprite.sprites[frameIndex.index];
-        _sr.flipX = frameIndex.flipped;
+        spriteRenderer.sprite = characterSprite.sprites[frameIndex.index];
+        spriteRenderer.flipX = frameIndex.flipped;
     }
 
+    // play animation using the current state
     public void Play(string state)
     {
         _animationTime = 0f;
         _currentSpriteAnimation = characterSprite.animationScheme.GetAnimation(state);
+        Debug.Log($"[SpriteAnimator] Play(\"{state}\") -> {(_currentSpriteAnimation == null ? "NOT FOUND" : "found")}");
     }
 
-    public void SetActionState(ActionState nextState)
+    public void SetActionState(ActionState nextState, float angle)
     {
-        string nextDirection = GetActionDirection("", _ch.GetDirAngle()); // returns "Up", "Left", etc.
+        string nextDirection = GetActionDirection("", angle);
+        Debug.Log($"[SpriteAnimator] SetActionState({nextState}): angle={angle}, nextDirection={nextDirection}, current actionState={actionState}, currentDirection={_currentDirection}");
 
-        // Only play if the action changes OR the direction changes
         if (nextState != actionState || nextDirection != _currentDirection)
         {
             actionState = nextState;
             _currentDirection = nextDirection;
 
-            string clipKey = actionState + _currentDirection; // e.g., "IdleUp"
+            string clipKey = actionState + _currentDirection;
+            Debug.Log($"[SpriteAnimator] State/direction changed, playing clip \"{clipKey}\"");
             Play(clipKey);
         }
     }
     
+    // get name of action based on direction & movement
     private string GetActionDirection(string action, float angle)
     {
-        if (angle > 0 && angle < 90) return action + "Up";
-        if (angle >= 90 && angle <= 180) return action + "Left";
-        if (angle > 180 && angle < 270) return action + "Down";
-        return action + "Right";
+        if (angle >= -45f && angle <= 45f) return action + "Left";
+        if (angle > 45f && angle < 135f) return action + "Up";
+        if (angle <= -135f || angle >= 135f) return action + "Right";
+        return action + "Down";
     }
 }
