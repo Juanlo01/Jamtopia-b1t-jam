@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94654c6c987fe0c4b9c50bde53619f8f, type: 3}
+  m_Name: Boy
+  m_EditorClassIdentifier: 
+  spriteTexture: {fileID: 2800000, guid: 12fc443d85a08d7468ebff6bd54f12cd, type: 3}
+  animationScheme: {fileID: 11400000, guid: b25daf59aac885843a616b064d35b038, type: 2}
+  sprites:
+  - {fileID: 2128328531, guid: 12fc443d85a08d7468ebff6bd54f12cd, type: 3}
+  - {fileID: 1634829726, guid: 12fc443d85a08d7468ebff6bd54f12cd, type: 3}
+  - {fileID: 1207251621, guid: 12fc443d85a08d7468ebff6bd54f12cd, type: 3}
+  - {fileID: -315430484, guid: 12fc443d85a08d7468ebff6bd54f12cd, type: 3}
+  - {fileID: -2104599767, guid: 12fc443d85a08d7468ebff6bd54f12cd, type: 3}
+  - {fileID: -317888702, guid: 12fc443d85a08d7468ebff6bd54f12cd, type: 3}
+  - {fileID: 140774458, guid: 12fc443d85a08d7468ebff6bd54f12cd, type: 3}

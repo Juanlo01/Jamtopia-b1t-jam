@@ -18,8 +18,18 @@ public class PlayerController : MonoBehaviour{
 
     private float horizontal;
     private float vertical;
+    private float lastHorizontal;
+    private float lastVertical;
 
     private void FixedUpdate(){
         rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed);
+
+        // save the user's last horizontal & vertical movement for registering the character's direction
+        if(horizontal != 0f || vertical != 0f){
+            lastHorizontal = horizontal;
+            lastVertical = vertical;
+        }
     }
+    
+    public float GetDirAngle() { return Mathf.Atan2(lastVertical, lastHorizontal) * Mathf.Rad2Deg; }
 }
