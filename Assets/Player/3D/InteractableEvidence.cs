@@ -8,6 +8,7 @@ public class InteractableEvidence : MonoBehaviour, IInteractable3D{
     [SerializeField] private DialogueRunner dialogueRunner;
     [SerializeField] private string dialogueNode = "Start";
     [SerializeField] private InputAction press, screenPos;
+    [SerializeField] private MeshRenderer brother;
 
     private PlayerController3D interactingPlayer;
     private System.Action onInteractionEnd;
@@ -29,7 +30,13 @@ public class InteractableEvidence : MonoBehaviour, IInteractable3D{
         {
             transform.position = lockPos;
             transform.Translate(Vector3.down * Time.deltaTime);
-        }   
+        } 
+
+        if (brother.enabled == false)
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+        }  
+       
     }
     private Vector3 WorldPos
     {
@@ -55,12 +62,17 @@ public class InteractableEvidence : MonoBehaviour, IInteractable3D{
 
     public void Awake()
     {
-        camera = Camera.main;
-        screenPos.Enable();
-        press.Enable();
-        screenPos.performed += context => { currentScreenPos = context.ReadValue<Vector2>();};
-        press.performed += _ => { if(isClickedOn) StartCoroutine(Drag()); };
-        press.canceled += _ => {isDragging = false; };
+        if (brother != null)
+        {
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            camera = Camera.main;
+            screenPos.Enable();
+            press.Enable();
+            screenPos.performed += context => { currentScreenPos = context.ReadValue<Vector2>();};
+            press.performed += _ => { if(isClickedOn) StartCoroutine(Drag()); };
+            press.canceled += _ => {isDragging = false; };
+        }
+        
     }
 
     private IEnumerator Drag()
