@@ -3,10 +3,9 @@ using UnityEngine.InputSystem; // Allows use of of Input System API
 
 public class PlayerController3D : MonoBehaviour{
 
-    // Puts a old heading above a group of variables in Inspector
     [Header("Player Component References")]
-    // SerializeField keeps variable private while exposing it in Inspector
     [SerializeField] Rigidbody rb;
+    [SerializeField] SpriteAnimator spriteAnimator;
 
     [Header("Player Settings")]
     [SerializeField] float speed;
@@ -18,6 +17,8 @@ public class PlayerController3D : MonoBehaviour{
 
     private float horizontal;
     private float vertical;
+    private float lastHorizontal;
+    private float lastVertical;
     private bool movementFrozen;
 
     private void FixedUpdate(){
@@ -26,7 +27,19 @@ public class PlayerController3D : MonoBehaviour{
         }
         Vector3 velocity = rb.linearVelocity;
         rb.linearVelocity = new Vector3(horizontal * speed, velocity.y, vertical * speed);
+
+        // save the user's last horizontal & vertical movement for registering the character's direction
+        bool isMoving = horizontal != 0f || vertical != 0f;
+        if(isMoving){
+            lastHorizontal = horizontal;
+            lastVertical = vertical;
+        }
+
+        Debug.Log($"[PlayerController3D] horizontal={horizontal}, vertical={vertical}, isMoving={isMoving}");
+        spriteAnimator.SetActionState(isMoving ? SpriteAnimator.ActionState.Walk : SpriteAnimator.ActionState.Idle, GetDirAngle());
     }
+
+    public float GetDirAngle() { return Mathf.Atan2(lastVertical, lastHorizontal) * Mathf.Rad2Deg; }
 
     // Regions allow you to lump together related code and give it a name
     #region PLAYER_CONTROLS
@@ -37,7 +50,7 @@ public class PlayerController3D : MonoBehaviour{
     }
     #endregion
 
-    // Freezes/unfreezes player movement, eg. while a dialogue is playing
+    // freezes/unfreezes player movement, eg. while a dialogue is playing
     public void SetMovementFrozen(bool frozen){
         movementFrozen = frozen;
         if(movementFrozen){
