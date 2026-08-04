@@ -18,6 +18,7 @@ public class PlayerInteraction3D : MonoBehaviour{
     [SerializeField] private Material dither;
     [SerializeField]
     public Camera mainCamera;
+    public Camera evidenceCamera;
     public InputActionReference clickMouse;
     public bool isInteractable;
     public bool isAsleep;
@@ -32,6 +33,7 @@ public class PlayerInteraction3D : MonoBehaviour{
 
     void Awake()
     {
+        evidenceCamera.enabled = false;
         isAsleep = false;
         UnityEngine.ColorUtility.TryParseHtmlString("#FFBF00", out awakeMode);
         dither.SetColor("_LightColor", awakeMode);
@@ -52,9 +54,11 @@ public class PlayerInteraction3D : MonoBehaviour{
             if(mainCamera.enabled == true)
             {
                 mainCamera.enabled = false;
+                evidenceCamera.enabled = true;
             }
             else
             {
+                evidenceCamera.enabled = false;
                 mainCamera.enabled = true;
             }
         }

@@ -1474,6 +1474,8 @@ MonoBehaviour:
       m_Action: Screen Pos
       m_Flags: 0
     m_Flags: 0
+  brother: {fileID: 2134173565}
+  camera: {fileID: 1698642669}
 --- !u!54 &1357097034
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2422,7 +2424,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698642666}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -2679,7 +2681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5550441951888572841, guid: 633c564ab5432b548a201226d705be3a, type: 3}
       propertyPath: m_Name
-      value: Evidence
+      value: TableEvidence
       objectReference: {fileID: 0}
     - target: {fileID: 5550441951888572841, guid: 633c564ab5432b548a201226d705be3a, type: 3}
       propertyPath: m_Layer
@@ -3149,12 +3151,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction3D
   playerController: {fileID: 1960820401}
+  _meshRenderer: {fileID: 0}
   objectLayer:
     serializedVersion: 2
     m_Bits: 64
+  dither: {fileID: 2100000, guid: fc0c586340cafb845918672b9f78e50a, type: 2}
   mainCamera: {fileID: 1319113287}
+  evidenceCamera: {fileID: 1698642669}
   clickMouse: {fileID: 2063652149}
   isInteractable: 0
+  isAsleep: 0
 --- !u!135 &1960820405
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3402,7 +3408,7 @@ MonoBehaviour:
   dialogueRunner: {fileID: 0}
   dialogueNode: Start
   press:
-    m_Name: 
+    m_Name: Press
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 47b14a51-169f-4e4b-87e0-40c6072bd5c2
@@ -3411,7 +3417,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   screenPos:
-    m_Name: 
+    m_Name: Screen Pos
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: bd71c62b-bbfc-4e13-bfc7-5a7b6f5eb8bb
@@ -3419,6 +3425,13 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  brother: {fileID: 0}
+  camera: {fileID: 0}
+--- !u!23 &2134173565 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3528100686471452480, guid: 633c564ab5432b548a201226d705be3a, type: 3}
+  m_PrefabInstance: {fileID: 1633267602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
