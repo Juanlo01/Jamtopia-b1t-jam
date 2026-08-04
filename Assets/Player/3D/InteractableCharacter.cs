@@ -36,4 +36,14 @@ public class InteractableCharacter : MonoBehaviour, IInteractable3D{
         interactingPlayer = null;
         onInteractionEnd = null;
     }
+
+    public void OnTouchingPlayer()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnNotTouchingPlayer()
+    {
+        throw new System.NotImplementedException();
+    }
 }
