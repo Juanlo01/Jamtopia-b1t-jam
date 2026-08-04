@@ -5,6 +5,15 @@ Shader "Unlit/BillboardVerticalZDepth"
         _MainTex("Texture", 2D) = "white" {}
         _BaseColor("Color", Color) = (1,1,1,1)
         _Emission("Emission", Range(0.0, 100.0)) = 5.0
+        [Toggle] _EnableWobble("Enable Wobble Shift", Float) = 0
+        _WobbleUVScale("Wobble UV Scale", Vector) = (1,1,0,0)
+        _WobbleUVOffset("Wobble UV Offset", Vector) = (0,0,0,0)
+        _WobbleEnvelopeCenter("Wobble Envelope Center (v)", Range(0, 1)) = 0.65
+        _WobbleEnvelopeWidth("Wobble Envelope Width", Range(0.01, 1)) = 0.15
+        _WobbleBaseAmplitude("Wobble Base Amplitude", Range(0, 1)) = 0.15
+        _WobbleAmplitude("Wobble Amplitude (master)", Range(-1, 1)) = 0.1
+        _WobbleFrequency("Wobble Frequency (v)", Float) = 1
+        _SpriteUVRect("Sprite UV Rect (uMin,vMin,uMax,vMax) in atlas", Vector) = (0,0,1,1)
     }
 
     SubShader
@@ -42,6 +51,15 @@ Shader "Unlit/BillboardVerticalZDepth"
             float4 _BaseColor;
             float4 _MainTex_ST;
             float _Emission;
+            float _EnableWobble;
+            float4 _WobbleUVScale;
+            float4 _WobbleUVOffset;
+            float _WobbleEnvelopeCenter;
+            float _WobbleEnvelopeWidth;
+            float _WobbleBaseAmplitude;
+            float _WobbleAmplitude;
+            float _WobbleFrequency;
+            float4 _SpriteUVRect;
 
             float rayPlaneIntersection( float3 rayDir, float3 rayPos, float3 planeNormal, float3 planePos)
             {
@@ -89,7 +107,34 @@ Shader "Unlit/BillboardVerticalZDepth"
 
             fixed4 frag(v2f i) : SV_Target
             {
-                fixed4 text = tex2D(_MainTex, i.uv);
+                float2 uv = i.uv;
+                if (_EnableWobble > 0.5)
+                {
+                    // uv is in atlas space (this frame's own small sub-rect within the sheet), which
+                    // differs per frame/row - remap it into a 0-1 range local to just this frame first,
+                    // so the wobble reads the same regardless of where this frame sits in the atlas
+                    float2 rectMin = _SpriteUVRect.xy;
+                    float2 rectMax = _SpriteUVRect.zw;
+                    float2 localUV = (uv - rectMin) / (rectMax - rectMin);
+
+                    // remap this sprite's own local uv into the shared "body" uv space, so a smaller/offset
+                    // sprite (eg. eyes) can be tuned to ride the same wobble phase as the body sprite
+                    float2 wobbleUV = localUV * _WobbleUVScale.xy + _WobbleUVOffset.xy;
+
+                    // single smooth (non-piecewise) bump: peaks at _WobbleEnvelopeCenter, tapers down to
+                    // _WobbleBaseAmplitude away from it, sized by _WobbleEnvelopeWidth - this only shapes
+                    // how strongly each row wobbles RELATIVE to the peak, it doesn't control overall intensity
+                    float dist = wobbleUV.y - _WobbleEnvelopeCenter;
+                    float envelope = _WobbleBaseAmplitude + (1 - _WobbleBaseAmplitude) * exp(-(dist * dist) / (2 * _WobbleEnvelopeWidth * _WobbleEnvelopeWidth));
+
+                    // shift each row of pixels along u, animated over time; _WobbleFrequency controls how many
+                    // wave cycles fit across v, _WobbleAmplitude is the master intensity (0 = no wobble at all)
+                    float t = _Time.y;
+                    float u_disp = cos(wobbleUV.y * _WobbleFrequency - t);
+                    uv.x += u_disp * envelope * _WobbleAmplitude;
+                }
+
+                fixed4 text = tex2D(_MainTex, uv);
                 fixed4 modu = text * _BaseColor;
                 fixed3 emit = modu.rgb * _Emission;
                 fixed4 col  = fixed4(emit, modu.a);

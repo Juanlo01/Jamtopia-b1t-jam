@@ -2752,7 +2752,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30
+  field of view: 15
   orthographic: 0
   orthographic size: 6
   m_Depth: -1
@@ -4772,7 +4772,6 @@ MonoBehaviour:
   rb: {fileID: 1960820402}
   spriteAnimator: {fileID: 1960820405}
   spriteRenderer: {fileID: 1360120254}
-  faceSpriteRenderer: {fileID: 806183769}
   selectedMaterial: {fileID: 2100000, guid: 758966026af7606479097d7972b29294, type: 2}
   speed: 5
   jumpingPower: 0

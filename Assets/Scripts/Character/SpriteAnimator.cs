@@ -25,6 +25,9 @@ public class SpriteAnimator : MonoBehaviour
     public AnimationScheme.SpriteAnimation CurrentAnimation => _currentSpriteAnimation;
     public int CurrentFrameIndex { get; private set; }
 
+    private static readonly int SpriteUVRectID = Shader.PropertyToID("_SpriteUVRect");
+    private MaterialPropertyBlock _materialPropertyBlock;
+
     public enum ActionState
     {
         Idle,
@@ -70,8 +73,25 @@ public class SpriteAnimator : MonoBehaviour
             return;
         }
 
-        spriteRenderer.sprite = characterSprite.sprites[frameIndex.index];
+        Sprite sprite = characterSprite.sprites[frameIndex.index];
+        spriteRenderer.sprite = sprite;
         spriteRenderer.flipX = frameIndex.flipped;
+
+        // tell shaders (eg. the wobble pass) this frame's UV rect within the atlas, so they can remap
+        // atlas-space UV back into a consistent 0-1 range local to just this one frame's cell
+        Rect textureRect = sprite.textureRect;
+        Texture texture = sprite.texture;
+        Vector4 uvRect = new Vector4(
+            textureRect.xMin / texture.width,
+            textureRect.yMin / texture.height,
+            textureRect.xMax / texture.width,
+            textureRect.yMax / texture.height
+        );
+
+        _materialPropertyBlock ??= new MaterialPropertyBlock();
+        spriteRenderer.GetPropertyBlock(_materialPropertyBlock);
+        _materialPropertyBlock.SetVector(SpriteUVRectID, uvRect);
+        spriteRenderer.SetPropertyBlock(_materialPropertyBlock);
     }
 
     // play animation using the current state
