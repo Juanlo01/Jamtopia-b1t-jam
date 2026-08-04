@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94654c6c987fe0c4b9c50bde53619f8f, type: 3}
+  m_Name: Pikachu
+  m_EditorClassIdentifier: 
+  spriteTexture: {fileID: 2800000, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  animationScheme: {fileID: 11400000, guid: 2f502f230fbff0f408cd33074dad8c70, type: 2}
+  sprites:
+  - {fileID: -979946202, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: -1325895510, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: 520669496, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: 1410900568, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: 2100951048, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: 1683064595, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: 685836320, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: 2083657475, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: 1287546676, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: 1567749326, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: 806956826, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
+  - {fileID: -262884121, guid: 336dd7522407a974fb2f749adb4ae783, type: 3}
