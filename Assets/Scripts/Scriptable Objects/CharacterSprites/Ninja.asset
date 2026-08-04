@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94654c6c987fe0c4b9c50bde53619f8f, type: 3}
+  m_Name: Ninja
+  m_EditorClassIdentifier: 
+  spriteTexture: {fileID: 2800000, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  animationScheme: {fileID: 11400000, guid: 2f502f230fbff0f408cd33074dad8c70, type: 2}
+  sprites:
+  - {fileID: 801434799, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: 1863107191, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: -1883615666, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: 599758609, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: -1038463284, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: 333719671, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: 217426394, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: -478490059, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: -1708975748, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: -37938494, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: -1548143036, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
+  - {fileID: -1388659104, guid: 1e37a63f2cc94cf4eb86d54d3ff3ead6, type: 3}
