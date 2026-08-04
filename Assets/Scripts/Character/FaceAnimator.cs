@@ -7,6 +7,7 @@ public class FaceAnimator : MonoBehaviour
     [Header("Connections")]
     [SerializeField] private SpriteAnimator spriteAnimator;
     [SerializeField] private SpriteRenderer faceRenderer;
+    [SerializeField] private PlayerController3D playerController;
 
     [Header("Face Sprites")]
     [SerializeField] private Sprite downFaceSprite_Open;
@@ -96,6 +97,16 @@ public class FaceAnimator : MonoBehaviour
     {
         if (spriteAnimator == null) return;
 
+        if (playerController != null && playerController.isSleepwalking)
+        {
+            if (_closeEyesRoutine != null)
+            {
+                StopCoroutine(_closeEyesRoutine);
+                _closeEyesRoutine = null;
+            }
+            _eyeState = EyeState.Closed;
+        }
+
         FaceDirection direction = ParseDirection(spriteAnimator.CurrentDirection);
         FaceOffsetSettings settings = GetSettings(spriteAnimator.actionState, direction);
 
@@ -122,6 +133,8 @@ public class FaceAnimator : MonoBehaviour
     // blink animation
     public void CloseEyes()
     {
+        if (playerController != null && playerController.isSleepwalking) return; // eyes stay closed, no blinking
+
         if (_closeEyesRoutine != null) StopCoroutine(_closeEyesRoutine);
         _closeEyesRoutine = StartCoroutine(CloseEyesRoutine());
     }
