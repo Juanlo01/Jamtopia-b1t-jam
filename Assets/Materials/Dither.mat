@@ -140,7 +140,7 @@ Material:
     - _DarkColor: {r: 0, g: 0.091000006, b: 0.06916001, a: 1}
     - _DaytimeColor: {r: 1, g: 0.8382575, b: 0.12641507, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightColor: {r: 0.19496614, g: 0.7433963, b: 0.6500448, a: 1}
+    - _LightColor: {r: 1, g: 0.7490196, b: 0, a: 1}
     - _NighttimeColor: {r: 0.19607845, g: 0.74509805, b: 0.6509804, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TwilightColor: {r: 1, g: 0.4433962, b: 0.48393512, a: 1}

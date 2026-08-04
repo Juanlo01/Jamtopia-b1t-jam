@@ -15,7 +15,7 @@ public class InteractableEvidence : MonoBehaviour, IInteractable3D{
 
     private Vector3 currentScreenPos;
 
-    Camera camera;
+    [SerializeField] public new Camera camera;
     bool isDragging;
 
     Vector3 lockPos;
@@ -65,12 +65,16 @@ public class InteractableEvidence : MonoBehaviour, IInteractable3D{
         if (brother != null)
         {
             gameObject.GetComponent<MeshRenderer>().enabled = false;
-            camera = Camera.main;
+            //camera = Camera.main;
             screenPos.Enable();
             press.Enable();
             screenPos.performed += context => { currentScreenPos = context.ReadValue<Vector2>();};
             press.performed += _ => { if(isClickedOn) StartCoroutine(Drag()); };
             press.canceled += _ => {isDragging = false; };
+        }
+        else if (brother == null)
+        {
+            throw new Exception(gameObject.name +" has no brother");
         }
         
     }
