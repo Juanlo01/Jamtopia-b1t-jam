@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94654c6c987fe0c4b9c50bde53619f8f, type: 3}
+  m_Name: Prahl
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSprite
+  spriteTexture: {fileID: 2800000, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  animationScheme: {fileID: 11400000, guid: c71b99f6047f65841822a5eff20a1cdb, type: 2}
+  sprites:
+  - {fileID: 190112048, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: 1501544145, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: 265652744, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: 1765742120, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: -1640398496, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: 339427488, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: 454805484, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: -1557363612, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: -117481411, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: 1203922909, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: -1665575023, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: -1479620198, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: -105240102, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: 1148830819, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: -1712279807, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
+  - {fileID: 449007359, guid: 821069cd44b317044b32b4d12787b16f, type: 3}
