@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94654c6c987fe0c4b9c50bde53619f8f, type: 3}
+  m_Name: Marty
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSprite
+  spriteTexture: {fileID: 2800000, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  animationScheme: {fileID: 11400000, guid: c71b99f6047f65841822a5eff20a1cdb, type: 2}
+  sprites:
+  - {fileID: 524749809, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: -382016521, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: -1938980431, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 1675032615, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 2033402455, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 275710795, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: -1485694945, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 1841783552, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 1233701274, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 1590744602, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: -270946706, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 191638520, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 1734230931, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 575532675, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: -1850463925, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  - {fileID: 818273918, guid: 4379ad9281097194d84fe86401380c2b, type: 3}

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3b4a88d6c47b5b44cbe4aacf2618598e
+guid: d110349a9a0f506418c780237625667a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
@@ -93,269 +93,216 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char4_0
+      name: Marty Eyes Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b0143fff8a28ee4495a13709ca93e1f
-      internalID: -1441239396
+      spriteID: 7f1ff6be4ccea144da27f25b99175248
+      internalID: -186866353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char4_1
+      name: Marty Eyes Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 100
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fdb12da39430b144bcf85d187a171b3
-      internalID: 408431588
+      spriteID: bc954ce28589f6e47a2bf046caf06201
+      internalID: -1500132432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char4_2
+      name: Marty Eyes Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 200
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a61597f983b2c2d4192fea51acb071b9
-      internalID: -562946963
+      spriteID: fac2dcec2fbff684e9982a7308f3a27c
+      internalID: -906210457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char4_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 138d8c802aeaa2748989bf15fc014b70
-      internalID: 1883504128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: char4_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26bcffeee255f554ea0dea6b164c9070
-      internalID: -542334205
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: char4_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc0452082d7f00f4db0622b4fa0b33e3
-      internalID: -1008511456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: char4_6
+      name: Marty Eyes Spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db9c6060f62874247acc67eff71dd83f
-      internalID: -739060358
+      spriteID: 49f15da640043d047aa9d2351dece486
+      internalID: -400343382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char4_7
+      name: Marty Eyes Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 100
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6f7bb934d6b555458e6f6f645cd5309
-      internalID: 395537067
+      spriteID: d43c22293f5677d499c6c8477ac12107
+      internalID: -633365016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char4_8
+      name: Marty Eyes Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 200
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a85d537164e85a4439342a3e6976524d
-      internalID: 198285485
+      spriteID: 184540cc4e7d225438232aaa1e77b51d
+      internalID: 873744959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char4_9
+      name: Marty Eyes Spritesheet_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e904d00b622ab44bb9e209897e09f8d
-      internalID: -137477835
+      spriteID: 28952e371938c54429677041637fe4d4
+      internalID: 949319759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char4_10
+      name: Marty Eyes Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 32
+        x: 100
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1998ac419577fe4694e6c8be5ab1eb3
-      internalID: 688939458
+      spriteID: 21a9e65e35a393841877fe6ffaa2f3f3
+      internalID: 793619387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char4_11
+      name: Marty Eyes Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 64
+        x: 200
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba97f08d6af76f14cb94a58b4cd003a2
-      internalID: -1718254991
+      spriteID: bb37375d354f79349a5263f69ce8fbbd
+      internalID: -1491449512
       vertices: []
       indices: 
       edges: []
@@ -364,7 +311,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 29e2cb2a465eaf549bdf8d2ae95bccee
+    spriteID: 50a1c942984b37a45ac8718d27958588
     internalID: 0
     vertices: []
     indices: 
@@ -374,20 +321,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":3.0},"gridSpriteSize":{"x":100.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      char4_0: -1441239396
-      char4_1: 408431588
-      char4_10: 688939458
-      char4_11: -1718254991
-      char4_2: -562946963
-      char4_3: 1883504128
-      char4_4: -542334205
-      char4_5: -1008511456
-      char4_6: -739060358
-      char4_7: 395537067
-      char4_8: 198285485
-      char4_9: -137477835
+      Marty Eyes Spritesheet_0: -186866353
+      Marty Eyes Spritesheet_1: -1500132432
+      Marty Eyes Spritesheet_2: -906210457
+      Marty Eyes Spritesheet_3: -400343382
+      Marty Eyes Spritesheet_4: -633365016
+      Marty Eyes Spritesheet_5: 873744959
+      Marty Eyes Spritesheet_6: 949319759
+      Marty Eyes Spritesheet_7: 793619387
+      Marty Eyes Spritesheet_8: -1491449512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

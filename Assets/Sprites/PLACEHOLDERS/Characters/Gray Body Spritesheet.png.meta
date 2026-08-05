@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7caa0feb7945044085b7aa76411a68f
+guid: c64ed84c80e00054a84e8082f98c6523
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,10 +45,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
@@ -93,269 +93,370 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char3_0
+      name: Gray Body Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7e495080ba20a74fb96fa05a551f628
-      internalID: -1265086409
+      spriteID: 64eb43bec2f9f434789b938d2fe5ad1c
+      internalID: -1749663509
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_1
+      name: Gray Body Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 400
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74aeff73f0fc5294e92e1e4545f6b6d9
-      internalID: -601124474
+      spriteID: 8446cc3a1d9a87a47a5f2ea6977a0185
+      internalID: 1375513699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_2
+      name: Gray Body Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 800
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdfa9311904dff845bef3022a43f08d2
-      internalID: 605545905
+      spriteID: ca21815337572024a98a79acc8da8f30
+      internalID: 1370306249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_3
+      name: Gray Body Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 1200
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a5652d53c6295540a5dc5ebd1e027c1
-      internalID: 118136143
+      spriteID: a6f68f096e7eac14799e7868fd9fd16a
+      internalID: -1284731240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52ffa77b4db50e84191439f5b8c10257
-      internalID: 999962411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: char3_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8094c867e250bd349b6c902a982b0d0f
-      internalID: -1637748286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: char3_6
+      name: Gray Body Spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9848a6e4833c31e43a16b46f5a669f0c
-      internalID: 1932153575
+      spriteID: 8a4bf3dc4901b9049a7fb9ac99e1dec7
+      internalID: 699042584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_7
+      name: Gray Body Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 400
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 949b5c7db0928a842a62f0b237becc65
-      internalID: -256059705
+      spriteID: 6ebbf29da7a2a144f888d675806ad31d
+      internalID: 1898890055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_8
+      name: Gray Body Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 800
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e593ee14c84ada459ba9911734229f2
-      internalID: 1464572063
+      spriteID: 6b8db82f1371ee44da982db49d7c90d6
+      internalID: 609536463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_9
+      name: Gray Body Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1ab5dac94ab8c4687ff049301b4789
+      internalID: -646205204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray Body Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44cf932e7067f248a3c91f542a32a38
+      internalID: -295630347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray Body Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa494aea0cf05045b9e843c36d653b5
+      internalID: 643058135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray Body Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bffd479eadcc434c92f3fdb39df356d
+      internalID: 816644353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray Body Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fc5580214c29f4284254233f2f6c44
+      internalID: -1204290131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray Body Spritesheet_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c750aa5bbf6b3b46aef0d11af327871
-      internalID: 1904688376
+      spriteID: 645f91a210b84af4ea4d48fa12eb7277
+      internalID: 455504424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_10
+      name: Gray Body Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 32
+        x: 400
         y: 0
-        width: 32
-        height: 32
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59dcd54448ea2ae4eaae4a9842602216
-      internalID: -341629673
+      spriteID: cee5915723e04324c962e0b3e388e5a5
+      internalID: -1081943844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_11
+      name: Gray Body Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 64
+        x: 800
         y: 0
-        width: 32
-        height: 32
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2431e63c9c01acd47b871c1be8d7143d
-      internalID: 1771109070
+      spriteID: e54519be1acdf07489e37ec2534dcb33
+      internalID: -1584395150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gray Body Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f726333291a1d044182e6eb8a8ffd3d3
+      internalID: 509590029
       vertices: []
       indices: 
       edges: []
@@ -364,7 +465,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: acbf9ae7b0d25804f9d3dddb27063d19
+    spriteID: 7d36b56e29eba0042a5e444c296c3b65
     internalID: 0
     vertices: []
     indices: 
@@ -374,20 +475,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":400.0,"y":400.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      char3_0: -1265086409
-      char3_1: -601124474
-      char3_10: -341629673
-      char3_11: 1771109070
-      char3_2: 605545905
-      char3_3: 118136143
-      char3_4: 999962411
-      char3_5: -1637748286
-      char3_6: 1932153575
-      char3_7: -256059705
-      char3_8: 1464572063
-      char3_9: 1904688376
+      Gray Body Spritesheet_0: -1749663509
+      Gray Body Spritesheet_1: 1375513699
+      Gray Body Spritesheet_10: 816644353
+      Gray Body Spritesheet_11: -1204290131
+      Gray Body Spritesheet_12: 455504424
+      Gray Body Spritesheet_13: -1081943844
+      Gray Body Spritesheet_14: -1584395150
+      Gray Body Spritesheet_15: 509590029
+      Gray Body Spritesheet_2: 1370306249
+      Gray Body Spritesheet_3: -1284731240
+      Gray Body Spritesheet_4: 699042584
+      Gray Body Spritesheet_5: 1898890055
+      Gray Body Spritesheet_6: 609536463
+      Gray Body Spritesheet_7: -646205204
+      Gray Body Spritesheet_8: -295630347
+      Gray Body Spritesheet_9: 643058135
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

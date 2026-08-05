@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 336dd7522407a974fb2f749adb4ae783
+guid: 495b21fcf33d9f74cbe161698d828424
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -93,269 +93,216 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pikachu_0
+      name: Gray Eyes Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61c9811228fc057449b18ff7e3e2f3fd
-      internalID: -979946202
+      spriteID: 1415b9a90aef820409ad0339572f6f95
+      internalID: 1969883440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pikachu_1
+      name: Gray Eyes Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 100
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47df1f99cfb4540408feb2152f0fec15
-      internalID: -1325895510
+      spriteID: a0ff3bf6ee87675439ee97f698708afe
+      internalID: 926038570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pikachu_2
+      name: Gray Eyes Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 200
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1476878574800b4486ebc826d5cb468
-      internalID: 520669496
+      spriteID: 2aa7f529297d90e48a3a731316d3e944
+      internalID: 372375489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pikachu_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28cbfc3912a6a354d90dc8c02a9696ae
-      internalID: 1410900568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pikachu_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48786b184dab34a4b9d77db17b693cdd
-      internalID: 2100951048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pikachu_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a368883ddb0ab224db679d2b530ab052
-      internalID: 1683064595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pikachu_6
+      name: Gray Eyes Spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b77efb7bc76a5ef4f94138398b99e8ef
-      internalID: 685836320
+      spriteID: 7ba5939ba1b75e4499832cd38f5b339b
+      internalID: -988566708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pikachu_7
+      name: Gray Eyes Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 100
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f01d67a224765344bb2bf553db2c168f
-      internalID: 2083657475
+      spriteID: a7dab2a9478d0674684956604e9d2df1
+      internalID: 888480652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pikachu_8
+      name: Gray Eyes Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 200
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 414d169f6e633564f94bc43151522600
-      internalID: 1287546676
+      spriteID: bcb4485ca1eb5f94cb7ef7dfc4071cc2
+      internalID: 1590315461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pikachu_9
+      name: Gray Eyes Spritesheet_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cb0d0802e8279e42a244c15fa4f33fb
-      internalID: 1567749326
+      spriteID: 266e330e58d0f5541940237164acf7df
+      internalID: -1013115460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pikachu_10
+      name: Gray Eyes Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 32
+        x: 100
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c33a68774ff65b4295b317f7669d14c
-      internalID: 806956826
+      spriteID: ba28ab1993a7c0245be3ff78748b2b39
+      internalID: -518785432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pikachu_11
+      name: Gray Eyes Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 64
+        x: 200
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5804166fff10631478d40befac3bb65e
-      internalID: -262884121
+      spriteID: 41ec75630d314fb4aba5236a47242126
+      internalID: 1875238162
       vertices: []
       indices: 
       edges: []
@@ -364,7 +311,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dc9fc0330ae2e45438e5100d484e4ae4
+    spriteID: a6fe952c04025784cac74690b9bb479c
     internalID: 0
     vertices: []
     indices: 
@@ -374,20 +321,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":3.0},"gridSpriteSize":{"x":100.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Pikachu_0: -979946202
-      Pikachu_1: -1325895510
-      Pikachu_10: 806956826
-      Pikachu_11: -262884121
-      Pikachu_2: 520669496
-      Pikachu_3: 1410900568
-      Pikachu_4: 2100951048
-      Pikachu_5: 1683064595
-      Pikachu_6: 685836320
-      Pikachu_7: 2083657475
-      Pikachu_8: 1287546676
-      Pikachu_9: 1567749326
+      Gray Eyes Spritesheet_0: 1969883440
+      Gray Eyes Spritesheet_1: 926038570
+      Gray Eyes Spritesheet_2: 372375489
+      Gray Eyes Spritesheet_3: -988566708
+      Gray Eyes Spritesheet_4: 888480652
+      Gray Eyes Spritesheet_5: 1590315461
+      Gray Eyes Spritesheet_6: -1013115460
+      Gray Eyes Spritesheet_7: -518785432
+      Gray Eyes Spritesheet_8: 1875238162
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -28,19 +28,25 @@ public class SpriteAnimator : MonoBehaviour
     private static readonly int SpriteUVRectID = Shader.PropertyToID("_SpriteUVRect");
     private MaterialPropertyBlock _materialPropertyBlock;
 
+    // fired whenever a serialized property changes in the Inspector (eg. characterSprite swapped out),
+    // so listeners (eg. CharacterController3D) can force the current animation to re-resolve against it
+    public event System.Action OnPropertiesChanged;
+
     public enum ActionState
     {
         Idle,
         Walk,
         Jump
     }
-    
+
     void OnValidate()
     {
         if (spriteRenderer != null && characterSprite.sprites.Length > 0)
         {
             spriteRenderer.sprite = characterSprite.sprites[0];
         }
+
+        OnPropertiesChanged?.Invoke();
     }
     
     // monitoring & updating current keyframe in an animation track
@@ -102,12 +108,12 @@ public class SpriteAnimator : MonoBehaviour
         Debug.Log($"[SpriteAnimator] Play(\"{state}\") -> {(_currentSpriteAnimation == null ? "NOT FOUND" : "found")}");
     }
 
-    public void SetActionState(ActionState nextState, float angle)
+    public void SetActionState(ActionState nextState, float angle, bool force = false)
     {
         string nextDirection = GetActionDirection("", angle);
-        Debug.Log($"[SpriteAnimator] SetActionState({nextState}): angle={angle}, nextDirection={nextDirection}, current actionState={actionState}, currentDirection={_currentDirection}");
+        Debug.Log($"[SpriteAnimator] SetActionState({nextState}): angle={angle}, nextDirection={nextDirection}, current actionState={actionState}, currentDirection={_currentDirection}, force={force}");
 
-        if (nextState != actionState || nextDirection != _currentDirection)
+        if (force || nextState != actionState || nextDirection != _currentDirection)
         {
             actionState = nextState;
             _currentDirection = nextDirection;

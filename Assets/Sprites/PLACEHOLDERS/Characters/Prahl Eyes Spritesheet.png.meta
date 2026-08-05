@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 12fc443d85a08d7468ebff6bd54f12cd
+guid: 009f1d93c2d1fd34993a7d903e45bede
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
@@ -93,159 +93,216 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char9_0
+      name: Prahl Eyes Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eec51c48015fb0e4bb3d3ec22a229a13
-      internalID: 2128328531
+      spriteID: 091a3a09ee12b2f4eb65c4c258238330
+      internalID: 287815869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char9_1
+      name: Prahl Eyes Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 100
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62999228cd529a74681fbcd920de572c
-      internalID: 1634829726
+      spriteID: f9a2c3db990ccf84280fb73288b7c020
+      internalID: 1815441544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char9_2
+      name: Prahl Eyes Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 200
+        y: 200
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2add15f48a795874eb10178816265fef
-      internalID: 1207251621
+      spriteID: 63149a11d0c448f4ea416f1796f92373
+      internalID: -1294727668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char9_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e882d287b5003d54bb6e4f456aa5cc2f
-      internalID: -315430484
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: char9_4
+      name: Prahl Eyes Spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d72e17bc4f8f99418d4c712645a80cd
-      internalID: -2104599767
+      spriteID: bbec8ce85f73c0f4cbef56d4e4458f6f
+      internalID: 1977690472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char9_5
+      name: Prahl Eyes Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 100
+        y: 100
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dad4ee4119224fa4e80f902ccbc02cdc
-      internalID: -317888702
+      spriteID: f2860d2761f341e4bbc07e8ad1ea1944
+      internalID: 443921119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char9_6
+      name: Prahl Eyes Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a583f56908754fe41b779ef1408e0ab1
+      internalID: 1158241563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prahl Eyes Spritesheet_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 100
+        height: 100
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27a6f7561c108cc49a8194a345d5097e
-      internalID: 140774458
+      spriteID: d3c0b18d0ea99b0499d14340e745de7f
+      internalID: 1680375666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prahl Eyes Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b35046ce46ebda429732deaf721a812
+      internalID: 2109849935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prahl Eyes Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be7eb8f8cda34245bed21492517f499
+      internalID: 901392731
       vertices: []
       indices: 
       edges: []
@@ -254,7 +311,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: fe9997fae5e365f4abe96a5dcb27eb1b
+    spriteID: a62dde7265a6b8b43a4280ead572180f
     internalID: 0
     vertices: []
     indices: 
@@ -264,15 +321,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":3.0},"gridSpriteSize":{"x":100.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      char9_0: 2128328531
-      char9_1: 1634829726
-      char9_2: 1207251621
-      char9_3: -315430484
-      char9_4: -2104599767
-      char9_5: -317888702
-      char9_6: 140774458
+      Prahl Eyes Spritesheet_0: 287815869
+      Prahl Eyes Spritesheet_1: 1815441544
+      Prahl Eyes Spritesheet_2: -1294727668
+      Prahl Eyes Spritesheet_3: 1977690472
+      Prahl Eyes Spritesheet_4: 443921119
+      Prahl Eyes Spritesheet_5: 1158241563
+      Prahl Eyes Spritesheet_6: 1680375666
+      Prahl Eyes Spritesheet_7: 2109849935
+      Prahl Eyes Spritesheet_8: 901392731
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

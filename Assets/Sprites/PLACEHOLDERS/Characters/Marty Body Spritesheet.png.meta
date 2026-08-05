@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 23d93126e94483746bf59fa8dcdeecb2
+guid: 4379ad9281097194d84fe86401380c2b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
@@ -93,269 +93,370 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char3_0
+      name: Marty Body Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7e495080ba20a74fb96fa05a551f628
-      internalID: -1265086409
+      spriteID: a4bd0d3c441529b41a35af5c2d350064
+      internalID: 524749809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_1
+      name: Marty Body Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 400
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74aeff73f0fc5294e92e1e4545f6b6d9
-      internalID: -601124474
+      spriteID: e403ccf92ff129547bd10f160d480719
+      internalID: -382016521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_2
+      name: Marty Body Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 800
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdfa9311904dff845bef3022a43f08d2
-      internalID: 605545905
+      spriteID: 93609cbdfc54a514784d297c0dac06fe
+      internalID: -1938980431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_3
+      name: Marty Body Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 1200
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a5652d53c6295540a5dc5ebd1e027c1
-      internalID: 118136143
+      spriteID: b4d59bcb768342a42931c06f5f261af2
+      internalID: 1675032615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52ffa77b4db50e84191439f5b8c10257
-      internalID: 999962411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: char3_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8094c867e250bd349b6c902a982b0d0f
-      internalID: -1637748286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: char3_6
+      name: Marty Body Spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9848a6e4833c31e43a16b46f5a669f0c
-      internalID: 1932153575
+      spriteID: 572567e80224a204a9123c60c8735757
+      internalID: 2033402455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_7
+      name: Marty Body Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 400
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 949b5c7db0928a842a62f0b237becc65
-      internalID: -256059705
+      spriteID: 62501279f954ae3428e840ca874c64a9
+      internalID: 275710795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_8
+      name: Marty Body Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 800
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e593ee14c84ada459ba9911734229f2
-      internalID: 1464572063
+      spriteID: 039d4a60fdb2f8c47994da42b744a82b
+      internalID: -1485694945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_9
+      name: Marty Body Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1137294d28e5b64f91ec0d5a236d034
+      internalID: 1841783552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marty Body Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39fdbd5ea944ea54ea0106d8160c3fc3
+      internalID: 1233701274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marty Body Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332e126f83384a6499349a44824243eb
+      internalID: 1590744602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marty Body Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620a55a6bb86aab458ff2f0ca226b281
+      internalID: -270946706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marty Body Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396275095e196fa4bbe96b69565de5e3
+      internalID: 191638520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marty Body Spritesheet_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c750aa5bbf6b3b46aef0d11af327871
-      internalID: 1904688376
+      spriteID: 65a8d7d455eba91478f0c01bb7433a8e
+      internalID: 1734230931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_10
+      name: Marty Body Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 32
+        x: 400
         y: 0
-        width: 32
-        height: 32
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59dcd54448ea2ae4eaae4a9842602216
-      internalID: -341629673
+      spriteID: 1d0a611f0c25aa342918da80c2db301e
+      internalID: 575532675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char3_11
+      name: Marty Body Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 64
+        x: 800
         y: 0
-        width: 32
-        height: 32
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2431e63c9c01acd47b871c1be8d7143d
-      internalID: 1771109070
+      spriteID: b9374bec59cca3b45aa4c56007920d6e
+      internalID: -1850463925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Marty Body Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660f58b7819c57b498036c6d53502905
+      internalID: 818273918
       vertices: []
       indices: 
       edges: []
@@ -364,7 +465,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: acbf9ae7b0d25804f9d3dddb27063d19
+    spriteID: fa08302d6654b094bbcdd6a9e83cff34
     internalID: 0
     vertices: []
     indices: 
@@ -374,20 +475,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":400.0,"y":400.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      char3_0: -1265086409
-      char3_1: -601124474
-      char3_10: -341629673
-      char3_11: 1771109070
-      char3_2: 605545905
-      char3_3: 118136143
-      char3_4: 999962411
-      char3_5: -1637748286
-      char3_6: 1932153575
-      char3_7: -256059705
-      char3_8: 1464572063
-      char3_9: 1904688376
+      Marty Body Spritesheet_0: 524749809
+      Marty Body Spritesheet_1: -382016521
+      Marty Body Spritesheet_10: -270946706
+      Marty Body Spritesheet_11: 191638520
+      Marty Body Spritesheet_12: 1734230931
+      Marty Body Spritesheet_13: 575532675
+      Marty Body Spritesheet_14: -1850463925
+      Marty Body Spritesheet_15: 818273918
+      Marty Body Spritesheet_2: -1938980431
+      Marty Body Spritesheet_3: 1675032615
+      Marty Body Spritesheet_4: 2033402455
+      Marty Body Spritesheet_5: 275710795
+      Marty Body Spritesheet_6: -1485694945
+      Marty Body Spritesheet_7: 1841783552
+      Marty Body Spritesheet_8: 1233701274
+      Marty Body Spritesheet_9: 1590744602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

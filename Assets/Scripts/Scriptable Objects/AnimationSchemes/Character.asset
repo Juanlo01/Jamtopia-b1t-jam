@@ -20,13 +20,13 @@ MonoBehaviour:
     - 0.5
     - 0.75
     frames:
-    - index: 32
+    - index: 0
       flipped: 0
-    - index: 33
+    - index: 1
       flipped: 0
-    - index: 34
+    - index: 2
       flipped: 0
-    - index: 35
+    - index: 3
       flipped: 0
     length: 1
   - name: IdleUp
@@ -36,66 +36,6 @@ MonoBehaviour:
     - 0.5
     - 0.75
     frames:
-    - index: 36
-      flipped: 0
-    - index: 37
-      flipped: 0
-    - index: 38
-      flipped: 0
-    - index: 39
-      flipped: 0
-    length: 1
-  - name: IdleLeft
-    times:
-    - 0
-    - 0.25
-    - 0.5
-    - 0.75
-    frames:
-    - index: 40
-      flipped: 0
-    - index: 41
-      flipped: 0
-    - index: 42
-      flipped: 0
-    - index: 43
-      flipped: 0
-    length: 1
-  - name: IdleRight
-    times:
-    - 0
-    - 0.25
-    - 0.5
-    - 0.75
-    frames:
-    - index: 44
-      flipped: 0
-    - index: 45
-      flipped: 0
-    - index: 46
-      flipped: 0
-    - index: 47
-      flipped: 0
-    length: 1
-  - name: WalkDown
-    times:
-    - 0
-    - 0.125
-    - 0.25
-    - 0.375
-    - 0.5
-    - 0.625
-    - 0.75
-    - 0.875
-    frames:
-    - index: 0
-      flipped: 0
-    - index: 1
-      flipped: 0
-    - index: 2
-      flipped: 0
-    - index: 3
-      flipped: 0
     - index: 4
       flipped: 0
     - index: 5
@@ -105,16 +45,12 @@ MonoBehaviour:
     - index: 7
       flipped: 0
     length: 1
-  - name: WalkUp
+  - name: IdleLeft
     times:
     - 0
-    - 0.125
     - 0.25
-    - 0.375
     - 0.5
-    - 0.625
     - 0.75
-    - 0.875
     frames:
     - index: 8
       flipped: 0
@@ -124,6 +60,14 @@ MonoBehaviour:
       flipped: 0
     - index: 11
       flipped: 0
+    length: 1
+  - name: IdleRight
+    times:
+    - 0
+    - 0.25
+    - 0.5
+    - 0.75
+    frames:
     - index: 12
       flipped: 0
     - index: 13
@@ -131,61 +75,5 @@ MonoBehaviour:
     - index: 14
       flipped: 0
     - index: 15
-      flipped: 0
-    length: 1
-  - name: WalkLeft
-    times:
-    - 0
-    - 0.125
-    - 0.25
-    - 0.375
-    - 0.5
-    - 0.625
-    - 0.75
-    - 0.875
-    frames:
-    - index: 16
-      flipped: 0
-    - index: 17
-      flipped: 0
-    - index: 18
-      flipped: 0
-    - index: 19
-      flipped: 0
-    - index: 20
-      flipped: 0
-    - index: 21
-      flipped: 0
-    - index: 22
-      flipped: 0
-    - index: 23
-      flipped: 0
-    length: 1
-  - name: WalkRight
-    times:
-    - 0
-    - 0.125
-    - 0.25
-    - 0.375
-    - 0.5
-    - 0.625
-    - 0.75
-    - 0.875
-    frames:
-    - index: 24
-      flipped: 0
-    - index: 25
-      flipped: 0
-    - index: 26
-      flipped: 0
-    - index: 27
-      flipped: 0
-    - index: 28
-      flipped: 0
-    - index: 29
-      flipped: 0
-    - index: 30
-      flipped: 0
-    - index: 31
       flipped: 0
     length: 1
