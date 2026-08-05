@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a187d72060e2cde42a6cb5c9698fbd70
+guid: 821069cd44b317044b32b4d12787b16f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
@@ -93,269 +93,370 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pokewbMal_0
+      name: Prahl Body Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 32
-        height: 32
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ee7fcc339b0b3f4f8cadaf20704a5d2
-      internalID: -1615718531
+      spriteID: ffd8c61017de6ce448a171e863eb4efe
+      internalID: 190112048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokewbMal_1
+      name: Prahl Body Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 400
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6978508e2f1199d4580f4c64dfbac858
-      internalID: -1321663272
+      spriteID: e91e10d9b8145c74db98e4b35d99b6df
+      internalID: 1501544145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokewbMal_2
+      name: Prahl Body Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 800
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f01c39421a066044293946c5b328aa54
-      internalID: -1046513933
+      spriteID: 66984e430e02db24b85b222c1550ac74
+      internalID: 265652744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokewbMal_3
+      name: Prahl Body Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 1200
+        y: 1200
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 312e954da46b65142afc183bc6c13d6f
-      internalID: -1806052589
+      spriteID: ca2f986d590e85c4a9c961eab6c9eea7
+      internalID: 1765742120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokewbMal_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff773b45030b88f408e1ebea6ab840b9
-      internalID: -1357388515
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pokewbMal_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f44f83c7682ac9844aff7bd0bd1cd6cd
-      internalID: 443914618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pokewbMal_6
+      name: Prahl Body Spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7664f2be9574964086f312826532edb
-      internalID: 562650688
+      spriteID: 988a22b00819f604584611b84823f7ab
+      internalID: -1640398496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokewbMal_7
+      name: Prahl Body Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 400
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ce3515a10d7d3b4ca9eda9e4a1e9f8d
-      internalID: -431766605
+      spriteID: 15ac0ebcda9c8254a8c0e7b0217b719b
+      internalID: 339427488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokewbMal_8
+      name: Prahl Body Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 800
+        y: 800
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11f0246ef26ee124a8303fa1e9c2064c
-      internalID: -1138150434
+      spriteID: 2582393d10a99584db626afd603db6f3
+      internalID: 454805484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokewbMal_9
+      name: Prahl Body Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d70f0d85a3a08f40813a3d56843a3fd
+      internalID: -1557363612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prahl Body Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ac81e868ef28a44805af9a63160522
+      internalID: -117481411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prahl Body Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60732e055cee19a4bbaba8ed97040454
+      internalID: 1203922909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prahl Body Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bde7abf05ea2e84786fce07a64ed28a
+      internalID: -1665575023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prahl Body Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58e59e0026c8f644bcde0a7c328c0f5
+      internalID: -1479620198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prahl Body Spritesheet_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 669dc843b20e06749b4516ef15297fa7
-      internalID: 1928281673
+      spriteID: f35f87551450e124b9b543eb7c085498
+      internalID: -105240102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokewbMal_10
+      name: Prahl Body Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 32
+        x: 400
         y: 0
-        width: 32
-        height: 32
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1da43db8b4a46154bbc96dee5eb3244c
-      internalID: 298616772
+      spriteID: 1d553701c80f8f34a81cb59488288c9d
+      internalID: 1148830819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pokewbMal_11
+      name: Prahl Body Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 64
+        x: 800
         y: 0
-        width: 32
-        height: 32
+        width: 400
+        height: 400
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3883be2db884644fb9a9bae2365a311
-      internalID: -58160441
+      spriteID: 9631ed33700be854c98ccb96fb213418
+      internalID: -1712279807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prahl Body Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2d4654ef247214b9d629da67375c52
+      internalID: 449007359
       vertices: []
       indices: 
       edges: []
@@ -364,7 +465,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 74fc8bfcdb98f2047bf6959b32e2ed50
+    spriteID: 1b4b041cdcf10d94693bfaf782f4f9ac
     internalID: 0
     vertices: []
     indices: 
@@ -374,20 +475,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":400.0,"y":400.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      pokewbMal_0: -1615718531
-      pokewbMal_1: -1321663272
-      pokewbMal_10: 298616772
-      pokewbMal_11: -58160441
-      pokewbMal_2: -1046513933
-      pokewbMal_3: -1806052589
-      pokewbMal_4: -1357388515
-      pokewbMal_5: 443914618
-      pokewbMal_6: 562650688
-      pokewbMal_7: -431766605
-      pokewbMal_8: -1138150434
-      pokewbMal_9: 1928281673
+      Prahl Body Spritesheet_0: 190112048
+      Prahl Body Spritesheet_1: 1501544145
+      Prahl Body Spritesheet_10: -1665575023
+      Prahl Body Spritesheet_11: -1479620198
+      Prahl Body Spritesheet_12: -105240102
+      Prahl Body Spritesheet_13: 1148830819
+      Prahl Body Spritesheet_14: -1712279807
+      Prahl Body Spritesheet_15: 449007359
+      Prahl Body Spritesheet_2: 265652744
+      Prahl Body Spritesheet_3: 1765742120
+      Prahl Body Spritesheet_4: -1640398496
+      Prahl Body Spritesheet_5: 339427488
+      Prahl Body Spritesheet_6: 454805484
+      Prahl Body Spritesheet_7: -1557363612
+      Prahl Body Spritesheet_8: -117481411
+      Prahl Body Spritesheet_9: 1203922909
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

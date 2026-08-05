@@ -5,6 +5,7 @@ Shader "Unlit/BillboardVerticalZDepth"
         _MainTex("Texture", 2D) = "white" {}
         _BaseColor("Color", Color) = (1,1,1,1)
         _Emission("Emission", Range(0.0, 100.0)) = 5.0
+        [Toggle] _EnableBillboard("Enable Billboarding", Float) = 1
         [Toggle] _EnableWobble("Enable Wobble Shift", Float) = 0
         _WobbleUVScale("Wobble UV Scale", Vector) = (1,1,0,0)
         _WobbleUVOffset("Wobble UV Offset", Vector) = (0,0,0,0)
@@ -51,6 +52,7 @@ Shader "Unlit/BillboardVerticalZDepth"
             float4 _BaseColor;
             float4 _MainTex_ST;
             float _Emission;
+            float _EnableBillboard;
             float _EnableWobble;
             float4 _WobbleUVScale;
             float4 _WobbleUVOffset;
@@ -75,33 +77,36 @@ Shader "Unlit/BillboardVerticalZDepth"
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv.xy;
 
-                // billboard mesh towards camera
-                float3 vpos = mul((float3x3)unity_ObjectToWorld, v.vertex.xyz);
-                float4 worldCoord = float4(unity_ObjectToWorld._m03, unity_ObjectToWorld._m13, unity_ObjectToWorld._m23, 1);
-                float4 viewPos = mul(UNITY_MATRIX_V, worldCoord) + float4(vpos, 0);
+                if (_EnableBillboard > 0.5)
+                {
+                    // billboard mesh towards camera
+                    float3 vpos = mul((float3x3)unity_ObjectToWorld, v.vertex.xyz);
+                    float4 worldCoord = float4(unity_ObjectToWorld._m03, unity_ObjectToWorld._m13, unity_ObjectToWorld._m23, 1);
+                    float4 viewPos = mul(UNITY_MATRIX_V, worldCoord) + float4(vpos, 0);
 
-                o.pos = mul(UNITY_MATRIX_P, viewPos);
+                    o.pos = mul(UNITY_MATRIX_P, viewPos);
 
-                // calculate distance to vertical billboard plane seen at this vertex's screen position
-                float3 planeNormal = normalize(float3(UNITY_MATRIX_V._m20, 0.0, UNITY_MATRIX_V._m22));
-                float3 planePoint = unity_ObjectToWorld._m03_m13_m23;
-                float3 rayStart = _WorldSpaceCameraPos.xyz;
-                float3 rayDir = -normalize(mul(UNITY_MATRIX_I_V, float4(viewPos.xyz, 1.0)).xyz - rayStart); // convert view to world, minus camera pos
-                float dist = rayPlaneIntersection(rayDir, rayStart, planeNormal, planePoint);
+                    // calculate distance to vertical billboard plane seen at this vertex's screen position
+                    float3 planeNormal = normalize(float3(UNITY_MATRIX_V._m20, 0.0, UNITY_MATRIX_V._m22));
+                    float3 planePoint = unity_ObjectToWorld._m03_m13_m23;
+                    float3 rayStart = _WorldSpaceCameraPos.xyz;
+                    float3 rayDir = -normalize(mul(UNITY_MATRIX_I_V, float4(viewPos.xyz, 1.0)).xyz - rayStart); // convert view to world, minus camera pos
+                    float dist = rayPlaneIntersection(rayDir, rayStart, planeNormal, planePoint);
 
-                // calculate the clip space z for vertical plane
-                float4 planeOutPos = mul(UNITY_MATRIX_VP, float4(rayStart + rayDir * dist, 1.0));
-                float newPosZ = planeOutPos.z / planeOutPos.w * o.pos.w;
+                    // calculate the clip space z for vertical plane
+                    float4 planeOutPos = mul(UNITY_MATRIX_VP, float4(rayStart + rayDir * dist, 1.0));
+                    float newPosZ = planeOutPos.z / planeOutPos.w * o.pos.w;
 
-                // use the closest clip space z
-                #if defined(UNITY_REVERSED_Z)
-                o.pos.z = max(o.pos.z, newPosZ);
-                #else
-                o.pos.z = min(o.pos.z, newPosZ);
-                #endif
+                    // use the closest clip space z
+                    #if defined(UNITY_REVERSED_Z)
+                    o.pos.z = max(o.pos.z, newPosZ);
+                    #else
+                    o.pos.z = min(o.pos.z, newPosZ);
+                    #endif
+                }
 
                 UNITY_TRANSFER_FOG(o,o.pos);
-                
+
                 return o;
             }
 

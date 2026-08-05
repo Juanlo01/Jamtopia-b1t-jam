@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 358627851}
   - component: {fileID: 358627850}
   m_Layer: 0
-  m_Name: Marty
+  m_Name: Gray (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteAnimator
   spriteRenderer: {fileID: 2029899382}
-  characterSprite: {fileID: 11400000, guid: be011150b35e1b94dbdff3c5de6abe95, type: 2}
+  characterSprite: {fileID: 11400000, guid: 9b8a455681c75394d97f430f9b035d7d, type: 2}
   animationSpeed: 1
   actionState: 0
   dirAngle: 0
@@ -971,7 +971,7 @@ Transform:
   m_GameObject: {fileID: 358627849}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: -4.49, y: 1.14, z: -2.67}
+  m_LocalPosition: {x: -4.49, y: 1, z: -2.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3346,16 +3346,16 @@ MonoBehaviour:
     yPhase: 1
   - state: 0
     direction: 2
-    xOffset: -0.23
-    yOffset: 0.01
+    xOffset: -0.07
+    yOffset: 0.05
     xRange: 0
     yRange: 0.02
     xPhase: 0
     yPhase: 1
   - state: 0
     direction: 3
-    xOffset: 0.23
-    yOffset: -0.01
+    xOffset: 0.29
+    yOffset: 0.05
     xRange: 0
     yRange: 0.02
     xPhase: 0
@@ -6494,7 +6494,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 524749809, guid: 4379ad9281097194d84fe86401380c2b, type: 3}
+  m_Sprite: {fileID: -1749663509, guid: c64ed84c80e00054a84e8082f98c6523, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6547,7 +6547,7 @@ Transform:
   m_GameObject: {fileID: 2136505992}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0.81, z: 0.1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6568,19 +6568,19 @@ MonoBehaviour:
   spriteAnimator: {fileID: 358627851}
   faceRenderer: {fileID: 2136505995}
   playerController: {fileID: 0}
-  downFaceSprite_Open: {fileID: -186866353, guid: d110349a9a0f506418c780237625667a, type: 3}
-  downFaceSprite_Partial: {fileID: -1500132432, guid: d110349a9a0f506418c780237625667a, type: 3}
-  downFaceSprite_Closed: {fileID: -906210457, guid: d110349a9a0f506418c780237625667a, type: 3}
-  leftFaceSprite_Open: {fileID: -400343382, guid: d110349a9a0f506418c780237625667a, type: 3}
-  leftFaceSprite_Partial: {fileID: -633365016, guid: d110349a9a0f506418c780237625667a, type: 3}
-  leftFaceSprite_Closed: {fileID: 873744959, guid: d110349a9a0f506418c780237625667a, type: 3}
-  rightFaceSprite_Open: {fileID: 949319759, guid: d110349a9a0f506418c780237625667a, type: 3}
-  rightFaceSprite_Partial: {fileID: 793619387, guid: d110349a9a0f506418c780237625667a, type: 3}
-  rightFaceSprite_Closed: {fileID: -1491449512, guid: d110349a9a0f506418c780237625667a, type: 3}
+  downFaceSprite_Open: {fileID: 1969883440, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
+  downFaceSprite_Partial: {fileID: 926038570, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
+  downFaceSprite_Closed: {fileID: 372375489, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
+  leftFaceSprite_Open: {fileID: -988566708, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
+  leftFaceSprite_Partial: {fileID: 888480652, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
+  leftFaceSprite_Closed: {fileID: 1590315461, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
+  rightFaceSprite_Open: {fileID: -1013115460, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
+  rightFaceSprite_Partial: {fileID: -518785432, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
+  rightFaceSprite_Closed: {fileID: 1875238162, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
   eyeCloseTime: 0.15
-  minEyeCloseInterval: 0.25
-  maxEyeCloseInterval: 2
-  baseOffset: {x: 0, y: 0.7, z: 0.1}
+  minEyeCloseInterval: 2
+  maxEyeCloseInterval: 6
+  baseOffset: {x: 0, y: 0.81, z: 0.1}
   offsetSettings:
   - state: 0
     direction: 0
@@ -6608,7 +6608,7 @@ MonoBehaviour:
     yPhase: 1
   - state: 0
     direction: 3
-    xOffset: 0.1
+    xOffset: 0.29
     yOffset: 0.05
     xRange: 0
     yRange: 0.02
@@ -6695,7 +6695,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -186866353, guid: d110349a9a0f506418c780237625667a, type: 3}
+  m_Sprite: {fileID: 1969883440, guid: 495b21fcf33d9f74cbe161698d828424, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
