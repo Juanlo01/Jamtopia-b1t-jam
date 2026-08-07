@@ -9,6 +9,8 @@ public class PlayerController3D : MonoBehaviour{
     [SerializeField] SpriteRenderer spriteRenderer;
     [Tooltip("The face sprite's renderer (eg. FaceAnimator's faceRenderer). Its material's _EnableWobble is kept in sync with the body's.")]
     [SerializeField] SpriteRenderer faceSpriteRenderer;
+    [Tooltip("Plays (looping) while isSleepwalking is true, stops when it's false.")]
+    [SerializeField] ParticleSystem sleepwalkingParticles;
 
     [Header("Sprite Material")]
     [Tooltip("The sprite's currently selected material (eg. BillboardVerticalZDepth). Its _EnableWobble property is toggled via SetWobbleEnabled.")]
@@ -44,9 +46,10 @@ public class PlayerController3D : MonoBehaviour{
         Debug.Log($"[PlayerController3D] horizontal={horizontal}, vertical={vertical}");
         characterController.UpdateMovementAnimation(horizontal, vertical);
 
-        // wobble reflects the sleepwalking state, same as FaceAnimator forcing the eyes shut
+        // wobble & particles reflect the sleepwalking state, same as FaceAnimator forcing the eyes shut
         if(isSleepwalking != wobbleEnabled){
             SetWobbleEnabled(isSleepwalking);
+            SetSleepParticlesPlaying(isSleepwalking);
         }
     }
 
@@ -72,6 +75,20 @@ public class PlayerController3D : MonoBehaviour{
             faceSpriteRenderer.GetPropertyBlock(faceMaterialPropertyBlock);
             faceMaterialPropertyBlock.SetFloat(EnableWobbleID, wobbleEnabled ? 1f : 0f);
             faceSpriteRenderer.SetPropertyBlock(faceMaterialPropertyBlock);
+        }
+    }
+
+    // plays (or stops) the sleepwalking particle effect, forcing it to loop while playing
+    private void SetSleepParticlesPlaying(bool playing){
+        if(sleepwalkingParticles == null) return;
+
+        if(playing){
+            ParticleSystem.MainModule main = sleepwalkingParticles.main;
+            main.loop = true;
+            sleepwalkingParticles.Play();
+        }
+        else{
+            sleepwalkingParticles.Stop();
         }
     }
 
@@ -118,6 +135,7 @@ public class PlayerController3D : MonoBehaviour{
     private void Start(){
         ApplySpriteMaterial();
         SetWobbleEnabled(isSleepwalking);
+        SetSleepParticlesPlaying(isSleepwalking);
     }
 
     // Update is called once per frame
