@@ -7,6 +7,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: BathroomFloor
+    second: {fileID: 2100000, guid: 8230c66aaf8c1ca40afa8db798d627b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BathroomWall
+    second: {fileID: 2100000, guid: d9991be911477d74da8efb3d4e947745, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: DOORKNOB
     second: {fileID: 2100000, guid: 6977c806f8cca3f48bf0a9c3743e7ffa, type: 2}
   - first:
@@ -14,6 +24,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: DOORKNOB.001
     second: {fileID: 2100000, guid: 53393694966385846b6d513cdec06fae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: f2402fac118aecd46903acb366ca3e38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HallWall
+    second: {fileID: 2100000, guid: e6978e39ac3a44f4196937f9a8784d0c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -54,6 +74,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Mirror
     second: {fileID: 2100000, guid: 86c0402207943fe4e822147196a6c301, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Top
+    second: {fileID: 2100000, guid: 299924ca1e5aba74db01db5b69338140, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
