@@ -35,6 +35,7 @@ public class PlayerInteraction3D : MonoBehaviour{
     {
         evidenceCamera.enabled = false;
         isAsleep = false;
+        playerController.isSleepwalking = isAsleep;
         UnityEngine.ColorUtility.TryParseHtmlString("#FFBF00", out awakeMode);
         dither.SetColor("_LightColor", awakeMode);
     }
@@ -69,15 +70,17 @@ public class PlayerInteraction3D : MonoBehaviour{
             {
                 if (UnityEngine.ColorUtility.TryParseHtmlString("#90D5FF", out sleepMode))
                 {
-                dither.SetColor("_LightColor", sleepMode);
+                    dither.SetColor("_LightColor", sleepMode);
                 }
                 isAsleep = true;
+                playerController.isSleepwalking = isAsleep;
             }
             else if (isAsleep){
                 if(UnityEngine.ColorUtility.TryParseHtmlString("#FFBF00", out awakeMode)){
                     dither.SetColor("_LightColor", awakeMode);
                 }
                 isAsleep = false;
+                playerController.isSleepwalking = isAsleep;
             }
         }
     }
