@@ -14,7 +14,7 @@ namespace Yarn.Unity
 
         [SerializeField] string portraitsResourcesPath = "Portraits";
 
-        [SerializeField] float fadeDuration = 0.75f;
+        [SerializeField] float fadeDuration = 0.25f;
 
         private readonly Dictionary<string, Sprite> portraitsByName = new Dictionary<string, Sprite>(System.StringComparer.OrdinalIgnoreCase);
         private string? currentCharacterName;
@@ -96,7 +96,7 @@ namespace Yarn.Unity
             }
             if (characterShadow != null)
             {
-                SetImageAlpha(characterShadow, alpha);
+                SetImageAlpha(characterShadow, alpha * 0.5f);
             }
         }
 

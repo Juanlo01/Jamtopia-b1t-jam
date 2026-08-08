@@ -203,7 +203,7 @@ RectTransform:
   m_GameObject: {fileID: 4072704368179028894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0076537, y: 1.0076537, z: 1.0076537}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8095031002045282786}
@@ -496,7 +496,7 @@ MonoBehaviour:
   characterSprite: {fileID: 575151569639635943}
   characterShadow: {fileID: 5850568045424676157}
   portraitsResourcesPath: Portraits
-  fadeDuration: 0.75
+  fadeDuration: 0.25
 --- !u!114 &-8630891068867260981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1745,17 +1745,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9217345828028359467}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6483.121}
-  m_LocalScale: {x: 1.1285721, y: 1.1285721, z: 1.1285721}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.21, y: 1.21, z: 1.21}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8095031002045282786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1433.778, y: -3746.3323}
-  m_SizeDelta: {x: -1056, y: -216}
-  m_Pivot: {x: -0.05, y: -0.62}
+  m_AnchorMax: {x: 0.45, y: 0.8}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -1.1368684e-13, y: 0}
+  m_Pivot: {x: 0.51, y: 0.5}
 --- !u!222 &8021716380109126705
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1777,7 +1777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.49019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
