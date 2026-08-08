@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using Yarn.Unity;
 using System.Collections;
 
-public class InteractableEvidence : MonoBehaviour, IInteractable3D{
+public class InteractableBrush : MonoBehaviour, IInteractable3D{
     [SerializeField] private DialogueRunner dialogueRunner;
     [SerializeField] private string dialogueNode = "Start";
     [SerializeField] private InputAction press, screenPos;
