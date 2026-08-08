@@ -3,7 +3,147 @@ guid: 1d04b0cae3efdc8408dc4bbda38544d2
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BLINDS
+    second: {fileID: 2100000, guid: ea1d6cfe576a36b469f2fcffb84c8d44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BathroomFloor
+    second: {fileID: 2100000, guid: ee0437687b4ecd24d937858771b40b69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BathroomWall
+    second: {fileID: 2100000, guid: 1167f7c4187c50c44a3be6aeef3e7184, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COFBLACK
+    second: {fileID: 2100000, guid: 521ba93441e393b408ce9b1d835ef217, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COFFEE
+    second: {fileID: 2100000, guid: 86f0498d0b91ee34b933c07abb09cebd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COUNTER
+    second: {fileID: 2100000, guid: b4320bad8a1fe424ea36f9dfdf045741, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DOORKNOB
+    second: {fileID: 2100000, guid: fa8a0e30905ddef468f05b9bfa628911, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FRIDGE
+    second: {fileID: 2100000, guid: ecebe537f76f4424996f92455e7e9298, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: c022d14858aa9744e9a1439f16e6489c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HANDLE
+    second: {fileID: 2100000, guid: 4b050c18c76bc464abb4cfcd60c4c740, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HANDLE.002
+    second: {fileID: 2100000, guid: 79a8d809b28b2194fb6b6348485a0915, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HANDLE.003
+    second: {fileID: 2100000, guid: 6663a0a91ce021644bb05970d9653ec4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HANDLE.004
+    second: {fileID: 2100000, guid: b1d2f34c9525eda4db7af96f3a6a01c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HANDLE.005
+    second: {fileID: 2100000, guid: d238b2b493ce97249a592deae680e33c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HANDLE.006
+    second: {fileID: 2100000, guid: 2b1932acda2cdc14b80d7cfe1afe14fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HANDLE.007
+    second: {fileID: 2100000, guid: f431cfc8414a1624582713815992777f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HallWall
+    second: {fileID: 2100000, guid: ee7dc45eae47ce14e9a9f06d9299a981, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MICRO
+    second: {fileID: 2100000, guid: 4a70c53d84aa1664f865c5f07fd200a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MICRPANEL
+    second: {fileID: 2100000, guid: 2f902401f71567545a13d25d22e6ad29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: e44cb708f0a04d349ae340edebf5ee80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: d15b27001c6c70d41a9c6ca28074639e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: e007426c2defc3a4c9da667b48695170, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SCREEN
+    second: {fileID: 2100000, guid: 600d184460adde040ab5ed678c417d1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: STATDOORFRAME
+    second: {fileID: 2100000, guid: 04104ab66bbe06e48a13721535d0293e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: STATDOORPANEL
+    second: {fileID: 2100000, guid: 443ea6d1588e5f94182eed2d37249d58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: STOVE
+    second: {fileID: 2100000, guid: 4a26127ed1d47fe45bea8d4116ec4888, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TABLE
+    second: {fileID: 2100000, guid: 7d0f1a2827658544cb09178950bbc895, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Top
+    second: {fileID: 2100000, guid: 548cfbac3520408488e9a3a178de3ca3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
