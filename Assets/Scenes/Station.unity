@@ -6027,8 +6027,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6272513846575374887, guid: 627d37ca061b7c24a8d521874f94a09b, type: 3}
       propertyPath: dialogueRunner
-      value: 
-      objectReference: {fileID: 4910618717255568160, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
+      value:
+      objectReference: {fileID: 6129828901}
     - target: {fileID: 8541419301897650675, guid: 627d37ca061b7c24a8d521874f94a09b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.76
@@ -6432,6 +6432,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
+--- !u!114 &6129828901 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4910618717255568160, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
+  m_PrefabInstance: {fileID: 1178782776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &1183875409
 GameObject:
   m_ObjectHideFlags: 0
