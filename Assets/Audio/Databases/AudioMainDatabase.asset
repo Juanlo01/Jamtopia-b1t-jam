@@ -20,7 +20,7 @@ MonoBehaviour:
         Data2: 1135529402
         Data3: 948913792
         Data4: -562048361
-      Path: event:/MusicTest
+      Path: event:/Tests/MusicTest
     category: 0
   - id: sfx.test
     eventReference:
@@ -29,5 +29,5 @@ MonoBehaviour:
         Data2: 1102194841
         Data3: -1308993893
         Data4: 2054535182
-      Path: event:/SFXOneShotTest
+      Path: event:/Tests/SFXOneShotTest
     category: 1
