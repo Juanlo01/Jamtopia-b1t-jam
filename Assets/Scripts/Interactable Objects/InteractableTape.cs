@@ -141,6 +141,10 @@ public class InteractableTape : MonoBehaviour, IInteractable3D{
         if (rb != null) rb.useGravity = true;
     }
 
+    void StopDragging()
+    { 
+        isDragging = false;
+    }
 
 
     public void OnTriggerEnter(Collider collider)
