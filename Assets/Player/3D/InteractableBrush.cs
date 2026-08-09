@@ -97,6 +97,12 @@ public class InteractableBrush : MonoBehaviour, IInteractable3D{
     if (rb != null) rb.useGravity = true;
 }
 
+    void StopDragging()
+    { 
+        isDragging = false;
+    }
+
+
     // interact(), for any class interfacing IInteractable3D
     public void Interact(PlayerController3D interactingPlayer, System.Action onInteractionEnd){
         this.interactingPlayer = interactingPlayer;
