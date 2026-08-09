@@ -217,8 +217,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
-  m_sharedMaterial: {fileID: 3736803364359798006, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4f8a067c71c0cf24aadd7013fb8e90da, type: 2}
+  m_sharedMaterial: {fileID: 8495817301780114320, guid: 4f8a067c71c0cf24aadd7013fb8e90da, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -474,10 +474,10 @@ MonoBehaviour:
   selectionImage: {fileID: 721144572235377823}
   normal:
     sprite: {fileID: 0}
-    colour: {r: 1, g: 1, b: 1, a: 1}
+    colour: {r: 0, g: 0, b: 0, a: 1}
   selected:
     sprite: {fileID: 21300000, guid: 997a4571b48144fd7be9c547b769c11d, type: 3}
-    colour: {r: 0, g: 0, b: 0, a: 1}
+    colour: {r: 1, g: 1, b: 1, a: 1}
   disabled:
     sprite: {fileID: 0}
     colour: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -496,6 +496,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Yarn.Unity.BoxedOptionItem
   optionItem: {fileID: 2576261519635394347}
   boxImage: {fileID: 56614174357966607}
-  inactiveColour: {r: 0, g: 0, b: 0, a: 0}
-  selectedColour: {r: 1, g: 1, b: 1, a: 1}
-  disabledColour: {r: 0, g: 0, b: 0, a: 0}
+  inactiveColour: {r: 1, g: 1, b: 1, a: 0}
+  selectedColour: {r: 0, g: 0, b: 0, a: 1}
+  disabledColour: {r: 1, g: 1, b: 1, a: 0}
