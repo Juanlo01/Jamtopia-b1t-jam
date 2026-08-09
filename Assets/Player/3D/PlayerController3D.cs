@@ -5,10 +5,12 @@ public class PlayerController3D : MonoBehaviour{
 
     [Header("Player Component References")]
     [SerializeField] Rigidbody rb;
-    [SerializeField] SpriteAnimator spriteAnimator;
+    [SerializeField] CharacterController3D characterController;
     [SerializeField] SpriteRenderer spriteRenderer;
     [Tooltip("The face sprite's renderer (eg. FaceAnimator's faceRenderer). Its material's _EnableWobble is kept in sync with the body's.")]
     [SerializeField] SpriteRenderer faceSpriteRenderer;
+    [Tooltip("Plays (looping) while isSleepwalking is true, stops when it's false.")]
+    [SerializeField] ParticleSystem sleepwalkingParticles;
 
     [Header("Sprite Material")]
     [Tooltip("The sprite's currently selected material (eg. BillboardVerticalZDepth). Its _EnableWobble property is toggled via SetWobbleEnabled.")]
@@ -29,8 +31,6 @@ public class PlayerController3D : MonoBehaviour{
 
     private float horizontal;
     private float vertical;
-    private float lastHorizontal;
-    private float lastVertical;
     private bool movementFrozen;
     private bool wobbleEnabled; // defaults false
     private MaterialPropertyBlock materialPropertyBlock;
@@ -43,23 +43,15 @@ public class PlayerController3D : MonoBehaviour{
         Vector3 velocity = rb.linearVelocity;
         rb.linearVelocity = new Vector3(horizontal * speed, velocity.y, vertical * speed);
 
-        // save the user's last horizontal & vertical movement for registering the character's direction
-        bool isMoving = horizontal != 0f || vertical != 0f;
-        if(isMoving){
-            lastHorizontal = horizontal;
-            lastVertical = vertical;
-        }
+        Debug.Log($"[PlayerController3D] horizontal={horizontal}, vertical={vertical}");
+        characterController.UpdateMovementAnimation(horizontal, vertical);
 
-        Debug.Log($"[PlayerController3D] horizontal={horizontal}, vertical={vertical}, isMoving={isMoving}");
-        spriteAnimator.SetActionState(isMoving ? SpriteAnimator.ActionState.Walk : SpriteAnimator.ActionState.Idle, GetDirAngle());
-
-        // wobble reflects the sleepwalking state, same as FaceAnimator forcing the eyes shut
+        // wobble & particles reflect the sleepwalking state, same as FaceAnimator forcing the eyes shut
         if(isSleepwalking != wobbleEnabled){
             SetWobbleEnabled(isSleepwalking);
+            SetSleepParticlesPlaying(isSleepwalking);
         }
     }
-
-    public float GetDirAngle() { return Mathf.Atan2(lastVertical, lastHorizontal) * Mathf.Rad2Deg; }
 
     // swaps the sprite's material (eg. for a different sprite look) and re-applies it
     public void SetSelectedMaterial(Material material){
@@ -83,6 +75,20 @@ public class PlayerController3D : MonoBehaviour{
             faceSpriteRenderer.GetPropertyBlock(faceMaterialPropertyBlock);
             faceMaterialPropertyBlock.SetFloat(EnableWobbleID, wobbleEnabled ? 1f : 0f);
             faceSpriteRenderer.SetPropertyBlock(faceMaterialPropertyBlock);
+        }
+    }
+
+    // plays (or stops) the sleepwalking particle effect, forcing it to loop while playing
+    private void SetSleepParticlesPlaying(bool playing){
+        if(sleepwalkingParticles == null) return;
+
+        if(playing){
+            ParticleSystem.MainModule main = sleepwalkingParticles.main;
+            main.loop = true;
+            sleepwalkingParticles.Play();
+        }
+        else{
+            sleepwalkingParticles.Stop();
         }
     }
 
@@ -129,6 +135,7 @@ public class PlayerController3D : MonoBehaviour{
     private void Start(){
         ApplySpriteMaterial();
         SetWobbleEnabled(isSleepwalking);
+        SetSleepParticlesPlaying(isSleepwalking);
     }
 
     // Update is called once per frame
