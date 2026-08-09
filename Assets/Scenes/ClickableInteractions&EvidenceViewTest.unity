@@ -1297,7 +1297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1319113286
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2637,7 +2637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 371392211771088553, guid: 633c564ab5432b548a201226d705be3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.78
+      value: -11.94
       objectReference: {fileID: 0}
     - target: {fileID: 371392211771088553, guid: 633c564ab5432b548a201226d705be3a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2645,7 +2645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 371392211771088553, guid: 633c564ab5432b548a201226d705be3a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.03
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 371392211771088553, guid: 633c564ab5432b548a201226d705be3a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2975,12 +2975,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController3D
   rb: {fileID: 1960820402}
+  spriteAnimator: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  faceSpriteRenderer: {fileID: 0}
+  selectedMaterial: {fileID: 0}
   speed: 5
   jumpingPower: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
   groundCheck: {fileID: 0}
+  isSleepwalking: 0
 --- !u!54 &1960820402
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ public class PlayerInteraction3D : MonoBehaviour{
 
     void Awake()
     {
-        evidenceCamera.enabled = false;
+        //evidenceCamera.enabled = false;
         isAsleep = false;
         playerController.isSleepwalking = isAsleep;
         UnityEngine.ColorUtility.TryParseHtmlString("#FFBF00", out awakeMode);
