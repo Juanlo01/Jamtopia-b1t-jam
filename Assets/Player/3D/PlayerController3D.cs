@@ -67,7 +67,7 @@ public class PlayerController3D : MonoBehaviour{
             materialPropertyBlock ??= new MaterialPropertyBlock();
             spriteRenderer.GetPropertyBlock(materialPropertyBlock);
             materialPropertyBlock.SetFloat(EnableWobbleID, wobbleEnabled ? 1f : 0f);
-            spriteRenderer.SetPropertyBlock(materialPropertyBlock);
+            spriteRenderer.SetPropertyBlock(materialPropertyBlock); 
         }
 
         if(faceSpriteRenderer != null){
