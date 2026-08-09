@@ -26,7 +26,7 @@
 	- A: Victim only applied half a face of makeup, something interrupted her or the makeup was poisonous.
 	- B: Hairbrush on the ground so they must've dropped it with them as they collapsed.
 	- C: She's curled up in the bathroom, where's her phone? Why not crawl out and try to get help? Something didn't let her.
-	- D: Keys left on the bed and makeup left over on the pillow.
+	- ~~D: Keys left on the bed and makeup left over on the pillow.~~
 	- E: Loose nail by the doorframe, scratches by the door handle and hinges look fairly new, something I should take a photo of and have analyzed later. 
 	- F: Door to enter the hotel is clean, no signs of a break-in.
 	- **The Story**: The victim went to sleep after arriving home probably late at night since they were too tired to remove makeup but even more so, too tired to take the keys out of their pocket, they must've slipped out throughout the night. She wasn't applying only half a face of makeup but rather only got to wipe half of it away before whatever killed her. It's doubtful she was brushing her hair and wiping her makeup off at the same time, that must've been something she grabbed later on while falling or maybe she tried to use it as something to slam against the door. Scratches on the door have little to no dirt in them suggesting their brand new scratches, she was trapped on the inside that's when her nail slipped -- likely while scratching the door... the killer was waiting outside of the bathroom but if this all happened in the morning when did the killer enter the hotel room? Did she let them in? No signs of a break in.
