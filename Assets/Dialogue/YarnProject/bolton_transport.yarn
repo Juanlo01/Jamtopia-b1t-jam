@@ -1,0 +1,12 @@
+﻿title: bolton_transport
+---
+
+Bolton: Where are we headed to now?
+
+-> The Station
+    <<load_scene Station>>
+-> The Motel
+    <<load_scene Motel>>
+-> The Green Room
+    <<load_scene Greenroom>>
+===
