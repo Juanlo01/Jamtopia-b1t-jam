@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem; // Allows use of of Input System API
+using Yarn.Unity;
 
 public class PlayerController3D : MonoBehaviour{
 
@@ -7,6 +8,8 @@ public class PlayerController3D : MonoBehaviour{
     [SerializeField] Rigidbody rb;
     [SerializeField] CharacterController3D characterController;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [Tooltip("Used to push $is_asleep into Yarn's variable storage whenever isSleepwalking changes.")]
+    [SerializeField] DialogueRunner dialogueRunner;
     [Tooltip("The face sprite's renderer (eg. FaceAnimator's faceRenderer). Its material's _EnableWobble is kept in sync with the body's.")]
     [SerializeField] SpriteRenderer faceSpriteRenderer;
     [Tooltip("Plays (looping) while isSleepwalking is true, stops when it's false.")]
@@ -50,7 +53,14 @@ public class PlayerController3D : MonoBehaviour{
         if(isSleepwalking != wobbleEnabled){
             SetWobbleEnabled(isSleepwalking);
             SetSleepParticlesPlaying(isSleepwalking);
+            PushIsAsleepVariable();
         }
+    }
+
+    // keeps Yarn's $is_asleep in sync with isSleepwalking, so dialogue can read it
+    private void PushIsAsleepVariable(){
+        if(dialogueRunner == null) return;
+        dialogueRunner.VariableStorage.SetValue("$is_asleep", isSleepwalking);
     }
 
     // swaps the sprite's material (eg. for a different sprite look) and re-applies it
@@ -136,6 +146,7 @@ public class PlayerController3D : MonoBehaviour{
         ApplySpriteMaterial();
         SetWobbleEnabled(isSleepwalking);
         SetSleepParticlesPlaying(isSleepwalking);
+        PushIsAsleepVariable();
     }
 
     // Update is called once per frame
