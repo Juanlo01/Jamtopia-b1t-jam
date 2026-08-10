@@ -23,7 +23,31 @@ public class EvidenceInventory : MonoBehaviour
     [Header("Evidence Data")]
     [SerializeField] private List<EvidenceData> evidenceList = new List<EvidenceData>();
 
-    void Start()
+    // [YarnCommand] on an *instance* method makes Yarn Spinner treat the command's first argument as
+    // the name of a GameObject to find this component on (which is why calls used to need a stray
+    // "UIDocument" token up front). Static commands skip that target lookup entirely, so the commands
+    // below are static and forward to the one live instance -- same approach as SceneManager.TransitionTo.
+    private static EvidenceInventory instance;
+
+    private void Awake()
+    {
+        instance = this;
+
+        // populated here rather than in Start() because SceneManager.Start() kicks off the Initialize
+        // node (which calls changeEvidenceStatus); Start() ordering between the two isn't guaranteed,
+        // but every Awake() runs before any Start(), so the list is always ready in time.
+        EnsureEvidenceList();
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this)
+        {
+            instance = null;
+        }
+    }
+
+    private void EnsureEvidenceList()
     {
         // Populate default motel evidence if the list is empty in Inspector
         if (evidenceList.Count == 0)
@@ -39,13 +63,39 @@ public class EvidenceInventory : MonoBehaviour
             evidenceList.Add(new EvidenceData { id = "greenroomVent", entry = 4 });
             evidenceList.Add(new EvidenceData { id = "greenroomInstruments", entry = 5 });
         }
+    }
 
+    void Start()
+    {
         // Display initial statuses (e.g., "Undiscovered") on game start
         InitializeUI();
     }
 
     [YarnCommand("writeToNotepad")]
-    public void writeToNotepad(string id, string title, string description)
+    public static void writeToNotepad(string id, string title, string description)
+    {
+        if (instance == null)
+        {
+            Debug.LogWarning($"[EvidenceInventory] no instance in the scene to write '{id}' to the notepad with.");
+            return;
+        }
+
+        instance.WriteToNotepadInternal(id, title, description);
+    }
+
+    [YarnCommand("changeEvidenceStatus")]
+    public static void changeEvidenceStatus(string id, string collected)
+    {
+        if (instance == null)
+        {
+            Debug.LogWarning($"[EvidenceInventory] no instance in the scene to change status of '{id}' with.");
+            return;
+        }
+
+        instance.ChangeEvidenceStatusInternal(id, collected);
+    }
+
+    private void WriteToNotepadInternal(string id, string title, string description)
     {
         EvidenceData item = evidenceList.Find(x => x.id == id);
 
@@ -62,8 +112,7 @@ public class EvidenceInventory : MonoBehaviour
         }
     }
 
-    [YarnCommand("changeEvidenceStatus")]
-    public void changeEvidenceStatus(string id, string collected)
+    private void ChangeEvidenceStatusInternal(string id, string collected)
     {
         EvidenceData item = evidenceList.Find(x => x.id == id);
 

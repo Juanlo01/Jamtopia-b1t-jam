@@ -100,7 +100,7 @@ title: Bradshaw_MotelDone
 //setting: forensics lab with bradshaw
 ---
 // NEEDS DIALOGUE: Bradshaw hands off completed motel evidence report
-<<changeEvidenceStatus("motel", "complete")>>
+<<changeEvidenceStatus motel complete>>
 <<set $bradshaw_motel_done_shown = true>>
 ===
 
@@ -108,7 +108,7 @@ title: Bradshaw_GreenroomDone
 //setting: forensics lab with bradshaw
 ---
 // NEEDS DIALOGUE: Bradshaw hands off completed greenroom evidence report
-<<changeEvidenceStatus("greenroom", "complete")>>
+<<changeEvidenceStatus greenroom complete>>
 <<set $bradshaw_greenroom_done_shown = true>>
 ===
 
@@ -116,6 +116,6 @@ title: Bradshaw_BothDone
 //setting: forensics lab with bradshaw
 ---
 // NEEDS DIALOGUE???
-<<changeEvidenceStatus("motel", "complete")>>
-<<changeEvidenceStatus("greenroom", "complete")>>
+<<changeEvidenceStatus motel complete>>
+<<changeEvidenceStatus greenroom complete>>
 ===

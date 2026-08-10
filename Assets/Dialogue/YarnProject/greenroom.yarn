@@ -31,7 +31,7 @@ title: greenroomInteractSaxophone
         <<collectEvidence("greenroomSaxophone")>>
         <<set $greenroom_saxophone_collected = true>>
         <<set $greenroom_evidence = $greenroom_evidence + 1>>
-        <<writeToNotepad("greenroomSaxophone","Saxophone","Saxophone has a dent in it that appears consistent with bludgeoning. Was it grabbed out of convenience? Suggests it was closest to the victim maybe?")>>
+        <<writeToNotepad greenroomSaxophone "Saxophone" "Saxophone has a dent in it that appears consistent with bludgeoning. Was it grabbed out of convenience? Suggests it was closest to the victim maybe?">>
     <<endif>>
 <<endif>>
 ===
@@ -48,7 +48,7 @@ title: greenroomInteractSaxophonePlayer
         <<collectEvidence("greenroomSaxophonePlayer")>>
         <<set $greenroom_saxophoneplayer_collected = true>>
         <<set $greenroom_evidence = $greenroom_evidence + 1>>
-        <<writeToNotepad("greenroomSaxophonePlayer","The Victim","Looks like their mouth was hit by something blunt. Their body position is interesting? Looks like they're reaching towards the vent.")>>
+        <<writeToNotepad greenroomSaxophonePlayer "The Victim" "Looks like their mouth was hit by something blunt. Their body position is interesting? Looks like they're reaching towards the vent.">>
     <<endif>>
 <<endif>>
 ===
@@ -64,7 +64,7 @@ title: greenroomInteractIceBucket
 
         <<set $greenroom_icebucket_observed = true>>
         <<set $greenroom_evidence = $greenroom_evidence + 1>>
-        <<writeToNotepad UIDocument "greenroomIceBucket","Ice Bucket","Ice has barely began to melt, this must've just happened. Likely suspects are anyone that had access to this room in the past hour.">>
+        <<writeToNotepad greenroomIceBucket "Ice Bucket" "Ice has barely began to melt, this must've just happened. Likely suspects are anyone that had access to this room in the past hour.">>
     //<<endif>>
 //<<endif>>
 ===
@@ -85,7 +85,7 @@ title: greenroomInteractVent
         <<collectEvidence("greenroomVent")>>
         <<set $greenroom_vent_collected = true>>
         <<set $greenroom_evidence = $greenroom_evidence + 1>>
-        <<writeToNotepad("greenroomVent","Hidden Keys","Keys were deliberately put out of reach of the victim, but the door was locked when we got here. I suspect the killer had a pair of keys of their own to lock the door.")>>
+        <<writeToNotepad greenroomVent "Hidden Keys" "Keys were deliberately put out of reach of the victim, but the door was locked when we got here. I suspect the killer had a pair of keys of their own to lock the door.">>
     <<endif>>
 <<endif>>
 ===
@@ -102,7 +102,7 @@ title: greenroomInteractInstruments
         <<collectEvidence("greenroomInstruments")>>
         <<set $greenroom_instruments_collected = true>>
         <<set $greenroom_evidence = $greenroom_evidence + 1>>
-        <<writeToNotepad("greenroomInstruments","Matching Musicians","My hunch is this was done by a fellow musician, I think it's best to have all their fingerprints at our disposal.")>>
+        <<writeToNotepad greenroomInstruments "Matching Musicians" "My hunch is this was done by a fellow musician, I think it's best to have all their fingerprints at our disposal.">>
     <<endif>>
 <<endif>>
 ===

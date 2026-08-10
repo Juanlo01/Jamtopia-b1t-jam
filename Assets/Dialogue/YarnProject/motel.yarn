@@ -29,7 +29,7 @@ title: motelInteractFrontDoor
     //<<if $motel_frontdoor_observed == false>>
         <<set $motel_frontdoor_observed = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad UIDocument "motelFrontDoor","Front Door","No signs of a break-in, it's likely someone she knew?">>
+        <<writeToNotepad motelFrontDoor "Front Door" "No signs of a break-in, it's likely someone she knew?">>
     //<<endif>>
 //<<endif>>
 ===
@@ -44,7 +44,7 @@ title: motelInteractDroppedNail
 
         <<set $motel_nail_collected = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad UIDocument "motelDroppedNail","Acrylic Nail","Her nail broke off violently, she aggressively clawed at the door. Something or someone kept her inside while she died.">>
+        <<writeToNotepad motelDroppedNail "Acrylic Nail" "Her nail broke off violently, she aggressively clawed at the door. Something or someone kept her inside while she died.">>
     //<<endif>>
 //<<endif>>
 ===
@@ -59,7 +59,7 @@ title: motelInteractDeadWoman
 
         <<set $motel_woman_observed = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad UIDocument "motelDeadWoman","The Victim","She only has half a face of makeup, not because she only got to apply half but because she only got through removing half.">>
+        <<writeToNotepad motelDeadWoman "The Victim" "She only has half a face of makeup, not because she only got to apply half but because she only got through removing half.">>
     //<<endif>>
 //<<endif>>
 ===
@@ -72,7 +72,7 @@ title: motelInteractHairbrush
 
         <<set $motel_hairbrush_collected = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad UIDocument "motelHairbrush","Hairbrush","Hairbrush was on the ground but she wasn't brushing her hair? She must've reached for it while collapsing, this was very abrupt.">>
+        <<writeToNotepad motelHairbrush "Hairbrush" "Hairbrush was on the ground but she wasn't brushing her hair? She must've reached for it while collapsing, this was very abrupt.">>
     //<<endif>>
 //<<endif>>
 ===
@@ -85,7 +85,7 @@ title: motelInteractMakeupWipes
 
         <<set $motel_makeupwipes_observed = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad UIDocument "motelMakeupWipes","Makeup Wipes","I suspect these have the poison, I overhead Gray wanting to bag the makeup but they'll find no poison there.">>
+        <<writeToNotepad motelMakeupWipes "Makeup Wipes" "I suspect these have the poison, I overhead Gray wanting to bag the makeup but they'll find no poison there.">>
     //<<endif>>
 //<<endif>>
 ===

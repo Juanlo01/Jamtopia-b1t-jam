@@ -25,11 +25,11 @@ title: Initialize
 <<declare $motel_hairbrush_collected = false>>
 <<declare $motel_makeupwipes_observed = false>>
 
-<<changeEvidenceStatus("motelFrontDoor", "undiscovered")>>
-<<changeEvidenceStatus("motelDeadWoman", "undiscovered")>>
-<<changeEvidenceStatus("motelDroppedNail", "undiscovered")>>
-<<changeEvidenceStatus("motelHairbrush", "undiscovered")>>
-<<changeEvidenceStatus("motelMakeupWipes", "undiscovered")>>
+<<changeEvidenceStatus motelFrontDoor undiscovered>>
+<<changeEvidenceStatus motelDeadWoman undiscovered>>
+<<changeEvidenceStatus motelDroppedNail undiscovered>>
+<<changeEvidenceStatus motelHairbrush undiscovered>>
+<<changeEvidenceStatus motelMakeupWipes undiscovered>>
 
 // greenroom
 
@@ -43,11 +43,11 @@ title: Initialize
 <<declare $greenroom_vent_collected = false>>
 <<declare $greenroom_instruments_collected = false>>
 
-<<changeEvidenceStatus("greenroomSaxophone", "undiscovered")>>
-<<changeEvidenceStatus("greenroomSaxophonePlayer", "undiscovered")>>
-<<changeEvidenceStatus("greenroomIceBucket", "undiscovered")>>
-<<changeEvidenceStatus("greenroomVent", "undiscovered")>>
-<<changeEvidenceStatus("greenroomInstruments", "undiscovered")>>
+<<changeEvidenceStatus greenroomSaxophone undiscovered>>
+<<changeEvidenceStatus greenroomSaxophonePlayer undiscovered>>
+<<changeEvidenceStatus greenroomIceBucket undiscovered>>
+<<changeEvidenceStatus greenroomVent undiscovered>>
+<<changeEvidenceStatus greenroomInstruments undiscovered>>
 
 // gray
 
