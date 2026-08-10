@@ -13,21 +13,93 @@ MonoBehaviour:
   m_Name: AudioMainDatabase
   m_EditorClassIdentifier: Assembly-CSharp::SimpleAudioSystem.AudioDatabase
   entries:
-  - id: music.test
+  - id: mus.jazzbar
     eventReference:
       Guid:
-        Data1: 1516588807
-        Data2: 1135529402
-        Data3: 948913792
-        Data4: -562048361
-      Path: event:/MusicTest
+        Data1: 408270218
+        Data2: 1118488309
+        Data3: 1826459583
+        Data4: -1086125929
+      Path: event:/Music/Mus_JazzBar
     category: 0
-  - id: sfx.test
+  - id: mus.motel
     eventReference:
       Guid:
-        Data1: -2065105674
-        Data2: 1102194841
-        Data3: -1308993893
-        Data4: 2054535182
-      Path: event:/SFXOneShotTest
+        Data1: 158862668
+        Data2: 1094945261
+        Data3: 47071906
+        Data4: 1856438649
+      Path: event:/Music/Mus_Motel
+    category: 0
+  - id: mus.mainmenu
+    eventReference:
+      Guid:
+        Data1: -2082232010
+        Data2: 1113635867
+        Data3: -1909562496
+        Data4: 1376666566
+      Path: event:/Music/Mus_MainMenu
+    category: 0
+  - id: mus.breakroom
+    eventReference:
+      Guid:
+        Data1: 254201004
+        Data2: 1246076956
+        Data3: -1296901488
+        Data4: 567777195
+      Path: event:/Music/Mus_BreakRoom
+    category: 0
+  - id: mus.minigame
+    eventReference:
+      Guid:
+        Data1: -466885084
+        Data2: 1223720453
+        Data3: -345830782
+        Data4: 1815268687
+      Path: event:/Music/Mus_MiniGame
+    category: 0
+  - id: sfx.windowbreak
+    eventReference:
+      Guid:
+        Data1: -1101256167
+        Data2: 1149989756
+        Data3: 1275685541
+        Data4: 389677618
+      Path: event:/SFX/SFX_WindowBreak
+    category: 1
+  - id: sfx.doorkick
+    eventReference:
+      Guid:
+        Data1: 1509210646
+        Data2: 1226738698
+        Data3: -106753622
+        Data4: 818463996
+      Path: event:/SFX/SFX_DoorKick
+    category: 1
+  - id: sfx.player.walking
+    eventReference:
+      Guid:
+        Data1: 1465735777
+        Data2: 1326345479
+        Data3: -497103227
+        Data4: -2018172661
+      Path: event:/SFX/SFX_Player_Walking
+    category: 1
+  - id: ui.button.click
+    eventReference:
+      Guid:
+        Data1: -1786716787
+        Data2: 1263032986
+        Data3: 1330170036
+        Data4: -1523684397
+      Path: event:/UI/UI_Button_Click
+    category: 1
+  - id: ui.button.hover
+    eventReference:
+      Guid:
+        Data1: -1863753416
+        Data2: 1262105429
+        Data3: 290968997
+        Data4: 1879751747
+      Path: event:/UI/UI_Button_Hover
     category: 1

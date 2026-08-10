@@ -6,6 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< ours
+    path: Assets/Scenes/TestScenes/LiftingPrintsTest.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+=======
     path: Assets/Scenes/policeDepartment.unity
     guid: d17f502dbf4af7d43874c73feedfd4fc
   - enabled: 1
@@ -17,6 +21,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LossScreen.unity
     guid: a929b38be033233478210568658975de
+>>>>>>> theirs
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
