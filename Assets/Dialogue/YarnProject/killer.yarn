@@ -1,0 +1,74 @@
+// killer.yarn
+
+title: KillerConfession
+//setting: interrogation_room
+---
+Bolton: We found your prints on the saxophone.
+
+Bolton: There's already enough evidence to put you away for a long time.
+
+Bolton: I suggest you tell us what happened.
+
+Killer: ...I caught them together. Her and him. I thought she was staying late for rehearsal.
+
+Bolton: Him being the saxophone player.
+
+Killer: Was. Yeah.
+
+Killer: I didn't go there to do anything. I just wanted to see her.
+
+Bolton: But you did do something. Eventually.
+
+Killer: Not that night. I just left.
+
+Killer: I kept thinking about it. Couldn't sleep. Couldn't play. Just kept seeing them.
+
+Bolton: The makeup wipes.
+
+Killer: ...
+
+Bolton: How'd you get the poison into her makeup wipes?
+
+Killer: Does it matter?
+
+Bolton: It does.
+
+Killer: ...I know a guy. That's all I'll say about that.
+
+Bolton: And the saxophone player?
+
+Killer: He didn't even feel bad about it. I could tell. Just kept showing up to rehearsal like nothing happened.
+
+Killer: Told him I wanted to celebrate with him after the show.
+
+Bolton: And after the show.
+
+Killer: He was alone in the greenroom.
+
+Killer: I was angry, have you ever been heartbroken like that?
+
+Bolton: ...
+
+Killer: I know what I did.
+
+Bolton: Yeah.
+
+Killer: Is she...
+
+Bolton: She didn't make it.
+
+Killer: Figures.
+
+You to Gray from outside of the interrogation room
+
+You: All's in a day work huh?
+
+Gray: Suppose so, nice work out there finding the keys and the makeup wipes.
+
+You: Knew you'd eventually come around to liking me.
+
+Gray: Slow your roll I tolerate you at best.
+
+THE END.
+<<ending("good")>>
+===

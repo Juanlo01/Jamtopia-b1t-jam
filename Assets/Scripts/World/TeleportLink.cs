@@ -31,6 +31,11 @@ public class TeleportLink : MonoBehaviour
 
     private float lastTeleportTime = -Mathf.Infinity;
 
+    // Fired with the side the player just arrived at (not the trigger side they entered).
+    // Generic on purpose -- sibling scripts (eg. PoliceDepartmentRoomPublisher) hook this to
+    // publish scene-specific meaning without TeleportLink itself knowing what a "room" is.
+    public event System.Action<TeleportSide> OnTeleported;
+
     private void Awake(){
         Wire(triggerA, TeleportSide.A);
         Wire(triggerB, TeleportSide.B);
@@ -53,13 +58,13 @@ public class TeleportLink : MonoBehaviour
         PlayerController3D player = other.GetComponentInParent<PlayerController3D>();
         if(player == null) return;
 
-        if(side == TeleportSide.A) Teleport(player, markerA, markerB, focusB);
-        else Teleport(player, markerB, markerA, focusA);
+        if(side == TeleportSide.A) Teleport(player, markerA, markerB, focusB, TeleportSide.B);
+        else Teleport(player, markerB, markerA, focusA, TeleportSide.A);
 
         lastTeleportTime = Time.time;
     }
 
-    private void Teleport(PlayerController3D player, Transform previousMarker, Transform nextMarker, Transform focus){
+    private void Teleport(PlayerController3D player, Transform previousMarker, Transform nextMarker, Transform focus, TeleportSide arrivedSide){
         if(nextMarker == null) return;
 
         Rigidbody rb = player.GetComponent<Rigidbody>();
@@ -76,6 +81,8 @@ public class TeleportLink : MonoBehaviour
         }
 
         FaceDirectionOfTravel(player, previousMarker, nextMarker);
+
+        OnTeleported?.Invoke(arrivedSide);
     }
 
     private void FaceDirectionOfTravel(PlayerController3D player, Transform previousMarker, Transform nextMarker){
