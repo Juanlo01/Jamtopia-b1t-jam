@@ -18,6 +18,7 @@ public class InteractableTape : MonoBehaviour, IInteractable3D {
     private Vector3 currentScreenPos;
 
     [SerializeField] public new Camera camera;
+    [SerializeField] public new Camera firstCamera;
     [SerializeField] bool isDragging;
     [SerializeField] bool phaseOne;
     [SerializeField] bool phaseTwo;
@@ -138,6 +139,10 @@ public class InteractableTape : MonoBehaviour, IInteractable3D {
                 // Lock position within camera boundaries while maintaining Y height
                 transform.position = GetClampedPosition(targetPos, fixedY);
                 fingerPrint.transform.SetParent(transform);
+                yield return new WaitForSeconds(5.0f);
+                firstCamera.enabled = true;
+                camera.enabled = false;
+                
             }
             
             yield return null;
