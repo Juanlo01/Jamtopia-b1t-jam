@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Teeny" style="flex-grow: 1; position: absolute; aspect-ratio: 1; width: 100%; height: 100%; bottom: auto; right: auto; translate: -974px -589px;">
+        <ui:Image source="project://database/Assets/Sprites/UI/NightTerrors/Teeny/TeenyBody.png?fileID=21300000&amp;guid=a18ae0419addd794cab0277a5419f093&amp;type=3#TeenyBody" name="TeenyBody" style="aspect-ratio: 1; width: 15%; height: 15%; translate: 841px 437px; position: absolute;">
+            <ui:Button text="Button" name="Button" style="height: 64px; width: 64px; opacity: 0; position: absolute; top: 6px; left: 36px;"/>
+        </ui:Image>
+        <ui:Image name="TeenyLeftEye" source="project://database/Assets/Sprites/UI/NightTerrors/Teeny/TeenyLeftEye.png?fileID=2800000&amp;guid=768fb6a0ac1e24e4cb9e3c050896a357&amp;type=3#TeenyLeftEye" scale-mode="ScaleToFit" language-direction="Inherit" style="aspect-ratio: 1; width: 12%; height: 12px; translate: 866px 467px; position: absolute;"/>
+        <ui:Image name="TeenyRightEye" source="project://database/Assets/Sprites/UI/NightTerrors/Teeny/TeenyRightEye.png?fileID=21300000&amp;guid=f7e55d298c24f4b4dae32b5df4df5910&amp;type=3#TeenyRightEye" style="aspect-ratio: 1; width: 12px; height: 12px; translate: 899px 467px; position: absolute;"/>
+    </ui:VisualElement>
+</ui:UXML>
