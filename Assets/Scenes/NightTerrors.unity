@@ -1551,6 +1551,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   camera: {fileID: 330585545}
+  edgePadding: {x: 0.05, y: 0.05}
 --- !u!1 &142790313
 GameObject:
   m_ObjectHideFlags: 0
@@ -12411,7 +12412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1238642244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14019,6 +14020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1393025692}
+  - component: {fileID: 1393025693}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -14044,6 +14046,23 @@ Transform:
   - {fileID: 1861960551}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1393025693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393025691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3e7ddd2399b024da8d870e9896acf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  spiky: {fileID: 1238642243}
+  teeny: {fileID: 1926617823}
+  smoky: {fileID: 1861960550}
+  evidenceView: 1
+  sleeping: 1
 --- !u!1 &1404142051
 GameObject:
   m_ObjectHideFlags: 0
@@ -18879,6 +18898,7 @@ MonoBehaviour:
   airBubbles: 0
   currentMouseDelta: {x: 0, y: 0}
   requiredHoldMoveTime: 3
+  edgePadding: {x: 0.05, y: 0.05}
 --- !u!65 &1817701645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19593,7 +19613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1861960551
 Transform:
   m_ObjectHideFlags: 0

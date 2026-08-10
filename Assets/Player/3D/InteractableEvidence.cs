@@ -6,7 +6,7 @@ using System.Collections;
 
 public class InteractableEvidence : MonoBehaviour, IInteractable3D{
     [SerializeField] private DialogueRunner dialogueRunner;
-    [SerializeField] private string dialogueNode = "Start";
+    [SerializeField] private string dialogueNode = "motelInteractHairbrush";
     [SerializeField] private InputAction press, screenPos;
     [SerializeField] private MeshRenderer brother;
     [SerializeField] private LayerMask interactableLayer;
@@ -21,9 +21,6 @@ public class InteractableEvidence : MonoBehaviour, IInteractable3D{
 
     private void Update()
     {
-        
-
-
         if (brother.enabled != false)
         {
             gameObject.GetComponent<MeshRenderer>().enabled = true;
@@ -107,6 +104,8 @@ public class InteractableEvidence : MonoBehaviour, IInteractable3D{
         if(dialogueRunner != null && !string.IsNullOrEmpty(dialogueNode)){
             dialogueRunner.onDialogueComplete.AddListener(HandleDialogueComplete);
             dialogueRunner.StartDialogue(dialogueNode).Forget();
+           
+            Debug.Log("Dialogue node selected is " + dialogueNode);
         }
         else{
             EndInteraction();

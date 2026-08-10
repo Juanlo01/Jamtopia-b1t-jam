@@ -13,20 +13,26 @@ public class AnimationScheme : ScriptableObject
 
     void OnValidate()
     {
-        if (serializedAnimations.Length > 0)
-        {
-            Animations = new Dictionary<string, SpriteAnimation>();
+        BuildAnimationsLookup();
+    }
 
-            for (int i = 0; i < serializedAnimations.Length; i++)
-            {
-                Animations.Add(serializedAnimations[i].name, serializedAnimations[i]);
-            }
+    // OnValidate is editor-only and never runs in a build, so Animations would otherwise stay null
+    // forever at runtime (this is what caused the WebGL build to crash on its very first animation
+    // state change) -- build it lazily here too, so it works whether or not OnValidate ever ran.
+    private void BuildAnimationsLookup()
+    {
+        Animations = new Dictionary<string, SpriteAnimation>();
+
+        foreach (SpriteAnimation animation in serializedAnimations)
+        {
+            Animations[animation.name] = animation;
         }
     }
-    
+
     public SpriteAnimation GetAnimation(string state)
     {
-        return Animations[state];
+        if (Animations == null) BuildAnimationsLookup();
+        return Animations.TryGetValue(state, out SpriteAnimation animation) ? animation : null;
     }
     
     [System.Serializable]

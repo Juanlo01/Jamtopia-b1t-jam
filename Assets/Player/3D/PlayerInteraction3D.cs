@@ -159,14 +159,15 @@ public class PlayerInteraction3D : MonoBehaviour{
 
     private void Click(InputAction.CallbackContext context)
     {
-         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-
-        if(Physics.Raycast(ray, out RaycastHit hit, 100f, objectLayer) && isInteractable == true)
+        Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        Debug.Log("Clicked");
+        if(Physics.Raycast(ray, out RaycastHit hit, 200f, objectLayer) && isInteractable == true)
         {
             Debug.Log("Clicked on " + hit.collider.gameObject.name + "!");
             //currentInteractable.Interact(playerController, OnInteractionEnd);
             //Destroy(hit.collider.gameObject);
-            hit.collider.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            //hit.collider.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            hit.collider.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 }

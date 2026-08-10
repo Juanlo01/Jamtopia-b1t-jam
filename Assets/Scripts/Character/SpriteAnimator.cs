@@ -66,6 +66,10 @@ public class SpriteAnimator : MonoBehaviour
             idx = ~idx - 1;
             if (idx < 0) idx = 0;
         }
+        // times/frames are meant to be kept the same length, but that's only ever enforced by hand
+        // (eg. in the Inspector) -- guard the lookup so a mismatch degrades gracefully instead of
+        // an unchecked out-of-bounds access (which WebGL builds can't always catch as a C# exception)
+        if (idx >= _currentSpriteAnimation.frames.Length) return;
         CurrentFrameIndex = idx;
 
         global::AnimationScheme.SpriteKeyframe frameIndex = _currentSpriteAnimation.frames[idx];
