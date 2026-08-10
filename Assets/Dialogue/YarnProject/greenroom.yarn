@@ -56,17 +56,17 @@ title: greenroomInteractSaxophonePlayer
 title: greenroomInteractIceBucket
 //setting: greenroom with Gray & Bolton, 2nd death
 ---
-<<if $is_asleep>>
-    <<if $greenroom_icebucket_observed == false>>
+//<<if $is_asleep>>
+    //<<if $greenroom_icebucket_observed == false>>
         You: The ice still hasn't melted, this is incredibly fresh kill.
 
         You: All the people with recent access to this room would be top suspects.
 
         <<set $greenroom_icebucket_observed = true>>
         <<set $greenroom_evidence = $greenroom_evidence + 1>>
-        <<writeToNotepad("greenroomIceBucket","Ice Bucket","Ice has barely began to melt, this must've just happened. Likely suspects are anyone that had access to this room in the past hour.")>>
-    <<endif>>
-<<endif>>
+        <<writeToNotepad UIDocument "greenroomIceBucket","Ice Bucket","Ice has barely began to melt, this must've just happened. Likely suspects are anyone that had access to this room in the past hour.">>
+    //<<endif>>
+//<<endif>>
 ===
 
 title: greenroomInteractVent

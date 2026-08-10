@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 using Yarn.Unity;
 using System.Collections;
 
-public class InteractableEvidence : MonoBehaviour, IInteractable3D{
+public class Interactable_MotelMakeupRemover : MonoBehaviour, IInteractable3D{
     [SerializeField] private DialogueRunner dialogueRunner;
-    [SerializeField] private string dialogueNode = "motelInteractHairbrush";
+    [SerializeField] private string dialogueNode = "motelInteractMakeupWipes";
     [SerializeField] private InputAction press, screenPos;
     [SerializeField] private MeshRenderer brother;
     [SerializeField] private LayerMask interactableLayer;
@@ -18,6 +18,7 @@ public class InteractableEvidence : MonoBehaviour, IInteractable3D{
 
     [SerializeField] public new Camera camera;
     bool isDragging;
+    bool motelHairbrushCollected;
 
     private void Update()
     {
@@ -65,7 +66,7 @@ public class InteractableEvidence : MonoBehaviour, IInteractable3D{
         {
             throw new Exception(gameObject.name +" has no brother");
         }
-        
+        motelHairbrushCollected = false;
     }
 
     private IEnumerator Drag()

@@ -4,6 +4,8 @@
 //   collecting : $is_asleep == true
 //   post_sleep : $is_asleep == false && $motel_woke_up == true
 
+
+
 title: motelStart
 //setting: motel, first murder
 ---
@@ -22,70 +24,70 @@ Bolton: Gibbs this isn't the time to be joking around!
 title: motelInteractFrontDoor
 //setting: motel, gibbs asleep
 ---
-<<if $is_asleep>>
+//<<if $is_asleep>>
     You: No signs of a break-in, was the killer let in willingly?
-    <<if $motel_frontdoor_observed == false>>
+    //<<if $motel_frontdoor_observed == false>>
         <<set $motel_frontdoor_observed = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad("motelFrontDoor","Front Door","No signs of a break-in, it's likely someone she knew?")>>
-    <<endif>>
-<<endif>>
+        <<writeToNotepad UIDocument "motelFrontDoor","Front Door","No signs of a break-in, it's likely someone she knew?">>
+    //<<endif>>
+//<<endif>>
 ===
 
 title: motelInteractDroppedNail
 ---
-<<if $is_asleep>>
-    <<if $motel_nail_collected == false>>
+//<<if $is_asleep>>
+    //<<if $motel_nail_collected == false>>
         You: This looks like her acrylic nail, it broke off while... *looking around*
 
         You: Clawing at the door? Those scratches haven't collected dust yet, I should take a photo for forensics.
 
         <<set $motel_nail_collected = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad("motelDroppedNail","Acrylic Nail","Her nail broke off violently, she aggressively clawed at the door. Something or someone kept her inside while she died.")>>
-    <<endif>>
-<<endif>>
+        <<writeToNotepad UIDocument "motelDroppedNail","Acrylic Nail","Her nail broke off violently, she aggressively clawed at the door. Something or someone kept her inside while she died.">>
+    //<<endif>>
+//<<endif>>
 ===
 
 title: motelInteractDeadWoman
 ---
-<<if $is_asleep>>
-    <<if $motel_woman_observed == false>>
+//<<if $is_asleep>>
+    //<<if $motel_woman_observed == false>>
         You: She's curled up - seems like poison.
 
         You: Half a face of makeup, was she applying makeup before being poisoned...?
 
         <<set $motel_woman_observed = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad("motelDeadWoman","The Victim","She only has half a face of makeup, not because she only got to apply half but because she only got through removing half.")>>
-    <<endif>>
-<<endif>>
+        <<writeToNotepad UIDocument "motelDeadWoman","The Victim","She only has half a face of makeup, not because she only got to apply half but because she only got through removing half.">>
+    //<<endif>>
+//<<endif>>
 ===
 
 title: motelInteractHairbrush
 ---
-<<if $is_asleep>>
-    <<if $motel_hairbrush_collected == false>>
+//<<if $is_asleep>>
+    //<<if $motel_hairbrush_collected == false>>
         You: Hairbrush is on the ground, she must've been holding it or reached for it while collapsing to the ground?
 
         <<set $motel_hairbrush_collected = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad("motelHairbrush","Hairbrush","Hairbrush was on the ground but she wasn't brushing her hair? She must've reached for it while collapsing, this was very abrupt.")>>
-    <<endif>>
-<<endif>>
+        <<writeToNotepad UIDocument "motelHairbrush","Hairbrush","Hairbrush was on the ground but she wasn't brushing her hair? She must've reached for it while collapsing, this was very abrupt.">>
+    //<<endif>>
+//<<endif>>
 ===
 
 title: motelInteractMakeupWipes
 ---
-<<if $is_asleep>>
-    <<if $motel_makeupwipes_observed == false>>
+//<<if $is_asleep>>
+    //<<if $motel_makeupwipes_observed == false>>
         You: Come to think of it, it looks like she's *removing* her makeup not applying it on, poison could be in the makeup wipes.
 
         <<set $motel_makeupwipes_observed = true>>
         <<set $motel_evidence = $motel_evidence + 1>>
-        <<writeToNotepad("motelMakeupWipes","Makeup Wipes","I suspect these have the poison, I overhead Gray wanting to bag the makeup but they'll find no poison there.")>>
-    <<endif>>
-<<endif>>
+        <<writeToNotepad UIDocument "motelMakeupWipes","Makeup Wipes","I suspect these have the poison, I overhead Gray wanting to bag the makeup but they'll find no poison there.">>
+    //<<endif>>
+//<<endif>>
 ===
 
 title: motelWakeUp
