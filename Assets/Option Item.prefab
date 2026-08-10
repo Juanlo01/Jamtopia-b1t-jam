@@ -224,8 +224,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -359,8 +359,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
-  m_sharedMaterial: {fileID: 3736803364359798006, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -496,6 +496,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Yarn.Unity.BoxedOptionItem
   optionItem: {fileID: 2576261519635394347}
   boxImage: {fileID: 56614174357966607}
-  inactiveColour: {r: 1, g: 1, b: 1, a: 0}
-  selectedColour: {r: 0, g: 0, b: 0, a: 1}
-  disabledColour: {r: 1, g: 1, b: 1, a: 0}
+  inactiveColour: {r: 0, g: 0, b: 0, a: 0}
+  selectedColour: {r: 1, g: 1, b: 1, a: 1}
+  disabledColour: {r: 0.4792453, g: 0.4792453, b: 0.4792453, a: 0}

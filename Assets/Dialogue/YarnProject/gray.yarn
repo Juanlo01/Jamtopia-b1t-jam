@@ -2,11 +2,11 @@
 
 title: Gray
 ---
-<<if $setting == "motel">>
+<<if $setting == "Motel">>
     <<jump Gray_Motel>>
 <<elseif $setting == "breakroom">>
     <<jump Gray_Breakroom>>
-<<elseif $setting == "greenroom">>
+<<elseif $setting == "Greenroom">>
     <<jump Gray_Greenroom>>
 <<endif>>
 ===

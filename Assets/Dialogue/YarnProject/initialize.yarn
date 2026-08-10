@@ -7,7 +7,7 @@ title: Initialize
 
 // global
 
-<<declare $setting = "motel">>
+<<declare $setting = "Motel">>
 // "motel" | "greenroom" | "lab" | "office" | "boltons_office" | "breakroom" | "interrogation_room" | "lorin_household"
 // DEV: when swapping setting also update string for this variable
 

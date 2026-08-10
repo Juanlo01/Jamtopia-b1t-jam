@@ -2,26 +2,26 @@
 
 title: Bolton
 ---
-<<if $setting == "motel">>
+<<if $setting == "Motel">>
     <<jump Bolton_Motel>>
 <<elseif $setting == "boltons_office">>
     <<jump Bolton_Office>>
-<<elseif $setting == "greenroom">>
+<<elseif $setting == "Greenroom">>
     <<jump Bolton_Greenroom>>
 <<endif>>
 ===
 
 title: Bolton_Motel
 ---
-<<if $is_asleep == false && $motel_woke_up == false>>
+<<if $is_asleep>>
+    <<jump Bolton_Motel_DuringSleep>>
+<<elseif $motel_evidence == 0>>
     Bolton: Sink? Dead Woman? I'm sure you can do better than that.
     You: You're right, you're right, let me take my time.
-<<elseif $is_asleep>>
-    <<jump Bolton_Motel_DuringSleep>>
-<<elseif $motel_evidence >= 5>>
-    <<jump Bolton_Motel_AllEvidence>>
-<<else>>
+<<elseif $motel_evidence < 5>>
     <<jump Bolton_Motel_SomeEvidence>>
+<<else>>
+    <<jump Bolton_Motel_AllEvidence>>
 <<endif>>
 ===
 
@@ -45,6 +45,15 @@ You: Yes, I got some evidence
 Bolton: Some? Do you know what happened here?
 
 You: I'm not sure yet.
+
+Bolton: Alright. Let me know if you need to head to the station before coming back.
+
+-> I'll stick around.
+    <<set $motel_active = false>>
+    Bolton: Alright, your call.
+-> Let's head back to the Station.
+    <<transitionTo Station>>
+    Bolton: OK, let's head out.
 ===
 
 title: Bolton_Motel_AllEvidence
@@ -58,7 +67,7 @@ Bolton: Good work, ready to head back to the department?
 
 -> Yes.
     <<set $motel_active = false>>
-    <<transitionTo policeDepartment>>
+    <<transitionTo Station>>
 -> Hold that thought.
     Bolton: Let me know when you're ready to head back.
     You: Okay.
@@ -115,9 +124,9 @@ title: Bolton_Transportation
 Bolton: Where to?
 
 -> Motel <<if $motel_active>>
-    <<transitionTo motel>>
+    <<transitionTo Motel>>
 -> Greenroom <<if $greenroom_active>>
-    <<transitionTo greenroom>>
+    <<transitionTo Greenroom>>
 ===
 
 title: Bolton_Greenroom
@@ -139,7 +148,7 @@ Bolton: Anything yet?
     Bolton: Good work, ready to head back to the department?
     -> Yes.
         <<set $greenroom_active = false>>
-        <<transitionTo policeDepartment>>
+        <<transitionTo Station>>
     -> Hold that thought.
         Bolton: Let me know when you're ready to head back.
         You: Okay.
