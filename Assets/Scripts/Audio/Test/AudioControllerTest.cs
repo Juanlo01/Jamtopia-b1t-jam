@@ -41,7 +41,7 @@ public sealed class SceneMusicController : MonoBehaviour
                 currentSceneMusicId = "mus.breakroom";
                 break;
 
-            case "Minigame":
+            case "NightTerrors":
                 currentSceneMusicId = "mus.minigame";
                 break;
 

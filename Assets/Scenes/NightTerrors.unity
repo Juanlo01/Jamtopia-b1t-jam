@@ -10118,9 +10118,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController3D
   rb: {fileID: 1075870870}
-  spriteAnimator: {fileID: 0}
+  characterController: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  dialogueRunner: {fileID: 0}
   faceSpriteRenderer: {fileID: 0}
+  sleepwalkingParticles: {fileID: 0}
   selectedMaterial: {fileID: 0}
   speed: 5
   jumpingPower: 0
@@ -10129,6 +10131,7 @@ MonoBehaviour:
     m_Bits: 0
   groundCheck: {fileID: 0}
   isSleepwalking: 0
+  sceneMusicController: {fileID: 0}
 --- !u!54 &1075870870
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11642,11 +11645,11 @@ PrefabInstance:
     - target: {fileID: 839322048344808718, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 839322048344808718, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3736803364359798006, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 839322048344808718, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -11654,11 +11657,11 @@ PrefabInstance:
     - target: {fileID: 2008816003928775533, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2008816003928775533, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3736803364359798006, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2008816003928775533, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -11678,11 +11681,11 @@ PrefabInstance:
     - target: {fileID: 2890576881947907249, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2890576881947907249, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 3736803364359798006, guid: e4ffed23c6471594ab8bb630cd13d3ac, type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2890576881947907249, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -12790,6 +12793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableCharacter
   dialogueRunner: {fileID: 2062413130}
   dialogueNode: Start
+  characterController: {fileID: 0}
 --- !u!136 &1265508017
 CapsuleCollider:
   m_ObjectHideFlags: 0
