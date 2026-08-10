@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6336,7 +6336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6391,7 +6391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a576c45cc960f88459848f169757425b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueRunner: {fileID: 777405749}
+  dialogueRunner: {fileID: 0}
   dialogueNode: motelInteractDroppedNail
   press:
     m_Name: Press
@@ -10299,162 +10299,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1001 &777405748
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1011847475680819492, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011847475680819492, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011847475680819492, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011847475680819492, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011847475680819492, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011847475680819492, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328420874698368639, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328420874698368639, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328420874698368639, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328420874698368639, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328420874698368639, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1328420874698368639, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1854584952948815866, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2120171966454154875, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 291655323}
-    - target: {fileID: 2120171966454154875, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_PlaneDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2401351886755323250, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_Name
-      value: Dialogue System Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 3766467734361998273, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5797403662015531383, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5797403662015531383, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5797403662015531383, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5797403662015531383, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5797403662015531383, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5797403662015531383, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.50799
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.58406
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.18683
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6412706178684630885, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
---- !u!114 &777405749 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2353256881398323324, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
-  m_PrefabInstance: {fileID: 777405748}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &786584098
 GameObject:
   m_ObjectHideFlags: 0
@@ -14153,7 +13997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a660724b1c4997e48bb4f830dc0fd732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueRunner: {fileID: 777405749}
+  dialogueRunner: {fileID: 0}
   dialogueNode: motelInteractMakeupWipes
   press:
     m_Name: Press
@@ -14780,6 +14624,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 291655323}
+    - target: {fileID: 4626234927828345289, guid: 5d5dc5b50c99b9746a13af18e7c49cbe, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6559450356181606134, guid: 5d5dc5b50c99b9746a13af18e7c49cbe, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -16325,7 +16173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -20323,7 +20171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad97248799a5024aa25ac9df836423a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueRunner: {fileID: 777405749}
+  dialogueRunner: {fileID: 0}
   dialogueNode: motelInteractHairbrush
   press:
     m_Name: Press
@@ -21329,7 +21177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -23002,7 +22850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5072eadefacab64a920505972b84ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueRunner: {fileID: 777405749}
+  dialogueRunner: {fileID: 0}
   dialogueNode: motelInteractFrontDoor
   press:
     m_Name: Press
@@ -25517,7 +25365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -27231,7 +27079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c330165f08f5a2b47a57fd8d71d09ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueRunner: {fileID: 777405749}
+  dialogueRunner: {fileID: 0}
   dialogueNode: motelInteractDeadWoman
   press:
     m_Name: Press
@@ -27343,4 +27191,3 @@ SceneRoots:
   - {fileID: 164225572}
   - {fileID: 993437164}
   - {fileID: 1721079688}
-  - {fileID: 777405748}
