@@ -1,0 +1,154 @@
+// bolton.yarn
+
+title: Bolton
+---
+<<if $setting == "motel">>
+    <<jump Bolton_Motel>>
+<<elseif $setting == "boltons_office">>
+    <<jump Bolton_Office>>
+<<elseif $setting == "greenroom">>
+    <<jump Bolton_Greenroom>>
+<<endif>>
+===
+
+title: Bolton_Motel
+---
+<<if $is_asleep == false && $motel_woke_up == false>>
+    Bolton: Sink? Dead Woman? I'm sure you can do better than that.
+    You: You're right, you're right, let me take my time.
+<<elseif $is_asleep>>
+    <<jump Bolton_Motel_DuringSleep>>
+<<elseif $motel_evidence >= 5>>
+    <<jump Bolton_Motel_AllEvidence>>
+<<else>>
+    <<jump Bolton_Motel_SomeEvidence>>
+<<endif>>
+===
+
+title: Bolton_Motel_DuringSleep
+//setting: motel, gibbs asleep
+---
+Bolton: Anything to report?
+
+You: ...
+
+Bolton: Hello?
+===
+
+title: Bolton_Motel_SomeEvidence
+//setting: motel, gibbs awakened
+---
+Bolton: Anything to report?
+
+You: Yes, I got some evidence
+
+Bolton: Some? Do you know what happened here?
+
+You: I'm not sure yet.
+===
+
+title: Bolton_Motel_AllEvidence
+//setting: motel, gibbs awakened
+---
+Bolton: Anything to report?
+
+You: Yes, I think I gathered all the evidence I need.
+
+Bolton: Good work, ready to head back to the department?
+
+-> Yes.
+    <<set $motel_active = false>>
+    <<transitionTo policeDepartment>>
+-> Hold that thought.
+    Bolton: Let me know when you're ready to head back.
+    You: Okay.
+===
+
+title: Bolton_Office
+---
+<<if $bolton_office_visited == false>>
+    <<set $bolton_office_visited = true>>
+    <<jump Bolton_Office_FirstVisit>>
+<<else>>
+    <<jump Bolton_Office_Loop>>
+<<endif>>
+===
+
+title: Bolton_Office_FirstVisit
+//setting: bolton's office with LT. Bolton
+---
+Bolton: You know Gibbs for a second there at the Motel it felt like hiring you might've been a mistake.
+
+Bolton: But then you proved my original hunch to hire you on correctly.
+
+Bolton: Anyhow what'd you come in for?
+
+<<jump Bolton_Office_Loop>>
+===
+
+title: Bolton_Office_Loop
+//setting: bolton's office with LT. Bolton
+---
+Bolton: Yes Gibbs?
+
+<<if ($bradshaw_complete_motel && $motel_report_submitted == false) || ($bradshaw_complete_greenroom && $greenroom_report_submitted == false) || $motel_active || $greenroom_active>>
+    -> You: Here's the full report <<if $bradshaw_complete_motel && $motel_report_submitted == false>>
+        You: Here's the full report
+        // You explain to Bolton everything from your notepad along with the evidence processed by Bradshaw
+        Bolton: Good work. I'll look for family or friends of the victim, with any luck someone might be able to help I.D. our killer.
+        <<set $motel_report_submitted = true>>
+    -> You: Here's the full report <<if $bradshaw_complete_greenroom && $greenroom_report_submitted == false>>
+        You: Here's the full report
+        // You explain to Bolton everything from your notepad along with the evidence processed by Bradshaw
+        Bolton: Really you think it's him? We'll call the bass guitarist into questioning
+        <<set $greenroom_report_submitted = true>>
+    -> I need a ride. <<if $motel_active || $greenroom_active>>
+        <<jump Bolton_Transportation>>
+<<else>>
+    You: Uhh, nothing.
+<<endif>>
+===
+
+title: Bolton_Transportation
+//setting: bolton's office with LT. Bolton
+---
+Bolton: Where to?
+
+-> Motel <<if $motel_active>>
+    <<transitionTo motel>>
+-> Greenroom <<if $greenroom_active>>
+    <<transitionTo greenroom>>
+===
+
+title: Bolton_Greenroom
+---
+<<if $is_asleep>>
+    <<jump Bolton_Greenroom_Asleep>>
+<<else>>
+    <<jump Bolton_Greenroom_Awake>>
+<<endif>>
+===
+
+title: Bolton_Greenroom_Awake
+//setting: greenroom with Gray & Bolton, 2nd death
+---
+Bolton: Anything yet?
+
+-> Not yet.
+-> I think I have what I need. <<if $greenroom_evidence > 0>>
+    Bolton: Good work, ready to head back to the department?
+    -> Yes.
+        <<set $greenroom_active = false>>
+        <<transitionTo policeDepartment>>
+    -> Hold that thought.
+        Bolton: Let me know when you're ready to head back.
+        You: Okay.
+===
+
+title: Bolton_Greenroom_Asleep
+//setting: greenroom with Gray & Bolton, 2nd death
+---
+Bolton: Anything Yet?
+
+You: ...
+===

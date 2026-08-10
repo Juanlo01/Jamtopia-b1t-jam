@@ -1,0 +1,78 @@
+// initialize.yarn
+// Called once on game start.
+// Update $setting string manually when transitioning locations (see DEV note).
+
+title: Initialize
+---
+
+// global
+
+<<declare $setting = "motel">>
+// "motel" | "greenroom" | "lab" | "office" | "boltons_office" | "breakroom" | "interrogation_room" | "lorin_household"
+// DEV: when swapping setting also update string for this variable
+
+<<declare $is_asleep = false>>
+
+// motel
+
+<<declare $motel_evidence = 0>>
+<<declare $motel_active = true>>
+<<declare $motel_woke_up = false>>
+
+<<declare $motel_frontdoor_observed = false>>
+<<declare $motel_woman_observed = false>>
+<<declare $motel_nail_collected = false>>
+<<declare $motel_hairbrush_collected = false>>
+<<declare $motel_makeupwipes_observed = false>>
+
+<<changeEvidenceStatus("motelFrontDoor", "undiscovered")>>
+<<changeEvidenceStatus("motelDeadWoman", "undiscovered")>>
+<<changeEvidenceStatus("motelDroppedNail", "undiscovered")>>
+<<changeEvidenceStatus("motelHairbrush", "undiscovered")>>
+<<changeEvidenceStatus("motelMakeupWipes", "undiscovered")>>
+
+// greenroom
+
+<<declare $greenroom_evidence = 0>>
+<<declare $greenroom_active = false>>
+<<declare $greenroom_woke_up = false>>
+
+<<declare $greenroom_saxophone_collected = false>>
+<<declare $greenroom_saxophoneplayer_collected = false>>
+<<declare $greenroom_icebucket_observed = false>>
+<<declare $greenroom_vent_collected = false>>
+<<declare $greenroom_instruments_collected = false>>
+
+<<changeEvidenceStatus("greenroomSaxophone", "undiscovered")>>
+<<changeEvidenceStatus("greenroomSaxophonePlayer", "undiscovered")>>
+<<changeEvidenceStatus("greenroomIceBucket", "undiscovered")>>
+<<changeEvidenceStatus("greenroomVent", "undiscovered")>>
+<<changeEvidenceStatus("greenroomInstruments", "undiscovered")>>
+
+// gray
+
+<<declare $gray_breakroom_visited = false>>
+
+// bolton
+
+<<declare $bolton_office_visited = false>>
+<<declare $motel_report_submitted = false>>
+<<declare $greenroom_report_submitted = false>>
+<<declare $bradshaw_complete_motel = false>>
+<<declare $bradshaw_complete_greenroom = false>>
+
+// bradshaw
+
+<<declare $has_coffee = false>>
+<<declare $bradshaw_intro_done = false>>
+<<declare $bradshaw_coffee_delivered = false>>
+<<declare $bradshaw_teaching_done = false>>
+<<declare $greenroom_submitted_to_bradshaw = false>>
+<<declare $bradshaw_motel_done_shown = false>>
+<<declare $bradshaw_greenroom_done_shown = false>>
+
+// marty
+
+<<declare $marty_breakroom_visited = false>>
+
+===

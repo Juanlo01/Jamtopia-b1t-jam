@@ -1,0 +1,10 @@
+title: test_variables
+---
+
+<<if $is_asleep>>
+    Marty: wake up pig
+<<else>>
+    Marty: good morning sleepyhead
+<<endif>>
+
+===

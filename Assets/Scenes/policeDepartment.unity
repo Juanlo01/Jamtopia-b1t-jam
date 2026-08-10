@@ -969,6 +969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180595612}
+  - component: {fileID: 180595613}
   - component: {fileID: 180595611}
   m_Layer: 0
   m_Name: Hall-Bolton-TP
@@ -1012,6 +1013,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180595613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180595610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b74c011babecc4fbe680c8f0c496ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoliceDepartmentRoomPublisher
+  teleportLink: {fileID: 180595611}
+  arrivalSide: 1
+  room: 1
 --- !u!1 &236478348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2547,7 +2563,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3408979722000066399, guid: 061645dd656aeaf409241a32c24ef620, type: 3}
       propertyPath: dialogueNode
-      value: bolton_transport
+      value: Bolton
       objectReference: {fileID: 0}
     - target: {fileID: 3408979722000066399, guid: 061645dd656aeaf409241a32c24ef620, type: 3}
       propertyPath: dialogueRunner
@@ -2563,7 +2579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6083948997697994630, guid: 061645dd656aeaf409241a32c24ef620, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.78
+      value: 32.09
       objectReference: {fileID: 0}
     - target: {fileID: 6083948997697994630, guid: 061645dd656aeaf409241a32c24ef620, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2571,7 +2587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6083948997697994630, guid: 061645dd656aeaf409241a32c24ef620, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 53.67
+      value: 48.23
       objectReference: {fileID: 0}
     - target: {fileID: 6083948997697994630, guid: 061645dd656aeaf409241a32c24ef620, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2627,6 +2643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 486384586}
+  - component: {fileID: 486384587}
   - component: {fileID: 486384585}
   m_Layer: 0
   m_Name: Hall-Forensics-TP
@@ -2670,6 +2687,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486384587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486384584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b74c011babecc4fbe680c8f0c496ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoliceDepartmentRoomPublisher
+  teleportLink: {fileID: 486384585}
+  arrivalSide: 1
+  room: 4
 --- !u!1 &495713807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,6 +2961,10 @@ PrefabInstance:
     - target: {fileID: 8010683186610982482, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
       propertyPath: m_margin.z
       value: 50.954773
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217079869598710877, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
+      propertyPath: debugTextView
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9182497270662285361, guid: 3999cdf10faac8e4fbffa69c77132574, type: 3}
       propertyPath: m_margin.x
@@ -8561,6 +8597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 737183392}
+  - component: {fileID: 737183394}
   - component: {fileID: 737183391}
   - component: {fileID: 737183390}
   - component: {fileID: 737183389}
@@ -8708,6 +8745,20 @@ MonoBehaviour:
   - {fileID: 2085802252}
   - {fileID: 794801617}
   selectedFocusIndex: 0
+--- !u!114 &737183394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737183388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd6d7bc72ea9244a96299bed6d95c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoliceDepartmentRoomTracker
+  dialogueRunner: {fileID: 502245369}
+  startingRoom: 2
 --- !u!1 &745389824
 GameObject:
   m_ObjectHideFlags: 0
@@ -9518,6 +9569,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5766536504078762911, guid: 627d37ca061b7c24a8d521874f94a09b, type: 3}
       propertyPath: m_Name
+      value: Gray
+      objectReference: {fileID: 0}
+    - target: {fileID: 6272513846575374887, guid: 627d37ca061b7c24a8d521874f94a09b, type: 3}
+      propertyPath: dialogueNode
       value: Gray
       objectReference: {fileID: 0}
     - target: {fileID: 6272513846575374887, guid: 627d37ca061b7c24a8d521874f94a09b, type: 3}
@@ -10817,6 +10872,10 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5806810876226437377, guid: 415bea65223315049b32b65a9fd43840, type: 3}
+      propertyPath: dialogueRunner
+      value: 
+      objectReference: {fileID: 502245369}
+    - target: {fileID: 5806810876226437377, guid: 415bea65223315049b32b65a9fd43840, type: 3}
       propertyPath: isSleepwalking
       value: 0
       objectReference: {fileID: 0}
@@ -11139,6 +11198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1239366270}
+  - component: {fileID: 1239366271}
   - component: {fileID: 1239366269}
   m_Layer: 0
   m_Name: Breakroom-Hall-TP
@@ -11182,6 +11242,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1239366271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239366268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b74c011babecc4fbe680c8f0c496ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoliceDepartmentRoomPublisher
+  teleportLink: {fileID: 1239366269}
+  arrivalSide: 0
+  room: 2
 --- !u!1 &1243248420
 GameObject:
   m_ObjectHideFlags: 0
@@ -12474,6 +12549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496793822}
+  - component: {fileID: 1496793823}
   - component: {fileID: 1496793821}
   m_Layer: 0
   m_Name: Hall-Interragation-TP
@@ -12517,6 +12593,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1496793823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496793820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b74c011babecc4fbe680c8f0c496ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoliceDepartmentRoomPublisher
+  teleportLink: {fileID: 1496793821}
+  arrivalSide: 1
+  room: 3
 --- !u!114 &1522240860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12830,6 +12921,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.57
       objectReference: {fileID: 0}
+    - target: {fileID: 5590236171683485039, guid: 24ab9564316730d40b9fcae5468455cb, type: 3}
+      propertyPath: dialogueNode
+      value: Marty
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590236171683485039, guid: 24ab9564316730d40b9fcae5468455cb, type: 3}
+      propertyPath: dialogueRunner
+      value: 
+      objectReference: {fileID: 502245369}
     - target: {fileID: 8148493050961694855, guid: 24ab9564316730d40b9fcae5468455cb, type: 3}
       propertyPath: baseOffset.y
       value: 0.65
@@ -13795,6 +13894,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3328681415537001875, guid: c32f3e5a7ae835b47b6a552b7b205274, type: 3}
+      propertyPath: dialogueNode
+      value: Bradshaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328681415537001875, guid: c32f3e5a7ae835b47b6a552b7b205274, type: 3}
+      propertyPath: dialogueRunner
+      value: 
+      objectReference: {fileID: 502245369}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

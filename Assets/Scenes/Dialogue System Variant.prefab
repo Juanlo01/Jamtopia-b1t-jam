@@ -303,5 +303,26 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5034223731222335022, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1855318793911431009}
   m_SourcePrefab: {fileID: 100100000, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
+--- !u!1 &2401351886755323250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5034223731222335022, guid: a9db6c84a8b0e2d40b27fc778b43ab8f, type: 3}
+  m_PrefabInstance: {fileID: 7245859824667890524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1855318793911431009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2401351886755323250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f11c0824f788f942b652e84f2a95d5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VariableDebugSetter
+  toggleKey: 126
