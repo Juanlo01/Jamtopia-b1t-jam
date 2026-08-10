@@ -5,8 +5,7 @@ using Yarn.Unity;
 using System.Collections;
 using UnityEditor;
 
-
-public class InteractableTape : MonoBehaviour, IInteractable3D{
+public class InteractableTape : MonoBehaviour, IInteractable3D {
     [SerializeField] private DialogueRunner dialogueRunner;
     [SerializeField] private string dialogueNode = "Start";
     [SerializeField] private InputAction press, screenPos;
@@ -31,15 +30,21 @@ public class InteractableTape : MonoBehaviour, IInteractable3D{
     [SerializeField] private float requiredHoldMoveTime = 3.0f; // Duration in seconds
     private float moveTimer = 0f;
 
+    // --- CAMERA CLAMPING ---
+    [Header("Camera Clamping")]
+    [Tooltip("Padding from screen edges in viewport percent (0.05 = 5% margin from edge)")]
+    [SerializeField] private Vector2 edgePadding = new Vector2(0.05f, 0.05f);
+
     private void Update()
     {
         if (brother.activeSelf == false)
         {
             gameObject.SetActive(true);
-        }  
+        }   
 
         currentMouseDelta = screenPosAction.ReadValue<Vector2>();
     }
+
     private Vector3 WorldPos
     {
         get
@@ -48,6 +53,7 @@ public class InteractableTape : MonoBehaviour, IInteractable3D{
             return camera.ScreenToWorldPoint(currentScreenPos + new Vector3(0, 0, z));   
         }
     }
+
     private bool IsClickedOn
     {
         get
@@ -64,16 +70,18 @@ public class InteractableTape : MonoBehaviour, IInteractable3D{
 
     public void Awake()
     {
-            airBubbles = 0f;
-            phaseOne = true;
-            gameObject.SetActive(false);
-            //camera = Camera.main;
-            screenPosAction.Enable();
-            screenPos.Enable();
-            press.Enable();
-            screenPos.performed += context => { currentScreenPos = context.ReadValue<Vector2>();};
-            press.performed += _ => { if(IsClickedOn) StartCoroutine(Drag()); };
-            press.canceled += _ => {isDragging = false; };
+        airBubbles = 0f;
+        phaseOne = true;
+        gameObject.SetActive(false);
+        
+        if (camera == null) camera = Camera.main; // Fallback if camera is unassigned
+
+        screenPosAction.Enable();
+        screenPos.Enable();
+        press.Enable();
+        screenPos.performed += context => { currentScreenPos = context.ReadValue<Vector2>();};
+        press.performed += _ => { if(IsClickedOn) StartCoroutine(Drag()); };
+        press.canceled += _ => {isDragging = false; };
     }
 
     private IEnumerator Drag()
@@ -96,8 +104,8 @@ public class InteractableTape : MonoBehaviour, IInteractable3D{
             
             if (phaseOne)
             {
-                // Lock Y axis to the initial height
-                transform.position = new Vector3(targetPos.x, fixedY, targetPos.z);
+                // Lock position within camera boundaries while maintaining Y height
+                transform.position = GetClampedPosition(targetPos, fixedY);
             }
             else if (phaseTwo)
             {
@@ -117,21 +125,18 @@ public class InteractableTape : MonoBehaviour, IInteractable3D{
             }
             else if (phaseThree)
             {
-                //if (currentMouseDelta.sqrMagnitude > 0.01f)
-                //{
-                    moveTimer += Time.deltaTime;
+                moveTimer += Time.deltaTime;
 
-                    if (moveTimer >= requiredHoldMoveTime)
-                    {
-                        phaseThree = false;
-                        phaseFour = true;
-                    }
-                //}
+                if (moveTimer >= requiredHoldMoveTime)
+                {
+                    phaseThree = false;
+                    phaseFour = true;
+                }
             }
             else if (phaseFour)
             {
-                // Lock Y axis to the initial height
-                transform.position = new Vector3(targetPos.x, fixedY, targetPos.z);
+                // Lock position within camera boundaries while maintaining Y height
+                transform.position = GetClampedPosition(targetPos, fixedY);
                 fingerPrint.transform.SetParent(transform);
             }
             
@@ -141,11 +146,27 @@ public class InteractableTape : MonoBehaviour, IInteractable3D{
         if (rb != null) rb.useGravity = true;
     }
 
+    // Helper method to convert target position into camera-bounded world space
+    private Vector3 GetClampedPosition(Vector3 targetWorldPos, float fixedY)
+    {
+        // 1. Convert to Viewport coordinates (0.0 to 1.0 range)
+        Vector3 viewportPos = camera.WorldToViewportPoint(targetWorldPos);
+
+        // 2. Clamp X and Y inside the viewport frame with padding
+        viewportPos.x = Mathf.Clamp(viewportPos.x, 0f + edgePadding.x, 1f - edgePadding.x);
+        viewportPos.y = Mathf.Clamp(viewportPos.y, 0f + edgePadding.y, 1f - edgePadding.y);
+
+        // 3. Convert back to World Space
+        Vector3 clampedWorldPos = camera.ViewportToWorldPoint(viewportPos);
+
+        // 4. Return clamped X/Z with locked Y
+        return new Vector3(clampedWorldPos.x, fixedY, clampedWorldPos.z);
+    }
+
     void StopDragging()
     { 
         isDragging = false;
     }
-
 
     public void OnTriggerEnter(Collider collider)
     {
@@ -154,15 +175,12 @@ public class InteractableTape : MonoBehaviour, IInteractable3D{
             phaseOne = false;
             phaseTwo = true;
         }
-            
     }
 
-    // interact(), for any class interfacing IInteractable3D
     public void Interact(PlayerController3D interactingPlayer, System.Action onInteractionEnd){
         throw new System.NotImplementedException();
     }
 
-    // callback for when listener to dialogue runner receives an end signal
     private void HandleDialogueComplete(){
         throw new System.NotImplementedException();
     }
@@ -180,6 +198,4 @@ public class InteractableTape : MonoBehaviour, IInteractable3D{
     {
         throw new System.NotImplementedException();
     }
-
-    
 }
