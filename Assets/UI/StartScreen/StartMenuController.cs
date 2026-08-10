@@ -6,10 +6,20 @@ public class StartMenuController : MonoBehaviour
 {
     private VisualElement uiStartMenu;
 
-        private void OnEnable()
+        // private void OnEnable()
+        // {
+        //     // One-line query & click listener setup
+        //     GetComponent<UIDocument>().rootVisualElement.Q<Button>("PlayButton").clicked += () => 
+        //     {
+        //         Debug.Log("Button clicked!");
+        //         SceneManager.LoadScene("Motel");
+        //     };
+        // }
+
+        void ChangeScene()
         {
             // One-line query & click listener setup
-            GetComponent<UIDocument>().rootVisualElement.Q<Button>("PlayButton").clicked += () => 
+            GetComponent<UIDocument>().rootVisualElement.Q<Button>("PlayButton").clicked += () =>
             {
                 Debug.Log("Button clicked!");
                 SceneManager.TransitionTo("Motel");
