@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Smoky" style="flex-grow: 1; translate: -3px 4px; position: absolute; width: 112px; height: 108px; top: auto; left: auto; right: auto; bottom: auto; aspect-ratio: 1;">
+        <ui:Image name="SmokyBody" source="project://database/Assets/Sprites/UI/NightTerrors/Smoky/SmokyBody.png?fileID=21300000&amp;guid=f3b1662669a266c4598a342c43b7eb4a&amp;type=3#SmokyBody" style="aspect-ratio: 1; width: 100px; height: 100px; translate: 11px 3px; position: absolute; top: auto; left: auto;"/>
+        <ui:Image name="SmokyLeftEye" source="project://database/Assets/Sprites/UI/NightTerrors/Smoky/SmokyLeftEye.png?fileID=21300000&amp;guid=4c0f66ec308a64b489b135466eeccf12&amp;type=3#SmokyLeftEye" style="aspect-ratio: 1; width: 16px; height: 15px; translate: 911px 192px; position: absolute; top: -124px; left: -871px;"/>
+        <ui:Image name="SmokyRightEye" source="project://database/Assets/Sprites/UI/NightTerrors/Smoky/SmokyRightEye.png?fileID=21300000&amp;guid=49b67930f015e30439ef16df4d6a49fd&amp;type=3#SmokyRightEye" style="aspect-ratio: 1; width: 10px; height: 16px; translate: 929px 181px; position: absolute; top: -114px; left: -858px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="Smoke" style="flex-grow: 1; position: absolute; translate: 0 -23px; height: 530px; width: 952px; top: 576px; left: 2px; opacity: 1;">
+        <ui:Image name="SmokeCloud" source="project://database/Assets/Player/PlayerSprite.png?fileID=7482667652216324306&amp;guid=3e81e3a79bab4c64e98877255099063e&amp;type=3#Square" scale-mode="StretchToFill" style="height: 600px; width: 995px; position: absolute; top: 10px; left: -17px;"/>
+        <ui:Button text="Button" name="SmokeButton1" style="position: absolute; top: 257px; left: 452px;"/>
+    </ui:VisualElement>
+</ui:UXML>

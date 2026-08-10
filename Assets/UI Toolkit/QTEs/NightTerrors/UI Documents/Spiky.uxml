@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement focusable="false" style="flex-grow: 1; display: flex; position: absolute; right: auto; height: 540px; width: 962px; top: -614px; left: 980px;">
+        <ui:Image source="project://database/Assets/Sprites/UI/NightTerrors/Spiky/SpikyBase.png?fileID=2800000&amp;guid=6d4d537bd999e964cb6084a3817d16bd&amp;type=3#SpikyBase" scale-mode="ScaleToFit" name="SpikyBase" style="aspect-ratio: 1; width: 30%; height: 30%; translate: 859px 0; transform-origin: center; align-items: stretch; max-width: none; position: absolute; right: auto; top: 614px; left: -1065px;"/>
+        <ui:Image name="SpikyHand" source="project://database/Assets/Sprites/UI/NightTerrors/Spiky/SpikyHand.png?fileID=2800000&amp;guid=9128d43a3cfe4ce40bdc283193f8a213&amp;type=3#SpikyHand" style="aspect-ratio: 1; width: 25%; height: 25%; translate: -98px -72px; position: absolute; right: auto; top: 409px; left: 766px;"/>
+        <ui:Image source="project://database/Assets/Sprites/UI/NightTerrors/Spiky/SpikyDetail1.png?fileID=2800000&amp;guid=573ba23fb1df1ea48a81d801ec0f2f13&amp;type=3#SpikyDetail1" name="SpikyDetail1" style="aspect-ratio: 1; translate: 930px -233px; width: 15%; height: 15px; position: absolute; right: auto; top: 897px; left: -1049px;"/>
+        <ui:Image source="project://database/Assets/Sprites/UI/NightTerrors/Spiky/SpikyDetail2.png?fileID=2800000&amp;guid=7f43bd956988d724c93e8bfe2c3db547&amp;type=3#SpikyDetail2" name="SpikyDetail2" style="aspect-ratio: 1; translate: 943px -263px; width: 15%; height: 15px; position: absolute; right: auto; top: 904px; left: -1052px;"/>
+    </ui:VisualElement>
+</ui:UXML>

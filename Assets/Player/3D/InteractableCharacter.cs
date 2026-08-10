@@ -5,6 +5,8 @@ public class InteractableCharacter : MonoBehaviour, IInteractable3D{
     [SerializeField] private DialogueRunner dialogueRunner;
     [SerializeField] private string dialogueNode = "Start";
 
+    [SerializeField] private CharacterController3D characterController;
+
     private PlayerController3D interactingPlayer;
     private System.Action onInteractionEnd;
 
@@ -14,6 +16,7 @@ public class InteractableCharacter : MonoBehaviour, IInteractable3D{
         this.onInteractionEnd = onInteractionEnd;
 
         interactingPlayer.SetMovementFrozen(true);
+        characterController.IdleFace(interactingPlayer.transform.position);
 
         if(dialogueRunner != null && !string.IsNullOrEmpty(dialogueNode)){
             dialogueRunner.onDialogueComplete.AddListener(HandleDialogueComplete);
@@ -35,5 +38,15 @@ public class InteractableCharacter : MonoBehaviour, IInteractable3D{
         onInteractionEnd?.Invoke();
         interactingPlayer = null;
         onInteractionEnd = null;
+    }
+
+    public void OnTouchingPlayer()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnNotTouchingPlayer()
+    {
+        throw new System.NotImplementedException();
     }
 }
