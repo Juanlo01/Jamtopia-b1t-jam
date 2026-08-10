@@ -1,0 +1,44 @@
+// marty.yarn
+
+title: Marty
+---
+<<if $setting == "breakroom">>
+    <<jump Marty_Breakroom>>
+<<elseif $setting == "office">>
+    <<jump Marty_Office>>
+<<endif>>
+===
+
+title: Marty_Breakroom
+---
+<<if $marty_breakroom_visited == false>>
+    <<set $marty_breakroom_visited = true>>
+    <<jump Marty_Breakroom_FirstVisit>>
+<<else>>
+    <<jump Marty_Breakroom_Loop>>
+<<endif>>
+===
+
+title: Marty_Breakroom_FirstVisit
+//setting: breakroom with marty & gray
+---
+Marty: Hey.
+
+You: Hello.
+
+Marty: I hope to see you work someday you know?
+
+You: Yeah, probably one day.//tempted to instead say "Yeah, probably not during the game jam though"
+===
+
+title: Marty_Breakroom_Loop
+//setting: breakroom with marty & gray
+---
+// NEEDS DIALOGUE: Marty fangirling over Gibbs, loopable short interactions
+===
+
+title: Marty_Office
+//setting: office
+---
+// NEEDS DIALOGUE: Marty in office setting
+===
