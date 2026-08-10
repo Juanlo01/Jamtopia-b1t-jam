@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -21,6 +22,11 @@ public class SceneManager : MonoBehaviour
     // lookup entirely, so LoadScene forwards to the one live instance instead.
     private static SceneManager instance;
 
+    // The "Dialogue System" prefab (and its VariableStorage) is recreated fresh on every scene
+    // load, same as GeneralUI/GameClock -- so, like GameClock's day fields, variables have to be
+    // bridged across the destroy/recreate boundary via a static, not left to the storage itself.
+    private static (Dictionary<string, float> floats, Dictionary<string, string> strings, Dictionary<string, bool> bools)? variableSnapshot;
+
     private void Awake()
     {
         instance = this;
@@ -28,6 +34,8 @@ public class SceneManager : MonoBehaviour
         SetImageAlpha(fadeImage, 0f);
         SetImageAlpha(spinnerImage, 0f);
         SetSpinnerVisible(false);
+
+        RestoreVariableSnapshot();
     }
 
     private void OnDestroy()
@@ -84,12 +92,42 @@ public class SceneManager : MonoBehaviour
         return false;
     }
 
+    private static void CaptureVariableSnapshot()
+    {
+        DialogueRunner runner = FindFirstObjectByType<DialogueRunner>();
+        if (runner == null)
+        {
+            return;
+        }
+
+        variableSnapshot = runner.VariableStorage.GetAllVariables();
+    }
+
+    private static void RestoreVariableSnapshot()
+    {
+        if (variableSnapshot == null)
+        {
+            return;
+        }
+
+        DialogueRunner runner = FindFirstObjectByType<DialogueRunner>();
+        if (runner == null)
+        {
+            return;
+        }
+
+        var (floats, strings, bools) = variableSnapshot.Value;
+        runner.VariableStorage.SetAllVariables(floats, strings, bools, clear: false);
+    }
+
     private IEnumerator LoadSceneRoutine(int buildIndex)
     {
         isLoading = true;
 
         yield return StartCoroutine(FadeRoutine(0f, 1f));
         SetSpinnerVisible(true);
+
+        CaptureVariableSnapshot();
 
         AsyncOperation operation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(buildIndex);
         operation.allowSceneActivation = false;
