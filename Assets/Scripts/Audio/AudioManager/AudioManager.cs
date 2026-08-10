@@ -393,6 +393,56 @@ namespace SimpleAudioSystem
             hasCurrentMusic = false;
         }
 
+        private readonly Dictionary<string, EventInstance> loopingSFX = new Dictionary<string, EventInstance>();
+
+        public bool PlayLoop(string id)
+        {
+            if (loopingSFX.ContainsKey(id))
+            {
+                return true;
+            }
+
+            if (!TryGetEntry(id, out AudioEntry entry))
+            {
+                return false;
+            }
+
+            if (entry.EventReference.IsNull)
+            {
+                return false;
+            }
+
+            EventInstance instance =
+                RuntimeManager.CreateInstance(entry.EventReference);
+
+            if (!instance.isValid())
+            {
+                return false;
+            }
+
+            instance.start();
+            loopingSFX[id] = instance;
+
+            return true;
+        }
+
+        public bool StopLoop(string id)
+        {
+            if (!loopingSFX.TryGetValue(id, out EventInstance instance))
+            {
+                return false;
+            }
+
+            if (instance.isValid())
+            {
+                instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                instance.release();
+            }
+
+            loopingSFX.Remove(id);
+            return true;
+        }
+
         private void OnApplicationQuit()
         {
             Shutdown();
@@ -423,6 +473,17 @@ namespace SimpleAudioSystem
             {
                 StopAndReleaseCurrentMusic(FMOD.Studio.STOP_MODE.IMMEDIATE);
             }
+
+            foreach (EventInstance instance in loopingSFX.Values)
+            {
+                if (instance.isValid())
+                {
+                    instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                    instance.release();
+                }
+            }
+
+            loopingSFX.Clear();
         }
     }
 }

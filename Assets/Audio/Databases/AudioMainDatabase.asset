@@ -103,3 +103,12 @@ MonoBehaviour:
         Data4: 1879751747
       Path: event:/UI/UI_Button_Hover
     category: 1
+  - id: mus.sleepwalking
+    eventReference:
+      Guid:
+        Data1: 983955020
+        Data2: 1322081163
+        Data3: -833507688
+        Data4: 1800095343
+      Path: event:/Music/Mus_Sleepwalking
+    category: 1
