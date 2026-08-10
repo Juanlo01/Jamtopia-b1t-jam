@@ -1,5 +1,6 @@
 using SimpleAudioSystem;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class SceneMusicController : MonoBehaviour
 {
@@ -8,7 +9,22 @@ public sealed class SceneMusicController : MonoBehaviour
 
     private string currentSceneMusicId;
 
-    private void Start()
+    // this object persists across scene loads (DontDestroyOnLoad on the AudioManager root), so
+    // Start() only ever fires once for the very first scene -- listen for every later scene load too
+    private void OnEnable()
+    {
+        // fully-qualified: this project also has its own global-namespace SceneManager (TransitionTo),
+        // so a bare "SceneManager" here would be ambiguous with UnityEngine.SceneManagement.SceneManager
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+        PlayMusicForCurrentScene();
+    }
+
+    private void OnDisable()
+    {
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         PlayMusicForCurrentScene();
     }

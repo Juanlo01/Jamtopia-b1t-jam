@@ -6391,7 +6391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a576c45cc960f88459848f169757425b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueRunner: {fileID: 0}
+  dialogueRunner: {fileID: 1453675353}
   dialogueNode: motelInteractDroppedNail
   press:
     m_Name: Press
@@ -13997,7 +13997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a660724b1c4997e48bb4f830dc0fd732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueRunner: {fileID: 0}
+  dialogueRunner: {fileID: 1453675353}
   dialogueNode: motelInteractMakeupWipes
   press:
     m_Name: Press
@@ -20171,7 +20171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad97248799a5024aa25ac9df836423a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueRunner: {fileID: 0}
+  dialogueRunner: {fileID: 1453675353}
   dialogueNode: motelInteractHairbrush
   press:
     m_Name: Press
@@ -26116,6 +26116,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026128461}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2027060886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589017009465380628, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256194764752169948, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d97be494f15c540c9b1e94c9e9dd057b, type: 3}
 --- !u!1 &2035462582
 GameObject:
   m_ObjectHideFlags: 0
@@ -27079,7 +27136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c330165f08f5a2b47a57fd8d71d09ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueRunner: {fileID: 0}
+  dialogueRunner: {fileID: 1453675353}
   dialogueNode: motelInteractDeadWoman
   press:
     m_Name: Press
@@ -27191,3 +27248,4 @@ SceneRoots:
   - {fileID: 164225572}
   - {fileID: 993437164}
   - {fileID: 1721079688}
+  - {fileID: 2027060886}
