@@ -115,3 +115,6 @@ FMOD_Jamtopia/.cache/
 # FMOD Unity editor cache
 Assets/Plugins/FMOD/Cache/
 /Assets/Plugins/FMOD/Cache.meta
+
+# Obsidian vault (contains filenames illegal on Windows; not meant to be tracked)
+/obsidian/
