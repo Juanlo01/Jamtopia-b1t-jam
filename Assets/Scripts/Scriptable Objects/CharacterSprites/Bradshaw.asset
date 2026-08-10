@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94654c6c987fe0c4b9c50bde53619f8f, type: 3}
+  m_Name: Bradshaw
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSprite
+  spriteTexture: {fileID: 2800000, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  animationScheme: {fileID: 11400000, guid: c71b99f6047f65841822a5eff20a1cdb, type: 2}
+  sprites:
+  - {fileID: 2087269191, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: 273387006, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: 1569668376, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: -1941306225, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: -30538566, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: 1172879419, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: 825285458, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: 113101320, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: -106858832, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: -2014814782, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: 1661690095, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: 1206480871, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: -708377840, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: 1467640480, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: 568332060, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
+  - {fileID: -1637614435, guid: de807262ccb177c40b83ac97b7277d5a, type: 3}
