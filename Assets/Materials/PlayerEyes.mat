@@ -45,6 +45,7 @@ Material:
     m_Floats:
     - _DispAmount: -0.035
     - _Emission: 3.166
+    - _EnableBillboard: 0
     - _EnableWobble: 0
     - _WobbleAmplitude: 0.204
     - _WobbleBaseAmplitude: 0.273
