@@ -14864,6 +14864,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GeneralUI
       objectReference: {fileID: 0}
+    - target: {fileID: 8829398082301105999, guid: 5d5dc5b50c99b9746a13af18e7c49cbe, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829398082301105999, guid: 5d5dc5b50c99b9746a13af18e7c49cbe, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829398082301105999, guid: 5d5dc5b50c99b9746a13af18e7c49cbe, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 540
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -15734,17 +15746,17 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5806810876226437377, guid: 415bea65223315049b32b65a9fd43840, type: 3}
+      propertyPath: dialogueRunner
+      value: 
+      objectReference: {fileID: 1453675353}
+    - target: {fileID: 5806810876226437377, guid: 415bea65223315049b32b65a9fd43840, type: 3}
       propertyPath: isSleepwalking
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5806810876226437377, guid: 415bea65223315049b32b65a9fd43840, type: 3}
       propertyPath: sleepwalkingParticles
-      value:
+      value: 
       objectReference: {fileID: 1685487618}
-    - target: {fileID: 5806810876226437377, guid: 415bea65223315049b32b65a9fd43840, type: 3}
-      propertyPath: dialogueRunner
-      value:
-      objectReference: {fileID: 1453675353}
     - target: {fileID: 6570422763647168633, guid: 415bea65223315049b32b65a9fd43840, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.98768836
@@ -19061,7 +19073,7 @@ MonoBehaviour:
   planeDistance: 1
   _screenMatchMode: 0
   _matchWidthOrHeight: 0
-  _referenceResolution: {x: 1920, y: 1080}
+  _referenceResolution: {x: 960, y: 540}
 --- !u!114 &1412973993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19100,6 +19112,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1412973995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412973991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed16238ead30bb49b890c4a8565ba36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EvidenceInventory
+  motelEntryTextSlots:
+  - {fileID: 144935135}
+  - {fileID: 1062549541}
+  - {fileID: 18553543}
+  - {fileID: 519386937}
+  - {fileID: 1638155052}
+  motelEvidenceList:
+  - {fileID: 373908600}
+  - {fileID: 1692785625}
+  - {fileID: 974926243}
+  - {fileID: 1192525265}
+  - {fileID: 983669088}
+  evidenceList:
+  - id: 
+    evidenceName: 
+    evidenceDescription: 
+    collectionStatus: 
+    entry: 0
+  - id: 
+    evidenceName: 
+    evidenceDescription: 
+    collectionStatus: 
+    entry: 0
+  - id: 
+    evidenceName: 
+    evidenceDescription: 
+    collectionStatus: 
+    entry: 0
+  - id: 
+    evidenceName: 
+    evidenceDescription: 
+    collectionStatus: 
+    entry: 0
+  - id: 
+    evidenceName: 
+    evidenceDescription: 
+    collectionStatus: 
+    entry: 0
 --- !u!1001 &1453675352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19260,56 +19322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1412973995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412973991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed16238ead30bb49b890c4a8565ba36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EvidenceInventory
-  motelEntryTextSlots:
-  - {fileID: 144935135}
-  - {fileID: 1062549541}
-  - {fileID: 18553543}
-  - {fileID: 519386937}
-  - {fileID: 1638155052}
-  motelEvidenceList:
-  - {fileID: 373908600}
-  - {fileID: 1692785625}
-  - {fileID: 974926243}
-  - {fileID: 1192525265}
-  - {fileID: 983669088}
-  evidenceList:
-  - id: 
-    evidenceName: 
-    evidenceDescription: 
-    collectionStatus: 
-    entry: 0
-  - id: 
-    evidenceName: 
-    evidenceDescription: 
-    collectionStatus: 
-    entry: 0
-  - id: 
-    evidenceName: 
-    evidenceDescription: 
-    collectionStatus: 
-    entry: 0
-  - id: 
-    evidenceName: 
-    evidenceDescription: 
-    collectionStatus: 
-    entry: 0
-  - id: 
-    evidenceName: 
-    evidenceDescription: 
-    collectionStatus: 
-    entry: 0
 --- !u!1 &1468160827
 GameObject:
   m_ObjectHideFlags: 0
@@ -27331,3 +27343,4 @@ SceneRoots:
   - {fileID: 164225572}
   - {fileID: 993437164}
   - {fileID: 1721079688}
+  - {fileID: 777405748}
