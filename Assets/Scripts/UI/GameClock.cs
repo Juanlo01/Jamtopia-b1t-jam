@@ -39,7 +39,7 @@ public class GameClock : MonoBehaviour
 
             if (currentDay > totalDays)
             {
-                SceneManager.LoadScene("LossScreen");
+                SceneManager.TransitionTo("LossScreen");
             }
         }
     }
