@@ -12,7 +12,7 @@ public class StartMenuController : MonoBehaviour
             GetComponent<UIDocument>().rootVisualElement.Q<Button>("PlayButton").clicked += () => 
             {
                 Debug.Log("Button clicked!");
-                SceneManager.LoadScene("Motel");
+                SceneManager.TransitionTo("Motel");
             };
         }
 }

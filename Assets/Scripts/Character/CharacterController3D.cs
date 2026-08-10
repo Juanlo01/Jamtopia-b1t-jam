@@ -55,6 +55,9 @@ public class CharacterController3D : MonoBehaviour
     public void SetActionState(SpriteAnimator.ActionState state, float angle, bool force = false){
         lastState = state;
         lastAngle = angle;
-        spriteAnimator.SetActionState(state, angle, force);
+        // some CharacterController3D users (eg. "Corpse" in motel.unity/greenroom.unity) are 3D-mesh
+        // props reusing this component only for IdleFace's turn-to-face-player behaviour, and have no
+        // sprite to drive -- don't crash on Start() for those.
+        if(spriteAnimator != null) spriteAnimator.SetActionState(state, angle, force);
     }
 }
