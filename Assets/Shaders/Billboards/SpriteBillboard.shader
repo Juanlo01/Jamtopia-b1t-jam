@@ -15,6 +15,12 @@ Shader "Unlit/BillboardVerticalZDepth"
         _WobbleAmplitude("Wobble Amplitude (master)", Range(-1, 1)) = 0.1
         _WobbleFrequency("Wobble Frequency (v)", Float) = 1
         _SpriteUVRect("Sprite UV Rect (uMin,vMin,uMax,vMax) in atlas", Vector) = (0,0,1,1)
+
+        [Toggle] _EnableOutline("Enable Outline", Float) = 0
+        _OutlineThickness("Outline Thickness (px)", Range(0, 8)) = 1
+        _OutlineThickness2("Second Outline Thickness (px)", Range(0, 8)) = 1
+        _OutlinePulseSpeed("Outline Pulse Speed", Range(0.1, 10)) = 2
+        _OutlineAlphaThreshold("Outline Alpha Cutoff", Range(0, 1)) = 0.5
     }
 
     SubShader
@@ -49,6 +55,7 @@ Shader "Unlit/BillboardVerticalZDepth"
             };
 
             sampler2D _MainTex;
+            float4 _MainTex_TexelSize;
             float4 _BaseColor;
             float4 _MainTex_ST;
             float _Emission;
@@ -63,12 +70,36 @@ Shader "Unlit/BillboardVerticalZDepth"
             float _WobbleFrequency;
             float4 _SpriteUVRect;
 
+            float _EnableOutline;
+            float _OutlineThickness;
+            float _OutlineThickness2;
+            float _OutlinePulseSpeed;
+            float _OutlineAlphaThreshold;
+
             float rayPlaneIntersection( float3 rayDir, float3 rayPos, float3 planeNormal, float3 planePos)
             {
                 float denom = dot(planeNormal, rayDir);
                 denom = max(denom, 0.000001); // avoid divide by zero
                 float3 diff = planePos - rayPos;
                 return dot(diff, planeNormal) / denom;
+            }
+
+            // Highest alpha found in a ring of samples `thicknessPx` texels away from uv.
+            // Used to detect silhouette edges without needing a second (pre-baked) outline texture.
+            float OutlineNeighborAlpha(float2 uv, float thicknessPx)
+            {
+                float2 px = _MainTex_TexelSize.xy * thicknessPx;
+
+                float maxAlpha = 0;
+                maxAlpha = max(maxAlpha, tex2D(_MainTex, uv + float2( px.x,     0)).a);
+                maxAlpha = max(maxAlpha, tex2D(_MainTex, uv + float2(-px.x,     0)).a);
+                maxAlpha = max(maxAlpha, tex2D(_MainTex, uv + float2(    0, px.y)).a);
+                maxAlpha = max(maxAlpha, tex2D(_MainTex, uv + float2(    0,-px.y)).a);
+                maxAlpha = max(maxAlpha, tex2D(_MainTex, uv + float2( px.x, px.y)).a);
+                maxAlpha = max(maxAlpha, tex2D(_MainTex, uv + float2(-px.x, px.y)).a);
+                maxAlpha = max(maxAlpha, tex2D(_MainTex, uv + float2( px.x,-px.y)).a);
+                maxAlpha = max(maxAlpha, tex2D(_MainTex, uv + float2(-px.x,-px.y)).a);
+                return maxAlpha;
             }
 
             v2f vert(appdata v)
@@ -140,6 +171,31 @@ Shader "Unlit/BillboardVerticalZDepth"
                 }
 
                 fixed4 text = tex2D(_MainTex, uv);
+
+                // Two pulsing rims drawn into the transparent pixels bordering the silhouette.
+                // The first rim sits directly against the sprite; the second wraps around the
+                // first, one thickness further out, and always pulses with the inverse
+                // brightness of the first -- so they alternate white/black against each other.
+                if (_EnableOutline > 0.5 && text.a <= _OutlineAlphaThreshold)
+                {
+                    float pulse = sin(_Time.y * _OutlinePulseSpeed) * 0.5 + 0.5;
+
+                    if (OutlineNeighborAlpha(uv, _OutlineThickness) > _OutlineAlphaThreshold)
+                    {
+                        fixed4 outlineCol = fixed4(pulse, pulse, pulse, _BaseColor.a);
+                        UNITY_APPLY_FOG(i.fogCoord, outlineCol);
+                        return outlineCol;
+                    }
+
+                    if (OutlineNeighborAlpha(uv, _OutlineThickness + _OutlineThickness2) > _OutlineAlphaThreshold)
+                    {
+                        float inverse = 1 - pulse;
+                        fixed4 outlineCol = fixed4(inverse, inverse, inverse, _BaseColor.a);
+                        UNITY_APPLY_FOG(i.fogCoord, outlineCol);
+                        return outlineCol;
+                    }
+                }
+
                 fixed4 modu = text * _BaseColor;
                 fixed3 emit = modu.rgb * _Emission;
                 fixed4 col  = fixed4(emit, modu.a);
