@@ -5,7 +5,7 @@
 			<value>SFX_DoorKick</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{fb000c43-d37a-4b5a-9786-5f0f4a40cf8d}</destination>
@@ -82,7 +82,11 @@
 			<destination>{e2df39b2-1025-48a2-8c6a-cc8d5d469b94}</destination>
 		</relationship>
 	</object>
-	<object class="MultiSound" id="{b94e9936-b2a5-42b5-b12c-8b53b83582b9}" />
+	<object class="MultiSound" id="{b94e9936-b2a5-42b5-b12c-8b53b83582b9}">
+		<relationship name="sounds">
+			<destination>{735639c2-0aef-4e18-a54a-fe9a58267e09}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{6b64cd25-71a8-4c7b-9f7e-8dbd06bb8d96}">
 		<relationship name="effects">
 			<destination>{183ef0e0-9cbb-4b01-8ec2-bfafd7b57457}</destination>
@@ -95,6 +99,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{accb13aa-d853-4163-a194-ab2509816c09}" />
+	<object class="SingleSound" id="{735639c2-0aef-4e18-a54a-fe9a58267e09}">
+		<relationship name="audioFile">
+			<destination>{4ec01a6b-6929-43ba-b67a-500b2ab49b60}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{183ef0e0-9cbb-4b01-8ec2-bfafd7b57457}" />
 	<object class="MixerBusFader" id="{b523ef15-c772-4d10-a560-3295c274623e}" />
 </objects>
