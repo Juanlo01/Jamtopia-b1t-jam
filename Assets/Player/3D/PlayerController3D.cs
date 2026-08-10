@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem; // Allows use of of Input System API
 using Yarn.Unity;
+using FMOD.Studio;
+using FMODUnity;
+using SimpleAudioSystem;
 
 public class PlayerController3D : MonoBehaviour{
 
@@ -30,6 +33,9 @@ public class PlayerController3D : MonoBehaviour{
     [Header("States")]
     public bool isSleepwalking;
 
+    [Header("Audio")]
+    [SerializeField] SceneMusicController sceneMusicController;
+
     private static readonly int EnableWobbleID = Shader.PropertyToID("_EnableWobble");
 
     private float horizontal;
@@ -38,9 +44,12 @@ public class PlayerController3D : MonoBehaviour{
     private bool wobbleEnabled; // defaults false
     private MaterialPropertyBlock materialPropertyBlock;
     private MaterialPropertyBlock faceMaterialPropertyBlock;
+    private const string FootstepId = "sfx.player.walking";
+    private bool wasMoving;
 
     private void FixedUpdate(){
         if(movementFrozen){
+            SetWalkingAudio(false);
             return;
         }
         Vector3 velocity = rb.linearVelocity;
@@ -49,11 +58,28 @@ public class PlayerController3D : MonoBehaviour{
         Debug.Log($"[PlayerController3D] horizontal={horizontal}, vertical={vertical}");
         characterController.UpdateMovementAnimation(horizontal, vertical);
 
+        bool isMoving = Mathf.Abs(horizontal) > 0.01f || Mathf.Abs(vertical) > 0.01f;
+
+        if (isMoving != wasMoving)
+        {
+            SetWalkingAudio(isMoving);
+            wasMoving = isMoving;
+        }
+
         // wobble & particles reflect the sleepwalking state, same as FaceAnimator forcing the eyes shut
         if(isSleepwalking != wobbleEnabled){
             SetWobbleEnabled(isSleepwalking);
             SetSleepParticlesPlaying(isSleepwalking);
             PushIsAsleepVariable();
+
+            if (isSleepwalking)
+            {
+                sceneMusicController?.StartSleepwalkMusic();
+            }
+            else
+            {
+                sceneMusicController?.StopSleepwalkMusic();
+            }
         }
     }
 
@@ -129,6 +155,24 @@ public class PlayerController3D : MonoBehaviour{
         }
     }
 
+    // Walking SFX
+    private void SetWalkingAudio(bool walking)
+    {
+        if (AudioManager.Instance == null)
+        {
+            return;
+        }
+
+        if (walking)
+        {
+            AudioManager.Instance.PlayLoop(FootstepId);
+        }
+        else
+        {
+            AudioManager.Instance.StopLoop(FootstepId);
+        }
+    }
+
     // Player can jump if grounded
     // public void Jump(InputAction.CallbackContext context){
     //     if(context.performed && IsGrounded()){
@@ -143,10 +187,20 @@ public class PlayerController3D : MonoBehaviour{
 
 
     private void Start(){
+        if (sceneMusicController == null)
+        {
+            sceneMusicController = FindFirstObjectByType<SceneMusicController>();
+        }
+
         ApplySpriteMaterial();
         SetWobbleEnabled(isSleepwalking);
         SetSleepParticlesPlaying(isSleepwalking);
         PushIsAsleepVariable();
+
+        if (isSleepwalking)
+        {
+            sceneMusicController?.StartSleepwalkMusic();
+        }
     }
 
     // Update is called once per frame

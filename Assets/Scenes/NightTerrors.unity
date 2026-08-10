@@ -10121,6 +10121,7 @@ MonoBehaviour:
   rb: {fileID: 1075870870}
   characterController: {fileID: 0}
   spriteRenderer: {fileID: 0}
+  dialogueRunner: {fileID: 0}
   faceSpriteRenderer: {fileID: 0}
   sleepwalkingParticles: {fileID: 0}
   selectedMaterial: {fileID: 0}
@@ -10131,6 +10132,7 @@ MonoBehaviour:
     m_Bits: 0
   groundCheck: {fileID: 0}
   isSleepwalking: 0
+  sceneMusicController: {fileID: 0}
 --- !u!54 &1075870870
 Rigidbody:
   m_ObjectHideFlags: 0
