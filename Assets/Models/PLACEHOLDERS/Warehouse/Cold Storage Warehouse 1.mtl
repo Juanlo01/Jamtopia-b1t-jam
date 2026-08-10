@@ -1,0 +1,32 @@
+# Blender 5.0.1 MTL File: 'None'
+# www.blender.org
+
+newmtl s
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 1
+map_Kd s.png
+map_d s.png
+
+newmtl wh1a
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 1
+map_Kd wh1a.png
+map_d wh1a.png
+
+newmtl wh1d
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 1
+map_Kd wh1d.png
+map_d wh1d.png
