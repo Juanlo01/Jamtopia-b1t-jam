@@ -1,0 +1,3 @@
+M.O. is to slip Arsenic Trioxide, an odorless and tasteless poison that causes severe gastrointestinal agony, violent stomach cramping, abdominal burning, and internal spasms. Effectively forces the victim to double over into a fetal position as they die.
+
+The Killer tends to prefer to hide the Arsenic Trioxide in unconventional ways e.g. makeup removers instead of the makeup itself or lemon slices garnishes the drink instead of the drink itself. They're the things that come second to mind that could be poisoned rarely the first.
