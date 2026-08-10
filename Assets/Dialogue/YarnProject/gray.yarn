@@ -1,0 +1,111 @@
+// gray.yarn
+
+title: Gray
+---
+<<if $setting == "motel">>
+    <<jump Gray_Motel>>
+<<elseif $setting == "breakroom">>
+    <<jump Gray_Breakroom>>
+<<elseif $setting == "greenroom">>
+    <<jump Gray_Greenroom>>
+<<endif>>
+===
+
+title: Gray_Motel
+---
+<<if $is_asleep == false && $motel_woke_up == false>>
+    Gray: Coroner said this looks like the work of poison.
+    You: Poison huh? Interesting method.
+    Gray: Yeah, usually woman prefer to kill with poison.
+    You: I see... even more interesting.
+<<elseif $is_asleep>>
+    <<jump Gray_Motel_DuringSleep>>
+<<elseif $motel_evidence >= 5>>
+    <<jump Gray_Motel_AllEvidence>>
+<<else>>
+    <<jump Gray_Motel_SomeEvidence>>
+<<endif>>
+===
+
+title: Gray_Motel_DuringSleep
+//setting: motel, gibbs asleep
+---
+You: ...
+
+Gray: Coroner said this looks like the work of poison.
+
+You: ...
+
+Gray: Okay you're making me uncomfortable now.
+===
+
+title: Gray_Motel_SomeEvidence
+//setting: motel, gibbs awakened
+---
+You: I got some evidence here.
+
+Gray: Doubt it's anything I didn't gather myself.
+
+You: Yeah... maybe.
+===
+
+title: Gray_Motel_AllEvidence
+//setting: motel, gibbs awakened
+---
+You: I got some evidence here.
+
+Gray: Doubt it's anything I didn't gather myself.
+
+You: Heh, doubt it. I think i've just about cracked this case.
+
+Gray: We'll see about that.
+===
+
+title: Gray_Breakroom
+---
+<<if $gray_breakroom_visited == false>>
+    <<set $gray_breakroom_visited = true>>
+    <<jump Gray_Breakroom_FirstVisit>>
+<<else>>
+    // NEEDS DIALOGUE: repeat breakroom Gray interaction
+<<endif>>
+===
+
+title: Gray_Breakroom_FirstVisit
+//setting: breakroom with marty & gray
+---
+You: You really think I could do lab geek stuff?
+
+Gray: You heard a compliment in all of that?
+
+You: Yeah?
+
+Gray: Jeez, I was meaning to call you a dork Gibbs.
+===
+
+title: Gray_Greenroom
+---
+<<if $is_asleep>>
+    <<jump Gray_Greenroom_Asleep>>
+<<else>>
+    <<jump Gray_Greenroom_Awake>>
+<<endif>>
+===
+
+title: Gray_Greenroom_Awake
+//setting: greenroom with Gray & Bolton, 2nd death
+---
+Gray: Coroner says this looks like a bludgeoning.
+
+You: Yikes.
+===
+
+title: Gray_Greenroom_Asleep
+//setting: greenroom with Gray & Bolton, 2nd death
+---
+Gray: Coroner says this looks like a bludgeoning.
+
+You: ...
+
+Gray: This again? You're freaking me out.
+===

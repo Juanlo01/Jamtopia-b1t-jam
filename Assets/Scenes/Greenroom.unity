@@ -459,7 +459,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3408979722000066399, guid: 061645dd656aeaf409241a32c24ef620, type: 3}
       propertyPath: dialogueNode
-      value: bolton_transport
+      value: Bolton
       objectReference: {fileID: 0}
     - target: {fileID: 3408979722000066399, guid: 061645dd656aeaf409241a32c24ef620, type: 3}
       propertyPath: dialogueRunner

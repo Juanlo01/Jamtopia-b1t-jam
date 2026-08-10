@@ -1,0 +1,121 @@
+// bradshaw.yarn
+
+title: Bradshaw
+---
+<<if $bradshaw_intro_done == false>>
+    <<jump Bradshaw_Intro>>
+<<elseif $bradshaw_coffee_delivered == false>>
+    <<jump Bradshaw_CoffeeLoop>>
+<<elseif $bradshaw_teaching_done == false>>
+    <<jump Bradshaw_Teaching>>
+<<else>>
+    <<jump Bradshaw_Status>>
+<<endif>>
+===
+
+title: Bradshaw_Intro
+//setting: forensics lab with bradshaw
+---
+You: Hey how's the evidence processing going?
+
+Bradshaw: Fine.
+
+You: I was thinking I could maybe help you?
+
+Bradshaw: Seriously? I mean I guess you can do some of the simple stuff.
+
+You: If it helps catch the killer sooner, why not?
+
+Bradshaw: I'll teach ya' in exchange for some coffee.
+
+<<set $bradshaw_intro_done = true>>
+===
+
+title: Bradshaw_CoffeeLoop
+//setting: forensics lab with bradshaw (looped)
+---
+Bradshaw: Did you get the coffee?
+
+-> No. #default:7
+    Bradshaw: Well get on that.
+-> Here it is. <<if $has_coffee>>
+    Bradshaw: You know Gibbs I don't see being barista in your future.
+
+    You: What?
+
+    Bradshaw: This coffee is terrible, like a... 8.1 out of 10.
+
+    You: 8.1 is terrible?
+
+    Bradshaw: For coffee? Yes.
+
+    You: What a strange rating system.
+
+    <<set $bradshaw_coffee_delivered = true>>
+===
+
+title: Bradshaw_Teaching
+//setting: forensics lab with bradshaw
+---
+// NEEDS DIALOGUE: Bradshaw teaches Gibbs how to process evidence
+<<set $bradshaw_teaching_done = true>>
+===
+
+title: Bradshaw_Status
+---
+<<if $bradshaw_complete_motel && $bradshaw_complete_greenroom>>
+    <<jump Bradshaw_BothDone>>
+<<elseif $bradshaw_complete_motel && !$bradshaw_motel_done_shown>>
+    <<jump Bradshaw_MotelDone>>
+<<elseif $bradshaw_complete_greenroom && !$bradshaw_greenroom_done_shown>>
+    <<jump Bradshaw_GreenroomDone>>
+<<elseif $greenroom_submitted_to_bradshaw && $bradshaw_complete_motel>>
+    <<jump Bradshaw_GreenroomProcessing>>
+<<elseif $greenroom_submitted_to_bradshaw>>
+    <<jump Bradshaw_BothProcessing>>
+<<else>>
+    <<jump Bradshaw_MotelProcessing>>
+<<endif>>
+===
+
+title: Bradshaw_MotelProcessing
+//setting: forensics lab with bradshaw
+---
+// NEEDS DIALOGUE: Bradshaw processing motel evidence, player checks in
+===
+
+title: Bradshaw_GreenroomProcessing
+//setting: forensics lab with bradshaw
+---
+// NEEDS DIALOGUE: Bradshaw processing greenroom evidence, motel already done
+===
+
+title: Bradshaw_BothProcessing
+//setting: forensics lab with bradshaw
+---
+// NEEDS DIALOGUE???
+===
+
+title: Bradshaw_MotelDone
+//setting: forensics lab with bradshaw
+---
+// NEEDS DIALOGUE: Bradshaw hands off completed motel evidence report
+<<changeEvidenceStatus("motel", "complete")>>
+<<set $bradshaw_motel_done_shown = true>>
+===
+
+title: Bradshaw_GreenroomDone
+//setting: forensics lab with bradshaw
+---
+// NEEDS DIALOGUE: Bradshaw hands off completed greenroom evidence report
+<<changeEvidenceStatus("greenroom", "complete")>>
+<<set $bradshaw_greenroom_done_shown = true>>
+===
+
+title: Bradshaw_BothDone
+//setting: forensics lab with bradshaw
+---
+// NEEDS DIALOGUE???
+<<changeEvidenceStatus("motel", "complete")>>
+<<changeEvidenceStatus("greenroom", "complete")>>
+===
